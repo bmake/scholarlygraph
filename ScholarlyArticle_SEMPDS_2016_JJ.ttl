@@ -1,1 +1,329 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpv: <http://akwi.org/cpv#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
 
+
+### Scholarly Article Template without blank nodes
+
+<https://doi.org/DOI_ScholarlyArticle> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Towards a Vocabulary Terms Discovery Assistant" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "Information systems, Web data description languages" ; # Text, List of keywords, separated by commas
+		schema:description "The Linked Open Vocabularies (LOV) curated directory list of vocabularies has changed radically the way that engineers are assisted to explore the vocabulary space by searching for terms and vocabularies using the provided keyword based search. Running a survey regarding the decision of the vocabulary terms that can be used to annotate a specific webpage, we realised the gap between the vocabulary cre- ators side and the vocabulary users. In this direction, the presented framework, namely the LOVR framework, aims to facilitate the vocabulary terms discovery by providing a Web service with a set of endpoints that can be invoked to get a list of recommended terms for a given webpage. Within this work, we present the framework architecture and the fundamental parts of the prototype that implements the methodology behind the LOVR framework, which lever- ages the LOV search. Furthermore, the various endpoints of the Web service are described by explaining their usage scenarios." ; # Text, abstract of the paper
+		schema:author <http://orcid.org/0000-0002-1391-7104> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		#schema:pageStart "" ; # Text or Integer first page
+		#schema:pageEnd "" ; # Text or integer last page
+		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_9_RO , cpe:SEMPDS2016_9_RM , cpe:SEMPDS2016_9_RF , cpe:SEMPDS2016_9_FW , cpe:SEMPDS2016_9_Cr .
+		
+		# Research Objectives
+		cpe:SEMPDS2016_9_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_9_RO1 , cpe:SEMPDS2016_9_RO2 .
+		cpe:SEMPDS2016_9_RO1 a schema:StructuredValue ; 
+				schema:description "Implementation of the LOVR Framework" ;				
+				cpv:researchActionType cpv:ResActTypeImplement ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifactApplication . # NamedEntity Research Artifact 1 
+		cpe:SEMPDS2016_9_RO2 a schema:StructuredValue ;
+				schema:description "Development of the LOVR Framework and vocab-recommender tool" ;
+				cpv:researchActionType cpv:ResActTypeDevelop ; # NamedEntity Research Activity Type 2
+				cpv:researchArtifact cpv:ResArtifactApplication . # NamedEntity Research Artifact 2 
+		# proceed if necessary
+		
+		# Research Methods
+		cpe:SEMPDS2016_9_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_9_RM1 .
+		cpe:SEMPDS2016_9_RM1 a schema:StructuredValue ;
+				schema:description "Implementation of LOVR Framework" ; 
+				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 1		
+		# proceed if necessary
+			
+		# Research Findings
+		cpe:SEMPDS2016_9_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "Implementation details of LOVR framework" , "" . # Text Research Findings 1 and 2 etc.
+			
+		# Future Work
+		cpe:SEMPDS2016_9_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "Generation of examples for the produced vocabulary" , "Feedback loop for vocabulary"  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_9_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "Objective sometimes not clear" , "Graphic of architecture would help for better understanding" . # Text Critique 1 and 2 etc.
+
+<http://dx.doi.org/10.1145/2993318.2993351> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Using DevOps Principles to Continuously Monitor RDF Data Quality" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "One approach to continuously achieve a certain data quality level is to use an integration pipeline that continuously checks and monitors the quality of a data set according to defined metrics. This approach is inspired by Continuous Integration pipelines, that have been introduced in the area of software development and DevOps to perform continuous source code checks. By investigating in possible tools to use and discussing the specific requirements for RDF data sets, an integration pipeline is derived that joins current approaches of the areas of software-development and semantic-web as well as reuses existing tools. As these tools have not been built explicitly for CI usage, we evaluate their usability and propose possible workarounds and improvements. Furthermore, a real-world usage scenario is discussed, outlining the benefit of the usage of such a pipeline." ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		schema:pageStart "" ; # Text or Integer first page
+		schema:pageEnd "" ; # Text or integer last page
+		schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_34_RO , cpe:SEMPDS2016_34_RM , cpe:SEMPDS2016_34_RF , cpe:SEMPDS2016_34_FW , cpe:SEMPDS2016_34_Cr .
+
+		# Research Objectives
+		cpe:SEMPDS2016_34_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_34_RO1 , cpe:SEMPDS2016_34_RO2, cpe:SEMPDS2016_34_RO3 .
+		cpe:SEMPDS2016_34_RO1 a schema:StructuredValue ; 
+				schema:description "Implementation continoues integration pipeline for for repositories containing RDF data" ;				
+				cpv:researchActionType cpv:ResActTypeImplement ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifactProcess . # NamedEntity Research Artifact 1 
+		cpe:SEMPDS2016_34_RO2 a schema:StructuredValue ;
+				schema:description "Design continoues integration pipeline for for repositories containing RDF data" ;
+				cpv:researchActionType cpv:ResActTypeDesign ; # NamedEntity Research Activity Type 2
+				cpv:researchArtifact cpv:ResArtifactProcess . # NamedEntity Research Artifact 2 
+		cpe:SEMPDS2016_34_RO3 a schema:StructuredValue ;
+				schema:description "Evaluation of RDF quality assesment tools" ;
+				cpv:researchActionType cpv:ResActTypeEvaluate ; # NamedEntity Research Activity Type 2
+				cpv:researchArtifact cpv:ResArtifactSoftware . # NamedEntity Research Artifact 2 				
+		# proceed if necessary
+
+
+		# Research Methods
+		cpe:SEMPDS2016_34_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_34_RM1 , cpe:SEMPDS2016_34_RM2 .
+		cpe:SEMPDS2016_34_RM1 a schema:StructuredValue ;
+				schema:description "Proof of concept implementaiton of Pipline on GitHub and Travis CI" ; 
+				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 1		
+		cpe:SEMPDS2016_34_RM2 a schema:StructuredValue ;
+				schema:description "Overview about related work, especially rdf quality assesment tools" ; 
+				cpv:researchMethod cpv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 2	
+		# proceed if necessary
+
+		# Research Findings
+		cpe:SEMPDS2016_34_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "Continuous Integration pipelines to check RDF data sets as well as vocabularies/ontologies for their data quality and in order to improve their integrability" , "RDF quality assesment tools using different reporting formats" . # Text Research Findings 1 and 2 etc.
+
+		# Future Work
+		cpe:SEMPDS2016_34_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "Standard report format" , "Implementation of propper CLI tools for all RDF assesment tools"  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_34_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+
+
+
+<http://ceur-ws.org/Vol-1695/paper14.pdf> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Augmenting the Ontology Visualization Tool Recommender: Input Pre-Filling and Integration with the OOSP Ontological Benchmark Builder" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "Ontology visualization is an important functionality for on- tology users. Since many visualization methods have been proposed and implemented, it is not an easy task for an ontology user to select a proper ontology visualization tool based on the user’s requirements. In order to recommend an ontology visualization tool, some requirements should be provided manually by the user. However, other requirements could be assessed automatically. This demo paper presents a partial automation of the pre-existing Ontology Visualiza- tion Tools Recommender input; the recommender knowledge base is also updated with three new ontology visualization tools. Further, we present an integration of the Ontology Visualization Tools Recommender into another web-based tool, Online Ontology Set Picker, where proper ontology vi- sualization can assist in ontology benchmark construction." ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		#schema:pageStart "" ; # Text or Integer first page
+		#schema:pageEnd "" ; # Text or integer last page
+		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_ArtNo_RO , cpe:SEMPDS2016_ArtNo_RM , cpe:SEMPDS2016_ArtNo_RF , cpe:SEMPDS2016_ArtNo_FW , cpe:SEMPDS2016_ArtNo_Cr .
+
+		# Research Objectives
+		cpe:SEMPDS2016_ArtNo_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RO1 , cpe:SEMPDS2016_ArtNo_RO2 .
+		cpe:SEMPDS2016_ArtNo_RO1 a schema:StructuredValue ; 
+				schema:description "Partly automation of Ontology Visualization Tools Recommender " ;				
+				cpv:researchActionType cpv:ResActTypeEnhance ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifactApplication . # NamedEntity Research Artifact 1 
+		cpe:SEMPDS2016_ArtNo_RO2 a schema:StructuredValue ;
+				schema:description "Implementation of Online Ontology Set Picker web application based on Ontology Visualization Tools Recommender " ;
+				cpv:researchActionType cpv:ResActTypeImplement ; # NamedEntity Research Activity Type 2
+				cpv:researchArtifact cpv:ResArtifactApplication . # NamedEntity Research Artifact 2 
+		# proceed if necessary
+
+		# Research Methods
+		cpe:SEMPDS2016_ArtNo_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RM1 , cpe:SEMPDS2016_ArtNo_RM2 .
+		cpe:SEMPDS2016_ArtNo_RM1 a schema:StructuredValue ;
+				schema:description "Describtion OVTR" ; 
+				cpv:researchMethod cpv:ResMethConceptualDedAnalysis .	# NamedEntity Research Method 1		
+		cpe:SEMPDS2016_ArtNo_RM2 a schema:StructuredValue ;
+				schema:description "" ; 
+				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 2	
+		# proceed if necessary
+
+		# Research Findings
+		cpe:SEMPDS2016_ArtNo_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "Partial input automation for the pre-existing OVTR tool" , "" . # Text Research Findings 1 and 2 etc.
+
+		# Future Work
+		cpe:SEMPDS2016_ArtNo_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "Implementation of ontology collection on input" , "Alternative computation of importance of OWL features " ,  "Updating ontology regarding new Ontology visualisation tools"  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_ArtNo_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "Missing short introduction why to use Scenarios" , "Clear overview of requirments" . # Text Critique 1 and 2 etc.
+			
+
+<http://ceur-ws.org/Vol-1695/paper16.pdf> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Towards Reputation-Aware Expert Finding with Linked Open Data" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "Distributed social networks allow creating new work patterns, addressing the workforce of a company as crowd. Here, finding suitable workers for specific functions is important for work quality, but largely relies on human assessment. In web-scale environments this assessment exceeds human capability. Linked open data has proven to be successful in providing semantic descriptions and discoverability of distributed resources. Hence, we leverage linked open data, so that each worker can have a semantic profile based on WebID and reference co-workers, skills, projects, etc. To recommend suitable experts for a given task, supporting systems are required, which use this profile data. In this paper, we extend our previous work on CRAWL towards reputation- aware expert finding in distributed social networks. We outline three major aspects – Endorsements, Achievements and Meta Reputation – to achieve reputation awareness and report on our progress, showcase open challenges and present a roadmap for future work." ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		#schema:pageStart "" ; # Text or Integer first page
+		#schema:pageEnd "" ; # Text or integer last page
+		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_ArtNo_RO , cpe:SEMPDS2016_ArtNo_RM , cpe:SEMPDS2016_ArtNo_RF , cpe:SEMPDS2016_ArtNo_FW , cpe:SEMPDS2016_ArtNo_Cr .
+		
+		# Research Objectives
+		cpe:SEMPDS2016_ArtNo_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RO1 .
+		cpe:SEMPDS2016_ArtNo_RO1 a schema:StructuredValue ; 
+				schema:description "" ;				
+				cpv:researchActionType cpv:ResActTypeEnhance ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifactSoftware . # NamedEntity Research Artifact 1 
+		# proceed if necessary
+		
+		# Research Methods
+		cpe:SEMPDS2016_ArtNo_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RM1 , cpe:SEMPDS2016_ArtNo_RM2 .
+		cpe:SEMPDS2016_ArtNo_RM1 a schema:StructuredValue ;
+				schema:description "Overview about related work" ; 
+				cpv:researchMethod cpv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 1		
+		cpe:SEMPDS2016_ArtNo_RM2 a schema:StructuredValue ;
+				schema:description "Extending CRAWL for the aspect of reputation" ; 
+				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 2	
+		# proceed if necessary
+			
+		# Research Findings
+		cpe:SEMPDS2016_ArtNo_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "Expert finder in distributed social network" , "" . # Text Research Findings 1 and 2 etc.
+			
+		# Future Work
+		cpe:SEMPDS2016_ArtNo_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "Evaluation of presented approach" , "Implementation of approach" , "Optimization of approach in terms of performance", "Adpating algorithm to MapReduce to run on Hadoop" . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_ArtNo_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+			
+
+
+<http://ceur-ws.org/Vol-1695/paper17.pdf> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Semantic Technology for Financial Awareness" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "This paper sheds light on how semantic technology can be a key driver for promoting financial awareness and capability, through the presentation of the ideas behind the PROFIT platform and its functionalities. The PROFIT platform is designed by the newly funded namesake EU project, as a solution catering to the exact need of action enhancement for greater financial awareness and capability that has been identified as a major target for improved social performance, personal and household finance protection and, ultimately, greater societal well-being. Towards this goal, the platform will provide the following functionalities that are based on semantic technology: a) a novel financial education toolkit available to the wider public (b) advanced crowd-sourcing tools to process financial data, extract and present collective knowledge, (c) financial forecasting models exploiting the market sentiment to identify market trends and threats, (d) novel personalized recommendation systems to support financial decisions according to the user’s profile (financial literacy level, interests, demographic characteristics etc.) (e) a reputation-based incentive scheme to motivate good quality contributions to the platform." ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		#schema:pageStart "" ; # Text or Integer first page
+		#schema:pageEnd "" ; # Text or integer last page
+		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_ArtNo_RO , cpe:SEMPDS2016_ArtNo_RM , cpe:SEMPDS2016_ArtNo_RF , cpe:SEMPDS2016_ArtNo_FW , cpe:SEMPDS2016_ArtNo_Cr .
+		
+		# Research Objectives
+		cpe:SEMPDS2016_ArtNo_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RO1 .
+		cpe:SEMPDS2016_ArtNo_RO1 a schema:StructuredValue ; 
+				schema:description "Presenting the PROFIT platform including ontologies and functionalities" ;				
+				cpv:researchActionType cpv:ResActTypeDesign ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifactSystem . # NamedEntity Research Artifact 1 
+		# proceed if necessary
+		
+		# Research Methods
+		cpe:SEMPDS2016_ArtNo_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_ArtNo_RM1  .
+		cpe:SEMPDS2016_ArtNo_RM1 a schema:StructuredValue ;
+				schema:description "Overview about the PROFIT platform including ontologies and functionalities" ; 
+				cpv:researchMethod cpv:ResMethArgumentDedAnalysis .	# NamedEntity Research Method 1		
+		# proceed if necessary
+			
+		# Research Findings
+		cpe:SEMPDS2016_ArtNo_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "Description how semantic web technology can be used to exploit finacial awareness" , "" . # Text Research Findings 1 and 2 etc.
+			
+		# Future Work
+		cpe:SEMPDS2016_ArtNo_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "Testing of PROFIT platform" , ""  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_ArtNo_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "Partly general " , "" . # Text Critique 1 and 2 etc.
+			
+			
+
+<http://ceur-ws.org/Vol-1695/paper19.pdf> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "Integrating Matching Services into the Web of Needs" ; # Text, title of the paper
+		schema:inLanguage "en" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "Many platforms or marketplaces on the web offer services that de- scribe supply in certain domains. Users have to search actively and often multiple times in different closed platforms to find what they want. This approach produces a lot of overhead for users which can only to some extend be reduced by recommendations and filtering for relevant information. The Web of Needs is an open infrastruc- ture that aims to address this situation. Instead of users searching actively, they express and publish their needs (supply and demand) as linked data documents and get notified when suitable matches have been found. For this approach to work, need documents must be matched with each other by so-called matching services running in the background. The system allows multiple matching services to run in parallel that may be tuned for certain domains of needs. In this paper we describe a prototypical matching service architecture and explain how it can be extended to integrate custom matching algorithms into the Web of Needs.
+" ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
+		#schema:pageStart "" ; # Text or Integer first page
+		#schema:pageEnd "" ; # Text or integer last page
+		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about cpe:SEMPDS2016_19_RO , cpe:SEMPDS2016_19_RM , cpe:SEMPDS2016_19_RF , cpe:SEMPDS2016_19_FW , cpe:SEMPDS2016_19_Cr .
+		
+		# Research Objectives
+		cpe:SEMPDS2016_19_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement cpe:SEMPDS2016_19_RO1 , cpe:SEMPDS2016_19_RO2 .
+		cpe:SEMPDS2016_19_RO1 a schema:StructuredValue ; 
+				schema:description "" ;				
+				cpv:researchActionType cpv:ResActType1 ; # NamedEntity Research Activity Type 1
+				cpv:researchArtifact cpv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		cpe:SEMPDS2016_19_RO2 a schema:StructuredValue ;
+				schema:description "" ;
+				cpv:researchActionType cpv:ResActType2 ; # NamedEntity Research Activity Type 2
+				cpv:researchArtifact cpv:ResArtifact2 . # NamedEntity Research Artifact 2 
+		# proceed if necessary
+		
+		# Research Methods
+		cpe:SEMPDS2016_19_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement cpe:SEMPDS2016_19_RM1 , cpe:SEMPDS2016_19_RM2 .
+		cpe:SEMPDS2016_19_RM1 a schema:StructuredValue ;
+				schema:description "" ; 
+				cpv:researchMethod cpv:ResMeth1 .	# NamedEntity Research Method 1		
+		cpe:SEMPDS2016_19_RM2 a schema:StructuredValue ;
+				schema:description "" ; 
+				cpv:researchMethod cpv:ResMeth2 .	# NamedEntity Research Method 2	
+		# proceed if necessary
+			
+		# Research Findings
+		cpe:SEMPDS2016_19_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
+			
+		# Future Work
+		cpe:SEMPDS2016_19_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		cpe:SEMPDS2016_19_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.

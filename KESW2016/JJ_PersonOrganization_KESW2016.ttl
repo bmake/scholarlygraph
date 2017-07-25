@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
@@ -17,7 +17,7 @@
 		schema:email "" ; # mailto:emailAddress
 		schema:name "Artem Kuznetsov" . # alternative to givenName and familyName
 
-cpe:PavelBraslavski a schema:Person ; # no ORCID available
+spe:PavelBraslavski a schema:Person ; # no ORCID available
 		schema:familyName "Braslavski" ; # Text
 		schema:givenName "Pavel" ; # Text
 		schema:affiliation wd:Q1506552 ; # Wikidata Entity
@@ -25,7 +25,7 @@ cpe:PavelBraslavski a schema:Person ; # no ORCID available
 		schema:name "Pavel Braslavski" ; # alternative to givenName and familyName
 		schema:sameAs "http://kansas.ru/pb/index_en.html" . # maybe URL / Website
 
-cpe:VladimirIvanov a schema:Person ; # no ORCID available
+spe:VladimirIvanov a schema:Person ; # no ORCID available
 		schema:familyName "Ivanov" ; # Text
 		schema:givenName "Vladimir" ; # Text
 		schema:affiliation wd:Q30263296 ; # Wikidata Entity
@@ -34,7 +34,7 @@ cpe:VladimirIvanov a schema:Person ; # no ORCID available
 
 
 
-cpe:AliyaNugumanova a schema:Person ; # no ORCID available
+spe:AliyaNugumanova a schema:Person ; # no ORCID available
 		schema:familyName "Nugumanova" ; # Text
 		schema:givenName "Aliya" ; # Text
 		schema:affiliation wd:Q4126492 ; # Wikidata Entity
@@ -42,7 +42,7 @@ cpe:AliyaNugumanova a schema:Person ; # no ORCID available
 		schema:name "Aliya Nugumanova" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Aliya_Nugumanova" . # maybe URL / Website		
 
-cpe:IgorBessmertny a schema:Person ; # no ORCID available
+spe:IgorBessmertny a schema:Person ; # no ORCID available
 		schema:familyName "Bessmertny" ; # Text
 		schema:givenName "Igor" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
@@ -50,7 +50,7 @@ cpe:IgorBessmertny a schema:Person ; # no ORCID available
 		schema:name "Igor Bessmertny" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Igor_Bessmertny" . # maybe URL / Website				
 
-cpe:YerzhanBaiburin a schema:Person ; # no ORCID available
+spe:YerzhanBaiburin a schema:Person ; # no ORCID available
 		schema:familyName "Baiburin" ; # Text
 		schema:givenName "Yerzhan" ; # Text
 		schema:affiliation wd:Q4126492 ; # Wikidata Entity
@@ -73,7 +73,7 @@ cpe:YerzhanBaiburin a schema:Person ; # no ORCID available
 		schema:name "Ricardo Usbeck" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Ricardo_Usbeck" . # maybe URL / Website	
 
-cpe:MichaelRoeder a schema:Person ; # no ORCID available
+spe:MichaelRoeder a schema:Person ; # no ORCID available
 		schema:familyName "Röder" ; # Text
 		schema:givenName "Michael" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -95,7 +95,7 @@ cpe:MichaelRoeder a schema:Person ; # no ORCID available
 		schema:email "ak@metaphacts.com" ; # mailto:emailAddress
 		schema:name "Artem Kozlov" . # alternative to givenName and familyName
 
-cpe:MuhammadSaleem a schema:Person ; # no ORCID available
+spe:MuhammadSaleem a schema:Person ; # no ORCID available
 		schema:familyName "Saleem" ; # Text
 		schema:givenName "Muhammad" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -103,7 +103,7 @@ cpe:MuhammadSaleem a schema:Person ; # no ORCID available
 		schema:name "Muhammad Saleem" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Muhammad_Saleem31" . # maybe URL / Website	
 
-cpe:AxelCyrilleNgongaNgomo a schema:Person ; # no ORCID available
+spe:AxelCyrilleNgongaNgomo a schema:Person ; # no ORCID available
 		schema:familyName "Ngonga Ngomo" ; # Text
 		schema:givenName "Axel-Cyrille" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity

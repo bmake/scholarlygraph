@@ -2,20 +2,20 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
 
 ### Person Template
 
-cpe:LorenzoServadei a schema:Person ; # no ORCID available
+spe:LorenzoServadei a schema:Person ; # no ORCID available
 		schema:familyName "Servadei" ; # Text
 		schema:givenName "Lorenzo" ; # Text
 		schema:affiliation wd:Q314089 ; # Wikidata Entity
 		schema:email "mailto:lorenzo.servadei@hm.edu" . # mailto:emailAddress
 		
-cpe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
+spe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
 		schema:familyName "Schmidt" ; # Text
 		schema:givenName "Rainer" ; # Text
 		schema:affiliation wd:Q314089 . # Wikidata Entity
@@ -25,25 +25,25 @@ cpe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
 		schema:givenName "Florian" ; # Text
 		schema:affiliation wd:Q314089 . # Wikidata Entity
 				
-cpe:DibyanshuJaiswal a schema:Person ; # no ORCID available
+spe:DibyanshuJaiswal a schema:Person ; # no ORCID available
 		schema:familyName "Jaiswal" ; # Text
 		schema:givenName "Dibyanshu" ; # Text
-		schema:affiliation cpe:TCScom ; # keine Wikidata Entity available
+		schema:affiliation spe:TCScom ; # keine Wikidata Entity available
 		schema:email "mailto:dibyanshu.jaiswal@tcs.com" . # mailto:emailAddress
 		
 <http://orcid.org/0000-0001-6704-6810> a schema:Person ; # ORCID of the person
 		schema:familyName "Dey" ; # Text
 		schema:givenName "Sounak" ; # Text
-		schema:affiliation cpe:TCScom ; # keine Wikidata Entity available
+		schema:affiliation spe:TCScom ; # keine Wikidata Entity available
 		schema:email "mailto:sounak.d@tcs.com" . # mailto:emailAddress
 		
-cpe:SvetlanaPopova a schema:Person ; # multiple ORCIDs available
+spe:SvetlanaPopova a schema:Person ; # multiple ORCIDs available
 		schema:familyName "Popova" ; # Text
 		schema:givenName "Svetlana" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
 		schema:email "mailto:svp@list.ru" . # mailto:emailAddress
 		
-cpe:VeraDanilova a schema:Person ; # no ORCID available
+spe:VeraDanilova a schema:Person ; # no ORCID available
 		schema:familyName "Danilova" ; # Text
 		schema:givenName "Vera" ; # Text
 		schema:affiliation wd:Q2822458 ; # Wikidata Entity
@@ -55,49 +55,49 @@ cpe:VeraDanilova a schema:Person ; # no ORCID available
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:bogdan.kostov@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:JanaAhmad a schema:Person ; # no ORCID available
+spe:JanaAhmad a schema:Person ; # no ORCID available
 		schema:familyName "Ahmad" ; # Text
 		schema:givenName "Jana" ; # Text
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:jana.ahmad@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:PetrKremen a schema:Person ; # no ORCID available
+spe:PetrKremen a schema:Person ; # no ORCID available
 		schema:familyName "Kremen" ; # Text
 		schema:givenName "Petr" ; # Text
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:petr.kremen@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:AltafHussain a schema:Person ; # no ORCID available
+spe:AltafHussain a schema:Person ; # no ORCID available
 		schema:familyName "Hussain" ; # Text
 		schema:givenName "Altaf" ; # Text
-		schema:affiliation cpe:SFXUnivAntigonish ; # no Wikidata Entity available
+		schema:affiliation spe:SFXUnivAntigonish ; # no Wikidata Entity available
 		schema:email "mailto:altaf sust 82@yahoo.com" . # mailto:emailAddress
 
-cpe:WendyMacCaull a schema:Person ; # no ORCID available
+spe:WendyMacCaull a schema:Person ; # no ORCID available
 		schema:familyName "MacCaull" ; # Text
 		schema:givenName "Wendy" ; # Text
-		schema:affiliation cpe:SFXUnivAntigonish ; # no Wikidata Entity available
+		schema:affiliation spe:SFXUnivAntigonish ; # no Wikidata Entity available
 		schema:email "mailto:wmaccaul@stfx.ca" . # mailto:emailAddress
 
-cpe:YngveLamo a schema:Person ; # no ORCID available
+spe:YngveLamo a schema:Person ; # no ORCID available
 		schema:familyName "Lamo" ; # Text
 		schema:givenName "Yngve" ; # Text
 		schema:affiliation wd:Q1622091 ; # Wikidata Entity
 		schema:email "mailto:yngve.lamo@hib.no" . # mailto:emailAddress
 
-cpe:BarnabasSzasz a schema:Person ; # no ORCID available
+spe:BarnabasSzasz a schema:Person ; # no ORCID available
 		schema:familyName "Szasz" ; # Text
 		schema:givenName "Barnabas" ; # Text
 		schema:affiliation wd:Q903092 ; # Wikidata Entity
 		schema:email "mailto:bszasz@gmail.com" . # mailto:emailAddress
 
-cpe:RitaFleiner a schema:Person ; # no ORCID available
+spe:RitaFleiner a schema:Person ; # no ORCID available
 		schema:familyName "Fleiner" ; # Text
 		schema:givenName "Rita" ; # Text
 		schema:affiliation wd:Q1412435 ; # Wikidata Entity
 		schema:email "mailto:fleiner.rita@nik.uni-obuda.hu" . # mailto:emailAddress
 
-cpe:AndrasMicsik a schema:Person ; # no ORCID available
+spe:AndrasMicsik a schema:Person ; # no ORCID available
 		schema:familyName "Miscik" ; # Text
 		schema:givenName "Andras" ; # Text
 		schema:affiliation wd:Q6718411 ; # Wikidata Entity
@@ -109,7 +109,7 @@ cpe:AndrasMicsik a schema:Person ; # no ORCID available
 		schema:affiliation wd:Q1795928 ; # Wikidata Entity
 		schema:email "mailto:maaslam@kau.edu.sau" . # mailto:emailAddress
 		
-cpe:NaviRadiAljohani a schema:Person ; #  no ORCID available
+spe:NaviRadiAljohani a schema:Person ; #  no ORCID available
 		schema:familyName "Aljohani" ; # Text
 		schema:givenName "Nafi Radi" ; # Text
 		schema:affiliation wd:Q1795928 ; # Wikidata Entity
@@ -143,7 +143,7 @@ wd:Q314089 a schema:Organization ; # Wikidata entity
 		
 wd:Q1726 a schema:Place .
 		
-cpe:TCSRaILcom a schema:Organization ; # no Wikidata entity available
+spe:TCSRaILcom a schema:Organization ; # no Wikidata entity available
 		schema:legalName "TCS Research and Innovation Lab" ; # Text, officially name
 		schema:location wd:Q1348 ; # Wikidata entity
 		schema:url "https://www.tcs.com/research-innovation/" . # URL website
@@ -171,7 +171,7 @@ wd:Q1329478 a schema:Organization ; # Wikidata entity
 		
 wd:Q1085 a schema:Place .
 						
-cpe:SFXUnivAntigonish a schema:Organization ; # no Wikidata entity available
+spe:SFXUnivAntigonish a schema:Organization ; # no Wikidata entity available
 		schema:legalName "St. Francis Xavier University" ; # Text, officially name
 		schema:location wd:Q575483 ; # Wikidata entity
 		schema:url "https://www.stfx.ca/" . # URL website

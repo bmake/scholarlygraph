@@ -2,8 +2,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpv: <http://akwi.org/cpv#>.
-@prefix cpe: <http://akwi.org/cpe#">.
+@prefix spv: <https://bmake.th-brandenburg.de/spv#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#">.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
@@ -21,46 +21,46 @@
 		schema:pageStart "" ; # Text or Integer first page
 		schema:pageEnd "" ; # Text or integer last page
 		schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:ConfAbbrYear_ArtNo_RO , cpe:ConfAbbrYear_ArtNo_RM , cpe:ConfAbbrYear_ArtNo_RF , cpe:ConfAbbrYear_ArtNo_FW , cpe:ConfAbbrYear_ArtNo_Cr .
+		schema:about spe:ConfAbbrYear_ArtNo_RO , spe:ConfAbbrYear_ArtNo_RM , spe:ConfAbbrYear_ArtNo_RF , spe:ConfAbbrYear_ArtNo_FW , spe:ConfAbbrYear_ArtNo_Cr .
 		
 		# Research Objectives
-		cpe:ConfAbbrYear_ArtNo_RO a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:ConfAbbrYear_ArtNo_RO1 , cpe:ConfAbbrYear_ArtNo_RO2 .
-		cpe:ConfAbbrYear_ArtNo_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:ConfAbbrYear_ArtNo_RO1 , spe:ConfAbbrYear_ArtNo_RO2 .
+		spe:ConfAbbrYear_ArtNo_RO1 a schema:StructuredValue ; 
 				schema:description "" ;				
-				cpv:researchActionType cpv:ResActType1 ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		cpe:ConfAbbrYear_ArtNo_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		spe:ConfAbbrYear_ArtNo_RO2 a schema:StructuredValue ;
 				schema:description "" ;
-				cpv:researchActionType cpv:ResActType2 ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
-		cpe:ConfAbbrYear_ArtNo_RM a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:ConfAbbrYear_ArtNo_RM1 , cpe:ConfAbbrYear_ArtNo_RM2 .
-		cpe:ConfAbbrYear_ArtNo_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:ConfAbbrYear_ArtNo_RM1 , spe:ConfAbbrYear_ArtNo_RM2 .
+		spe:ConfAbbrYear_ArtNo_RM1 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth1 .	# NamedEntity Research Method 1		
-		cpe:ConfAbbrYear_ArtNo_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+		spe:ConfAbbrYear_ArtNo_RM2 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth2 .	# NamedEntity Research Method 2	
+				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
 		# proceed if necessary
 			
 		# Research Findings
-		cpe:ConfAbbrYear_ArtNo_RF a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
-		cpe:ConfAbbrYear_ArtNo_FW a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:ConfAbbrYear_ArtNo_Cr a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
 			

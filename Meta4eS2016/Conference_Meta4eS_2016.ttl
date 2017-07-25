@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
@@ -20,7 +20,7 @@ wd:Q176916 a schema:Organization .
 		
 ### Conference Data
 
-cpe:Meta4eS_2016 a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
+spe:Meta4eS_2016 a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
 		schema:name "Meta4eS 2016" ; # Text, short name
 		schema:alternateName "International Workshop on Methods, Evaluation, Tools and Applications for the Creation and Consumption of Structured Data for the e-Society (Meta4eS) 2016" ; # Text, long name
 		schema:description "Confederated OTM Workshop, Rhodes (Greece), October 2016" ; # Text, short description

@@ -2,10 +2,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpv: <http://akwi.org/cpv#>.
+@prefix spv: <https://bmake.th-brandenburg.de/spv#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
 
 
@@ -64,17 +64,17 @@ schema:ItemList a owl:Class ;
 			rdfs:comment  "Lists of enumerations of aspects specifying a scientific paper, like research methods, research findings, research objectives, and future work." ;
 			rdfs:subClassOf schema:Intangible .
 					
-cpv:ResearchMethod a owl:Class ;
+spv:ResearchMethod a owl:Class ;
 			rdfs:label "Research Method" ;
 			rdfs:comment "List of all relevant research methods used in Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
 					
-cpv:ResearchArtifact a owl:Class ;
+spv:ResearchArtifact a owl:Class ;
 			rdfs:label "Research Artifact" ;
 			rdfs:comment "Classification of all types of research & development artifacts characteristic for Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
 					
-cpv:ResearchActionType a owl:Class ;
+spv:ResearchActionType a owl:Class ;
 			rdfs:label "Research Action Type" ;
 			rdfs:comment "Classification of all types of research & development actions applied in Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
@@ -188,23 +188,23 @@ schema:itemListElement a rdf:Property ;
   			rdfs:domain schema:ItemList ;
   			rdfs:range [rdf:type owl:Class ; owl:unionOf (xsd:string owl:Thing )] .
   			
-cpv:researchArtifact a owl:ObjectProperty ;
+spv:researchArtifact a owl:ObjectProperty ;
 			rdfs:label "research artifact" ;
 			rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchArtifact .
+			rdfs:range spv:ResearchArtifact .
 			
-cpv:researchActionType a owl:ObjectProperty ;
+spv:researchActionType a owl:ObjectProperty ;
 			rdfs:label "research action type" ;
 			rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchActionType .
+			rdfs:range spv:ResearchActionType .
 			
-cpv:researchMethod a owl:ObjectProperty ;
+spv:researchMethod a owl:ObjectProperty ;
 			rdfs:label "research method" ;
 			rdfs:comment "Is used to indicate a research method described in a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchMethod .
+			rdfs:range spv:ResearchMethod .
 
 
 ### Datatype Properties ###
@@ -379,96 +379,96 @@ schema:logo a owl:DatatypeProperty ;
 			
 ### Named Individuals ###
 ## Scientific Methods ##
-cpv:ResMethDesignScience a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethDesignScience a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Design Science (Hevner)"@en ;
 			schema:isBasedOn <http://doi.org/10.1007/978-1-4419-5653-8_2> ;
 			rdfs:comment "Description" .
 			
-cpv:ResMethFormalDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethFormalDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Formal Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Formal-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Logisch-deduktives Schließen im Rahmen mathematisch-formaler Modelle"@de .			
 
-cpv:ResMethConceptualDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethConceptualDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Conceptual Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Konzeptionell-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Logisch-deduktives Schließen im Rahmen semiformaler Modelle (z. B. BPMN)."@de .			
 
-cpv:ResMethArgumentDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethArgumentDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Argumentative Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Argumentativ-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Rein sprachliches logisch-deduktives Schließen (wie z. B. in der Philosophie)"@de .			
 
-cpv:ResMethSimulation a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethSimulation a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Simulation (Wilde/Hess)"@en ;
 			schema:name "Simulation (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Simulation bildet das Verhalten des zu untersuchenden Systems formal in einem Modell ab und stellt Umweltzustände durch bestimmte Belegungen der Modellparameter nach. Sowohl durch die Modellkonstruktion als auch durch die Beobachtung der endogenen Modellgrößen lassen sich Erkenntnisse gewinnen."@de .	
 
-cpv:ResMethReferenceModeling a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethReferenceModeling a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Reference Modeling (Wilde/Hess)"@en ;
 			schema:name "Reference Modeling (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Referenzmodellierung erstellt induktiv (ausgehend von Beobachtungen) oder deduktiv (bspw. aus Theorien oder Modellen) meist vereinfachte und optimierte Abbildungen (Idealkonzepte) von Systemen, um so bestehende Erkenntnisse zu vertiefen und daraus Gestaltungsvorlagen zu generieren"@de .	
 
-cpv:ResMethActionResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethActionResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Action Research (Wilde/Hess)"@en ;
 			schema:name "Aktionsforschung (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Es wird ein Praxisproblem durch einen gemischten Kreis aus Wissenschaft und Praxis gelöst. Hierbei werden mehrere Zyklen aus Analyse-, Aktions-, und Evaluationsschritten durchlaufen, die jeweils gering strukturierte Instrumente wie Gruppendiskussionen oder Planspiele vorsehen."@de .	
 
-cpv:ResMethPrototyping a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethPrototyping a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Prototyping (Wilde/Hess)"@en ;
 			schema:name "Prototyping (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Es wird eine Vorabversion eines Anwendungssystems entwickelt und evaluiert. Beide Schritte können neue Erkenntnisse generieren."@de .	
 
-cpv:ResMethEthnography a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethEthnography a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Ethnography (Wilde/Hess)"@en ;
 			schema:name "Ethnographie (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Ethnographie möchte durch partizipierende Beobachtung Erkenntnisse generieren. Der Unterschied zur Fallstudie liegt in dem sehr hohen Umfang, in dem sich der Forscher in das untersuchte soziale Umfeld integriert. Eine objektive Distanz ist kaum vorhanden."@de .	
 
-cpv:ResMethCaseStudy a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethCaseStudy a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Case Study (Wilde/Hess)"@en ;
 			schema:name "Fallstudie (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Fallstudie untersucht in der Regel komplexe, schwer abgrenzbare Pha¨nomene in ihrem natu¨rlichen Kontext. Sie stellt eine spezielle Form der qualitativ-empirischen Methodik dar, die wenige Merkmalsträger intensiv untersucht. Es steht entweder die möglichst objektive Untersuchung von Thesen (verhaltenswissenschaftlicher Zugang) oder die Interpretation von Verhaltensmustern als Phänotypen der von den Probanden konstruierten Realitäten (konstruktionsorientierter Zugang) im Mittelpunkt."@de .			
 
-cpv:ResMethGroundedTheory a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethGroundedTheory a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Grounded Theory (Wilde/Hess)"@en ;
 			schema:name "Grounded Theory (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Grounded Theory („gegenstandsverankerte Theoriebildung“) zielt auf die induktive Gewinnung neuer Theorien durch intensive Beobachtung des Untersuchungsgegenstandes im Feld. Die verschiedenen Vorgehensweisen zu Kodierung und Auswertung der vorwiegend qualitativen Daten sind exakt spezifiziert."@de .	
 
-cpv:ResMethQualitativeResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethQualitativeResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Qualitative Research (Wilde/Hess)"@en ;
 			schema:name "Qualitative Querschnittsanalyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend qualitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de .	
 
-cpv:ResMethQuantitativeResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethQuantitativeResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Quantitative Research (Wilde/Hess)"@en ;
 			schema:name "Quantitative Querschnittsanalyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend quantitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de .	
 
-cpv:ResMethLabExperiment a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethLabExperiment a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Laboratory Experiment (Wilde/Hess)"@en ;
 			schema:name "Laborexperiment (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Das Laborexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in künstlicher Umgebung (im „Labor“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de .	
 
-cpv:ResMethFieldExperiment a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethFieldExperiment a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Field Experiment (Wilde/Hess)"@en ;
 			schema:name "Feldexperiment (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Das Feldrexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in seiner natürlichen Umgebung (im „Feld“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de .	
 			
-cpv:ResMethLiteratureAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethLiteratureAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Literature Analysis)"@en ;
 			schema:name "Literaturanalyse"@de ;
 			#schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
@@ -476,163 +476,163 @@ cpv:ResMethLiteratureAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
 			
 
 ## Research Action Types ##
-cpv:ResActTypeDevelop a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeDevelop a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "develop"@en ;
 			schema:name "entwickeln"@de .
 			
-cpv:ResActTypeAnalyze a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeAnalyze a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "analyze"@en ;
 			schema:name "analysieren"@de .
 			
-cpv:ResActTypeProve a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeProve a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "prove"@en ;
 			schema:name "prüfen, erproben"@de .
 			
-cpv:ResActTypeConceptualize a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeConceptualize a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "conceptualize"@en ;
 			schema:name "konzeptualisieren"@de .
 			
-cpv:ResActTypeConstruct a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeConstruct a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "construct"@en ;
 			schema:name "konstruieren"@de .
 
-cpv:ResActTypeEvaluate a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeEvaluate a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "evaluate"@en ;
 			schema:name "evaluieren"@de .
 			
-cpv:ResActTypeElicit a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeElicit a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "elicit"@en ;
 			schema:name "erheben"@de .
 			
-cpv:ResActTypeDesign a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeDesign a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "design"@en ;
 			schema:name "entwerfen/konzipieren"@de .
 			
-cpv:ResActTypeStructure a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeStructure a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "structure"@en ;
 			schema:name "strukturieren"@de .
 			
-cpv:ResActTypeCollect a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeCollect a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "collect"@en ;
 			schema:name "sammeln"@de .
 			
-cpv:ResActTypeEnhance a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeEnhance a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "enhance"@en ;
 			schema:name "verbessern"@de .
 
-cpv:ResActTypeExtract a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeExtract a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "extract"@en ;
 			schema:name "extrahieren"@de .
 
-cpv:ResActTypeProvide a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeProvide a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "provide"@en ;
 			schema:name "bereitstellen"@de .
 
-cpv:ResActTypeExtend a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeExtend a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "extend"@en ;
 			schema:name "erweitern"@de .
 
-cpv:ResActTypeImplement a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeImplement a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "implement"@en ;
 			schema:name "implementieren"@de .
 
-cpv:ResActTypeIntegrate a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeIntegrate a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "integrate"@en ;
 			schema:name "integrieren"@de .
 
 ## Artifacts of Research and Development ##
-cpv:ResArtifactBlueprint a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactBlueprint a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Blueprint"@en ;
 			schema:name "Konzept"@de .
 
-cpv:ResArtifactRequirements a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactRequirements a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Requirements"@en ;
 			schema:name "Anforderungen"@de .
 			
-cpv:ResArtifactApplication a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactApplication a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Application"@en ;
 			schema:name "Anwendung"@de .
 			
-cpv:ResArtifactSoftware a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactSoftware a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Software"@en ;
 			schema:name "Software/ Programm"@de .
 			
-cpv:ResArtifactHardware a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactHardware a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Hardware"@en ;
 			schema:name "Hardware"@de .
 			
-cpv:ResArtifactSystem a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactSystem a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "System"@en ;
 			schema:name "System"@de .
 			
-cpv:ResArtifactITSystem a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactITSystem a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "IT System"@en ;
 			schema:name "IT-System"@de .
 			
-cpv:ResArtifactProcess a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactProcess a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Process"@en ;
 			schema:name "Prozess"@de .
 			
-cpv:ResArtifactBusinessProcess a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactBusinessProcess a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Business Process"@en ;
 			schema:name "Geschäftsprozess"@de .
 			
-cpv:ResArtifactMethod a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactMethod a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Method"@en ;
 			schema:name "Method"@de .
 
-cpv:ResArtifactFramework a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactFramework a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Framework"@en ;
 			schema:name "Framework/ Rahmenwerk"@de .
 
-cpv:ResArtifactPolicy a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactPolicy a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Policy"@en ;
 			schema:name "Leitlinie"@de .
 
-cpv:ResArtifactStandard a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactStandard a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Standard, Guidline"@en ;
 			schema:name "Richtlinie"@de .
 
-cpv:ResArtifactNLPArtifact a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactNLPArtifact a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Element, Baustein der Verarbeitung natürlicher Sprache, z. B. Schlüsselphrasen, Schlüssel- und Stopwortlisten" ;
 			schema:name "NLP Artifact"@en ;
 			schema:name "NLP Artefakt"@de .
 			
-cpv:ResArtifactOntology a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactOntology a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "semantische Netze unterschiedlicher Ausbaustufe; bis zu formal spezifizierten Konzeptualisierungen einer Domäne" ;
 			schema:name "Ontology"@en ;
 			schema:name "Ontologie"@de .
 						
-cpv:ResArtifactLinkedData a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactLinkedData a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Linked Data"@en ;
 			schema:name "Linked Data"@de .
@@ -649,7 +649,7 @@ wd:Q176916 a schema:Organization .
 		
 ### Conference Data
 
-cpe:Meta4eS_2016 a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
+spe:Meta4eS_2016 a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
 		schema:name "Meta4eS 2016" ; # Text, short name
 		schema:alternateName "International Workshop on Methods, Evaluation, Tools and Applications for the Creation and Consumption of Structured Data for the e-Society (Meta4eS) 2016" ; # Text, long name
 		schema:description "Confederated OTM Workshop, Rhodes (Greece), October 2016" ; # Text, short description
@@ -664,13 +664,13 @@ wd:Q43048 a schema:Place .
 ### Person Data
 
 
-cpe:LorenzoServadei a schema:Person ; # no ORCID available
+spe:LorenzoServadei a schema:Person ; # no ORCID available
 		schema:familyName "Servadei" ; # Text
 		schema:givenName "Lorenzo" ; # Text
 		schema:affiliation wd:Q314089 ; # Wikidata Entity
 		schema:email "mailto:lorenzo.servadei@hm.edu" . # mailto:emailAddress
 		
-cpe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
+spe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
 		schema:familyName "Schmidt" ; # Text
 		schema:givenName "Rainer" ; # Text
 		schema:affiliation wd:Q314089 . # Wikidata Entity
@@ -680,25 +680,25 @@ cpe:RainerSchmidt a schema:Person ; # multiple ORCIDs available
 		schema:givenName "Florian" ; # Text
 		schema:affiliation wd:Q314089 . # Wikidata Entity
 				
-cpe:DibyanshuJaiswal a schema:Person ; # no ORCID available
+spe:DibyanshuJaiswal a schema:Person ; # no ORCID available
 		schema:familyName "Jaiswal" ; # Text
 		schema:givenName "Dibyanshu" ; # Text
-		schema:affiliation cpe:TCScom ; # keine Wikidata Entity available
+		schema:affiliation spe:TCScom ; # keine Wikidata Entity available
 		schema:email "mailto:dibyanshu.jaiswal@tcs.com" . # mailto:emailAddress
 		
 <http://orcid.org/0000-0001-6704-6810> a schema:Person ; # ORCID of the person
 		schema:familyName "Dey" ; # Text
 		schema:givenName "Sounak" ; # Text
-		schema:affiliation cpe:TCScom ; # keine Wikidata Entity available
+		schema:affiliation spe:TCScom ; # keine Wikidata Entity available
 		schema:email "mailto:sounak.d@tcs.com" . # mailto:emailAddress
 		
-cpe:SvetlanaPopova a schema:Person ; # multiple ORCIDs available
+spe:SvetlanaPopova a schema:Person ; # multiple ORCIDs available
 		schema:familyName "Popova" ; # Text
 		schema:givenName "Svetlana" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
 		schema:email "mailto:svp@list.ru" . # mailto:emailAddress
 		
-cpe:VeraDanilova a schema:Person ; # no ORCID available
+spe:VeraDanilova a schema:Person ; # no ORCID available
 		schema:familyName "Danilova" ; # Text
 		schema:givenName "Vera" ; # Text
 		schema:affiliation wd:Q2822458 ; # Wikidata Entity
@@ -710,49 +710,49 @@ cpe:VeraDanilova a schema:Person ; # no ORCID available
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:bogdan.kostov@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:JanaAhmad a schema:Person ; # no ORCID available
+spe:JanaAhmad a schema:Person ; # no ORCID available
 		schema:familyName "Ahmad" ; # Text
 		schema:givenName "Jana" ; # Text
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:jana.ahmad@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:PetrKremen a schema:Person ; # no ORCID available
+spe:PetrKremen a schema:Person ; # no ORCID available
 		schema:familyName "Kremen" ; # Text
 		schema:givenName "Petr" ; # Text
 		schema:affiliation wd:Q1329478 ; # Wikidata Entity
 		schema:email "mailto:petr.kremen@fel.cvut.cz" . # mailto:emailAddress
 
-cpe:AltafHussain a schema:Person ; # no ORCID available
+spe:AltafHussain a schema:Person ; # no ORCID available
 		schema:familyName "Hussain" ; # Text
 		schema:givenName "Altaf" ; # Text
-		schema:affiliation cpe:SFXUnivAntigonish ; # no Wikidata Entity available
+		schema:affiliation spe:SFXUnivAntigonish ; # no Wikidata Entity available
 		schema:email "mailto:altaf sust 82@yahoo.com" . # mailto:emailAddress
 
-cpe:WendyMacCaull a schema:Person ; # no ORCID available
+spe:WendyMacCaull a schema:Person ; # no ORCID available
 		schema:familyName "MacCaull" ; # Text
 		schema:givenName "Wendy" ; # Text
-		schema:affiliation cpe:SFXUnivAntigonish ; # no Wikidata Entity available
+		schema:affiliation spe:SFXUnivAntigonish ; # no Wikidata Entity available
 		schema:email "mailto:wmaccaul@stfx.ca" . # mailto:emailAddress
 
-cpe:YngveLamo a schema:Person ; # no ORCID available
+spe:YngveLamo a schema:Person ; # no ORCID available
 		schema:familyName "Lamo" ; # Text
 		schema:givenName "Yngve" ; # Text
 		schema:affiliation wd:Q1622091 ; # Wikidata Entity
 		schema:email "mailto:yngve.lamo@hib.no" . # mailto:emailAddress
 
-cpe:BarnabasSzasz a schema:Person ; # no ORCID available
+spe:BarnabasSzasz a schema:Person ; # no ORCID available
 		schema:familyName "Szasz" ; # Text
 		schema:givenName "Barnabas" ; # Text
 		schema:affiliation wd:Q903092 ; # Wikidata Entity
 		schema:email "mailto:bszasz@gmail.com" . # mailto:emailAddress
 
-cpe:RitaFleiner a schema:Person ; # no ORCID available
+spe:RitaFleiner a schema:Person ; # no ORCID available
 		schema:familyName "Fleiner" ; # Text
 		schema:givenName "Rita" ; # Text
 		schema:affiliation wd:Q1412435 ; # Wikidata Entity
 		schema:email "mailto:fleiner.rita@nik.uni-obuda.hu" . # mailto:emailAddress
 
-cpe:AndrasMicsik a schema:Person ; # no ORCID available
+spe:AndrasMicsik a schema:Person ; # no ORCID available
 		schema:familyName "Miscik" ; # Text
 		schema:givenName "Andras" ; # Text
 		schema:affiliation wd:Q6718411 ; # Wikidata Entity
@@ -764,7 +764,7 @@ cpe:AndrasMicsik a schema:Person ; # no ORCID available
 		schema:affiliation wd:Q1795928 ; # Wikidata Entity
 		schema:email "mailto:maaslam@kau.edu.sau" . # mailto:emailAddress
 		
-cpe:NaviRadiAljohani a schema:Person ; #  no ORCID available
+spe:NaviRadiAljohani a schema:Person ; #  no ORCID available
 		schema:familyName "Aljohani" ; # Text
 		schema:givenName "Nafi Radi" ; # Text
 		schema:affiliation wd:Q1795928 ; # Wikidata Entity
@@ -798,7 +798,7 @@ wd:Q314089 a schema:Organization ; # Wikidata entity
 		
 wd:Q1726 a schema:Place .
 		
-cpe:TCSRaILcom a schema:Organization ; # no Wikidata entity available
+spe:TCSRaILcom a schema:Organization ; # no Wikidata entity available
 		schema:legalName "TCS Research and Innovation Lab" ; # Text, officially name
 		schema:location wd:Q1348 ; # Wikidata entity
 		schema:url "https://www.tcs.com/research-innovation/" . # URL website
@@ -826,7 +826,7 @@ wd:Q1329478 a schema:Organization ; # Wikidata entity
 		
 wd:Q1085 a schema:Place .
 						
-cpe:SFXUnivAntigonish a schema:Organization ; # no Wikidata entity available
+spe:SFXUnivAntigonish a schema:Organization ; # no Wikidata entity available
 		schema:legalName "St. Francis Xavier University" ; # Text, officially name
 		schema:location wd:Q575483 ; # Wikidata entity
 		schema:url "https://www.stfx.ca/" . # URL website
@@ -888,52 +888,52 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "clustering scientific abstracts for knowledge extraction, stopword lists, key phrase extraction, part of speech, focus on nouns and adjectives" ; # Text, List of keywords, separated by commas
 		schema:description "E-health is a key factor in the E-society. E-health, in fact, enhances the efficiency and reduces the costs of the health services. In the diagnostic field, Ehealth can avail of several Machine Learning (ML) algorithms, as Artificial Neural Networks (ANNs) for instance, which often demonstrated a high classification accuracy. Although ANNs have already been applied for medical diagnosis, their influence on the Decision Making Process (DMP) has not been investigated in detail. Therefore, this paper focuses on the impact of ANNs on the DMP for a special kind of medical diagnosis called Spondylolisthesis and Disk Hernia. Through the Decision Model and Notation standard (DMN), the DMP is described, offering a model for possible health policies. In this way ANNs supported decision making for Spondylolisthesis and Disk Hernia diagnosis improve efficiency and quality of health service, especially in developing countries." ; # Text, abstract of the paper
-		schema:author cpe:LorenzoServadei , cpe:RainerSchmidt , <http://orcid.org/0000-0002-1018-1808> ; # ORCID or cpe ID of the author(s)
+		schema:author spe:LorenzoServadei , spe:RainerSchmidt , <http://orcid.org/0000-0002-1018-1808> ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "217" ; # Text or Integer first page
 		schema:pageEnd "227" ; # Text or integer last page
 		# schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:Meta4eS2016_22_RO , cpe:Meta4eS2016_22_RM , cpe:Meta4eS2016_22_RF , cpe:Meta4eS2016_22_FW , cpe:Meta4eS2016_22_Cr .
+		schema:about spe:Meta4eS2016_22_RO , spe:Meta4eS2016_22_RM , spe:Meta4eS2016_22_RF , spe:Meta4eS2016_22_FW , spe:Meta4eS2016_22_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_22_RO a schema:ItemList ;
+		spe:Meta4eS2016_22_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_22_RO1 , cpe:Meta4eS2016_22_RO2 .
-		cpe:Meta4eS2016_22_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_22_RO1 , spe:Meta4eS2016_22_RO2 .
+		spe:Meta4eS2016_22_RO1 a schema:StructuredValue ; 
 				schema:description "implement a ML based E-health system into a decision management process" ;	
-				cpv:researchActionType cpv:ResActTypeImplement ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifactSystem , cpv:ResArtifactProcess . # NamedEntity Research Artifact(s) 1 
-		cpe:Meta4eS2016_22_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActTypeImplement ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactSystem , spv:ResArtifactProcess . # NamedEntity Research Artifact(s) 1 
+		spe:Meta4eS2016_22_RO2 a schema:StructuredValue ;
 				schema:description "design a specific health policy for vertebral column disorders in low budget healthcare systems" ;	
-				cpv:researchActionType cpv:ResActTypeDesign ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifactPolicy . # NamedEntity Research Artifact 2
+				spv:researchActionType spv:ResActTypeDesign ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactPolicy . # NamedEntity Research Artifact 2
 				
 		# Research Methods
-		cpe:Meta4eS2016_22_RM a schema:ItemList ;
+		spe:Meta4eS2016_22_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_22_RM1 , cpe:Meta4eS2016_22_RM2 , cpe:Meta4eS2016_22_RM3 .
-		cpe:Meta4eS2016_22_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_22_RM1 , spe:Meta4eS2016_22_RM2 , spe:Meta4eS2016_22_RM3 .
+		spe:Meta4eS2016_22_RM1 a schema:StructuredValue ;
 				schema:description "Decision Model and Notation (DMN)" ; 
-				cpv:researchMethod cpv:ResMethConceptualDedAnalysis .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_22_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMethConceptualDedAnalysis .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_22_RM2 a schema:StructuredValue ;
 				schema:description "Systematic Literature Analysis" ; 
-				cpv:researchMethod cpv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 2		
-		cpe:Meta4eS2016_22_RM3 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 2		
+		spe:Meta4eS2016_22_RM3 a schema:StructuredValue ;
 				schema:description "Artificial Neural Network (ANN), Machine Learning (ML)" ; 
-				cpv:researchMethod cpv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 3		
+				spv:researchMethod spv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 3		
 
 		# Research Findings
-		cpe:Meta4eS2016_22_RF a schema:ItemList ;
+		spe:Meta4eS2016_22_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "process implementation with good results shown for specific kind of deseases and ML methods" , "suggestion for e-health implementation correspondig with lower costs and risks" . # Text Research Findings 1 and 2 etc.
 
 		# Future Work
-		cpe:Meta4eS2016_22_FW a schema:ItemList ;
+		spe:Meta4eS2016_22_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "implement decision management processes (DMP) in other use cases" , "research other machine learning algorithms" . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_22_Cr a schema:ItemList ;
+		spe:Meta4eS2016_22_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "errors in BPMN model (diverse message flow, specification of task, logic is ok but may have been modeled in DMN more complete)" , "error in DMN model (Fig. 4) - input data connect per information requirement to knowledge model (not allowed)" . # Text Critique 1 and 2 etc.
 
@@ -943,51 +943,51 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Serialization, Semantic user interface, Ontology-driven user interface, Semantic data processing" ; # Text, List of keywords, separated by commas
 		schema:description "To come up with a semantic web application, it requires skills from two major backgrounds: (a) domain experts to model and populate a semantic knowledge base; and (b) application developers to understand the domain ontology and then build an interface for end users. Learning and using such tools is an overhead and slows down the development process. To address these problems, our paper proposes KSD - Knowledge Serializer and De-serializer tool, that takes an ontology as an input and represents it in a structured form (like JSON, XML) while preserving the underlying semantic information. This format is adaptable to the changes in the underlying ontology and can be used to create user interface, web services and other application modules." ; # Text, abstract of the paper
-		schema:author cpe:DibyanshuJaiswal , <http://orcid.org/0000-0001-6704-6810> ; # ORCID or cpe ID of the author(s)
+		schema:author spe:DibyanshuJaiswal , <http://orcid.org/0000-0001-6704-6810> ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "228" ; # Text or Integer first page
 		schema:pageEnd "235" ; # Text or integer last page
 		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:Meta4eS2016_23_RO , cpe:Meta4eS2016_23_RM , cpe:Meta4eS2016_23_RF , cpe:Meta4eS2016_23_FW , cpe:Meta4eS2016_23_Cr .
+		schema:about spe:Meta4eS2016_23_RO , spe:Meta4eS2016_23_RM , spe:Meta4eS2016_23_RF , spe:Meta4eS2016_23_FW , spe:Meta4eS2016_23_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_23_RO a schema:ItemList ;
+		spe:Meta4eS2016_23_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_23_RO1 , cpe:Meta4eS2016_23_RO2 .
-		cpe:Meta4eS2016_23_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_23_RO1 , spe:Meta4eS2016_23_RO2 .
+		spe:Meta4eS2016_23_RO1 a schema:StructuredValue ; 
 				schema:description "" ;				
-				cpv:researchActionType cpv:ResActType1 ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_23_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_23_RO2 a schema:StructuredValue ;
 				schema:description "" ;
-				cpv:researchActionType cpv:ResActType2 ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
-		cpe:Meta4eS2016_23_RM a schema:ItemList ;
+		spe:Meta4eS2016_23_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_23_RM1 , cpe:Meta4eS2016_23_RM2 .
-		cpe:Meta4eS2016_23_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_23_RM1 , spe:Meta4eS2016_23_RM2 .
+		spe:Meta4eS2016_23_RM1 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth1 .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_23_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_23_RM2 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth2 .	# NamedEntity Research Method 2	
+				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
 		# proceed if necessary
 			
 		# Research Findings
-		cpe:Meta4eS2016_23_RF a schema:ItemList ;
+		spe:Meta4eS2016_23_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
-		cpe:Meta4eS2016_23_FW a schema:ItemList ;
+		spe:Meta4eS2016_23_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_23_Cr a schema:ItemList ;
+		spe:Meta4eS2016_23_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
 			
@@ -997,43 +997,43 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Clustering, Stopwords, Document representation, Extended stopwords list construction, Natural Language Processing" ; # Text, List of keywords, separated by commas
 		schema:description "Knowledge extraction from scientific documents plays an important role in the development of academic databases and services. We focus on the processing of abstracts to academic papers for the purposes of research data structuring that includes various subtasks, such as key phrase extraction and clustering. The use of abstracts is beneficial, because authors keep up with formal and stylistic requirements imposed by the publishers, and, therefore, informational and language patterns can be revealed. From our viewpoint, the existence of these patterns makes it possible to perform the cross-task application of techniques used for abstracts processing. The aim of the paper is to show it." ; # Text, abstract of the paper
-		schema:author cpe:SvetlanaPopova , cpe:VeraDanilova ; # ORCID or cpe ID of the author(s)
+		schema:author spe:SvetlanaPopova , spe:VeraDanilova ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "236" ; # Text or Integer first page
 		schema:pageEnd "241" ; # Text or integer last page
 		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:Meta4eS2016_24_RO , cpe:Meta4eS2016_24_RM , cpe:Meta4eS2016_24_RF , cpe:Meta4eS2016_24_Cr .
+		schema:about spe:Meta4eS2016_24_RO , spe:Meta4eS2016_24_RM , spe:Meta4eS2016_24_RF , spe:Meta4eS2016_24_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_24_RO a schema:ItemList ;
+		spe:Meta4eS2016_24_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_24_RO1 , cpe:Meta4eS2016_24_RO2 , cpe:Meta4eS2016_24_RO3 .
-		cpe:Meta4eS2016_24_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_24_RO1 , spe:Meta4eS2016_24_RO2 , spe:Meta4eS2016_24_RO3 .
+		spe:Meta4eS2016_24_RO1 a schema:StructuredValue ; 
 				schema:description "enhance the performance of clustering academic abstracts" ;					
-				cpv:researchActionType cpv:ResActTypeEnhance ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifactMethod . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_24_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActTypeEnhance ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactMethod . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_24_RO2 a schema:StructuredValue ;
 				schema:description "extract key phrases" ;	
-				cpv:researchActionType cpv:ResActTypeExtract ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifactNLPArtifact . # NamedEntity Research Artifact 2 
-		cpe:Meta4eS2016_24_RO3 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActTypeExtract ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactNLPArtifact . # NamedEntity Research Artifact 2 
+		spe:Meta4eS2016_24_RO3 a schema:StructuredValue ;
 				schema:description "extend stopword list by key phrases" ;	
-				cpv:researchActionType cpv:ResActTypeExtend ; # NamedEntity Research Activity Type 3
-				cpv:researchArtifact cpv:ResArtifactNLPArtifact . # NamedEntity Research Artifact 3 	
+				spv:researchActionType spv:ResActTypeExtend ; # NamedEntity Research Activity Type 3
+				spv:researchArtifact spv:ResArtifactNLPArtifact . # NamedEntity Research Artifact 3 	
 		
 		# Research Methods
-		cpe:Meta4eS2016_24_RM a schema:ItemList ;
+		spe:Meta4eS2016_24_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_24_RM1 , cpe:Meta4eS2016_24_RM2 .
-		cpe:Meta4eS2016_22_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_24_RM1 , spe:Meta4eS2016_24_RM2 .
+		spe:Meta4eS2016_22_RM1 a schema:StructuredValue ;
 				schema:description "using the CICling, EasyAbstracts and SEPLN-CICling collections" ; 
-				cpv:researchMethod cpv:ResMethLabExperiment .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_22_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMethLabExperiment .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_22_RM2 a schema:StructuredValue ;
 				schema:description "Natural Language Processing, semiformal method" ; 
-				cpv:researchMethod cpv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 2				
+				spv:researchMethod spv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 2				
 		
 		# Research Findings
-		cpe:Meta4eS2016_24_RF a schema:ItemList ;
+		spe:Meta4eS2016_24_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "very little effect from extending the the stopword lists" , "part of speech (PoS) effect in performance is more valuable" . # Text Research Findings 1 and 2 etc.
 
@@ -1041,7 +1041,7 @@ wd:Q3130 a schema:Place .
 		
 
 		# Critique
-		cpe:Meta4eS2016_24_Cr a schema:ItemList ;
+		spe:Meta4eS2016_24_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "The own abstract doesn't  match the assumed properties to abstracts and their usefulnes regarding formality and styles" . # Text Critique 1 and 2 etc.	
 
@@ -1050,50 +1050,50 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "" ; # Text, List of keywords, separated by commas
 		schema:description "Aviation is a high risk industry where safety management is mandatory for organizations. On a global scale, safety management is hierarchical, i.e. national authorities manage safety of the sector, controlling organizations which in turn manage safety of their operations, as well as the safety of their organizational units. It is apparent that safety information management is a key factor to the success of safety management. Improving safety information management in aviation can be achieved by the systematic documentation of safety information and its seamless sharing vertically as well as horizontally through the management hierarchy. Despite attempts to tackle this problem, the industry still suffers from information management issues, e.g. usage of terminologically incompatible safety management frameworks. As a result diverse information repositories, e.g. investigation reports, safety recommendations, or audit reports managed by these frameworks, cannot be efficiently explored and compared. We apply Linked Data principles, e.g. searchability and explorability based on dataset descriptors, to help solving the problem. In this work we propose an ontology-based safety information management for the aviation industry. To achieve this we develop the Aviation Safety Ontology that is modular and covers the contexts of the organization types aerodrome, airline, air traffic management, maintenance and the state civil aviation authority. We test the appropriateness of the proposed ontology by representing safety data in terms of the ontology." ; # Text, abstract of the paper
-		schema:author <http://orcid.org/0000-0003-2850-2582> , cpe:JanaAhmad , cpe:PetrKremen ; # ORCID or cpe ID of the author(s)
+		schema:author <http://orcid.org/0000-0003-2850-2582> , spe:JanaAhmad , spe:PetrKremen ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "242" ; # Text or Integer first page
 		schema:pageEnd "251" ; # Text or integer last page
-		schema:about cpe:Meta4eS2016_25_RO , cpe:Meta4eS2016_25_RM , cpe:Meta4eS2016_25_RF , cpe:Meta4eS2016_25_FW , cpe:Meta4eS2016_25_Cr .
+		schema:about spe:Meta4eS2016_25_RO , spe:Meta4eS2016_25_RM , spe:Meta4eS2016_25_RF , spe:Meta4eS2016_25_FW , spe:Meta4eS2016_25_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_25_RO a schema:ItemList ;
+		spe:Meta4eS2016_25_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_25_RO1 , cpe:Meta4eS2016_25_RO2 .
-		cpe:Meta4eS2016_25_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_25_RO1 , spe:Meta4eS2016_25_RO2 .
+		spe:Meta4eS2016_25_RO1 a schema:StructuredValue ; 
 				schema:description "" ;				
-				cpv:researchActionType cpv:ResActType1 ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_25_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_25_RO2 a schema:StructuredValue ;
 				schema:description "" ;
-				cpv:researchActionType cpv:ResActType2 ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
-		cpe:Meta4eS2016_25_RM a schema:ItemList ;
+		spe:Meta4eS2016_25_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_25_RM1 , cpe:Meta4eS2016_25_RM2 .
-		cpe:Meta4eS2016_25_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_25_RM1 , spe:Meta4eS2016_25_RM2 .
+		spe:Meta4eS2016_25_RM1 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth1 .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_25_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_25_RM2 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth2 .	# NamedEntity Research Method 2	
+				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
 		# proceed if necessary
 			
 		# Research Findings
-		cpe:Meta4eS2016_25_RF a schema:ItemList ;
+		spe:Meta4eS2016_25_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
-		cpe:Meta4eS2016_25_FW a schema:ItemList ;
+		spe:Meta4eS2016_25_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_25_Cr a schema:ItemList ;
+		spe:Meta4eS2016_25_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
 			
@@ -1103,50 +1103,50 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Ontology, Data integration, Dynamic context representation, Context aware service discovery, Domain and Service Integration" ; # Text, List of keywords, separated by commas
 		schema:description "We present the architecture for a framework for semantic web-based service discovery, suitable for integration with relational database systems. Existing discovery algorithms often lead to poor results due to limitations of the service description used and lack of domain data. Our framework incorporates context aware service discovery vis a vis dynamic (run-time) update using relational (domain) data from a legacy system. A template for service ontologies is provided, so the user may represent their services and the interrelationships between them. The domain data is represented as an OWL-ontology. The systems takes information in the service and domain ontologies and performs rule based reasoning using rules articulating inter-service dependencies as well as dependencies between services and domain data. An aggregation over service quality properties allows the aggregated selection of the bestsuited services. The framework is implemented as a web application following the Service Oriented Architecture; extensive testing shows that the system is robust. Features of the framework are illustrated using a detailed case study for the health-care domain." ; # Text, abstract of the paper
-		schema:author cpe:AltafHussain , cpe:WendyMacCaull , cpe:YngveLamo ; # ORCID or cpe ID of the author(s)
+		schema:author spe:AltafHussain , spe:WendyMacCaull , spe:YngveLamo ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "252" ; # Text or Integer first page
 		schema:pageEnd "264" ; # Text or integer last page
-		schema:about cpe:Meta4eS2016_26_RO , cpe:Meta4eS2016_26_RM , cpe:Meta4eS2016_26_RF , cpe:Meta4eS2016_26_FW , cpe:Meta4eS2016_26_Cr .
+		schema:about spe:Meta4eS2016_26_RO , spe:Meta4eS2016_26_RM , spe:Meta4eS2016_26_RF , spe:Meta4eS2016_26_FW , spe:Meta4eS2016_26_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_26_RO a schema:ItemList ;
+		spe:Meta4eS2016_26_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_26_RO1 , cpe:Meta4eS2016_26_RO2 .
-		cpe:Meta4eS2016_26_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_26_RO1 , spe:Meta4eS2016_26_RO2 .
+		spe:Meta4eS2016_26_RO1 a schema:StructuredValue ; 
 				schema:description "" ;				
-				cpv:researchActionType cpv:ResActType1 ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_26_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_26_RO2 a schema:StructuredValue ;
 				schema:description "" ;
-				cpv:researchActionType cpv:ResActType2 ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
-		cpe:Meta4eS2016_26_RM a schema:ItemList ;
+		spe:Meta4eS2016_26_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_26_RM1 , cpe:Meta4eS2016_26_RM2 .
-		cpe:Meta4eS2016_26_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_26_RM1 , spe:Meta4eS2016_26_RM2 .
+		spe:Meta4eS2016_26_RM1 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth1 .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_26_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_26_RM2 a schema:StructuredValue ;
 				schema:description "" ; 
-				cpv:researchMethod cpv:ResMeth2 .	# NamedEntity Research Method 2	
+				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
 		# proceed if necessary
 			
 		# Research Findings
-		cpe:Meta4eS2016_26_RF a schema:ItemList ;
+		spe:Meta4eS2016_26_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
-		cpe:Meta4eS2016_26_FW a schema:ItemList ;
+		spe:Meta4eS2016_26_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_26_Cr a schema:ItemList ;
+		spe:Meta4eS2016_26_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
 			
@@ -1156,49 +1156,49 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Ontology, Linked Open Data, Linked Open University Data, SPARQL" ; # Text, List of keywords, separated by commas
 		schema:description "Óbuda University wanted to build a linked dataset describing their courses in the semester. The concepts to be covered included curricula, subjects, courses, semesters and educators. A particular use case needed the description of lecture rooms and events as well. Although there are several ontologies for the mentioned domains, selecting a set of ontologies fitting our use case was not an easy task. After realizing the problems, we created the Ontology for Linked Open University Data (OLOUD) to fill in the gaps between re-used ontologies. OLOUD acts as a glue for a selection of existing ontologies, and thus enables us to integrate data from several sources and to provide practical information services for students and lecturers. " ; # Text, abstract of the paper
-		schema:author cpe:BarnabasSzasz , cpe:RitaFleiner , cpe:AndrasMicsik ; # ORCID or cpe ID of the author(s)
+		schema:author spe:BarnabasSzasz , spe:RitaFleiner , spe:AndrasMicsik ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "265" ; # Text or Integer first page
 		schema:pageEnd "276" ; # Text or integer last page
 		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:Meta4eS2016_27_RO , cpe:Meta4eS2016_27_RM , cpe:Meta4eS2016_27_RF , cpe:Meta4eS2016_27_FW , cpe:Meta4eS2016_27_Cr .
+		schema:about spe:Meta4eS2016_27_RO , spe:Meta4eS2016_27_RM , spe:Meta4eS2016_27_RF , spe:Meta4eS2016_27_FW , spe:Meta4eS2016_27_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_27_RO a schema:ItemList ;
+		spe:Meta4eS2016_27_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_27_RO1 , cpe:Meta4eS2016_27_RO2 .
-		cpe:Meta4eS2016_27_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_27_RO1 , spe:Meta4eS2016_27_RO2 .
+		spe:Meta4eS2016_27_RO1 a schema:StructuredValue ; 
 				schema:description "develop an ontology for university course data" ;					
-				cpv:researchActionType cpv:ResActTypeDevelop ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifactOntology . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_27_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActTypeDevelop ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactOntology . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_27_RO2 a schema:StructuredValue ;
 				schema:description "provide linked data for university courses" ;	
-				cpv:researchActionType cpv:ResActTypeProvide ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifactLinkedData . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActTypeProvide ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactLinkedData . # NamedEntity Research Artifact 2 
 				
 		# Research Methods
-		cpe:Meta4eS2016_27_RM a schema:ItemList ;
+		spe:Meta4eS2016_27_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_27_RM1 , cpe:Meta4eS2016_27_RM2 .
-		cpe:Meta4eS2016_27_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_27_RM1 , spe:Meta4eS2016_27_RM2 .
+		spe:Meta4eS2016_27_RM1 a schema:StructuredValue ;
 				schema:description "Ontology Engineering, Modeling, Re-using existing ontologies" ; 
-				cpv:researchMethod cpv:ResMethConceptualDedAnalysis .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_27_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMethConceptualDedAnalysis .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_27_RM2 a schema:StructuredValue ;
 				schema:description "prototypical development and implementation of practical information services for students and lecturers" ; 
-				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 2				
+				spv:researchMethod spv:ResMethPrototyping .	# NamedEntity Research Method 2				
 		
 		# Research Findings
-		cpe:Meta4eS2016_27_RF a schema:ItemList ;
+		spe:Meta4eS2016_27_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "OLOUD ontology; integration of university data from different sources (RDB, crawling, scraping, automatic enfolding, manual curation)" , "knowledge services: inhouse guiding, individual course plannig, proving inconsistencies and contradictions" . # Text Research Findings 1 and 2 etc.
 
 		# Future Work
-		cpe:Meta4eS2016_27_FW a schema:ItemList ;
+		spe:Meta4eS2016_27_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "implementing more constraints" , "using reasoners for inferencing new knowledge" . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_27_Cr a schema:ItemList ;
+		spe:Meta4eS2016_27_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "ontology visualization is suboptimal" , "some choices of vocabularies are elusive" , "sustainability of approach?" . # Text Critique 1 and 2 etc.	
 			
@@ -1207,48 +1207,48 @@ wd:Q3130 a schema:Place .
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "scientific publications, crawling and parsing LOD, extracting and producing LOD" ; # Text, List of keywords, separated by commas
 		schema:description "The World Wide Web (WWW) is emerging as the Web of Data, providing information on various domains. A vast number of scientific documents such as books, articles and journals can be found through many publisher’s websites, portals and XML exports. The challenge here is that the data about these scientific documents can not be explored collectively, as they are published as a bounded group of sources organized by different publishers. To address these limitations, we have developed a generic framework termed as Linked Open Publications Data Framework (LOPDF) that facilitates crawling, processing, extracting and producing machine-processable data that is open and linked to other open datasets. We also demonstrate the RDF datasets produced by using LOPDF framework and describe statistics of different datasets entities. " ; # Text, abstract of the paper
-		schema:author <http://orcid.org/0000-0001-7080-0327> , cpe:NaviRadiAljohani , <http://orcid.org/0000-0002-3787-7039> , <http://orcid.org/0000-0002-7281-5458> , <http://orcid.org/0000-0002-6798-6535> ; # ORCID or cpe ID of the author(s)
+		schema:author <http://orcid.org/0000-0001-7080-0327> , spe:NaviRadiAljohani , <http://orcid.org/0000-0002-3787-7039> , <http://orcid.org/0000-0002-7281-5458> , <http://orcid.org/0000-0002-6798-6535> ; # ORCID or cpe ID of the author(s)
 		schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ; # DOI of conference proceedings
 		schema:pageStart "277" ; # Text or Integer first page
 		schema:pageEnd "281" ; # Text or integer last page
 		#schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
-		schema:about cpe:Meta4eS2016_28_RO , cpe:Meta4eS2016_28_RM , cpe:Meta4eS2016_28_RF , cpe:Meta4eS2016_28_FW , cpe:Meta4eS2016_28_Cr .
+		schema:about spe:Meta4eS2016_28_RO , spe:Meta4eS2016_28_RM , spe:Meta4eS2016_28_RF , spe:Meta4eS2016_28_FW , spe:Meta4eS2016_28_Cr .
 		
 		# Research Objectives
-		cpe:Meta4eS2016_28_RO a schema:ItemList ;
+		spe:Meta4eS2016_28_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement cpe:Meta4eS2016_28_RO1 , cpe:Meta4eS2016_28_RO2 .
-		cpe:Meta4eS2016_28_RO1 a schema:StructuredValue ; 
+			schema:itemListElement spe:Meta4eS2016_28_RO1 , spe:Meta4eS2016_28_RO2 .
+		spe:Meta4eS2016_28_RO1 a schema:StructuredValue ; 
 				schema:description "provide a framework for adding structured data to digital libraries (Spedia similar to Dbpedia)" ;					
-				cpv:researchActionType cpv:ResActTypeProvide ; # NamedEntity Research Activity Type 1
-				cpv:researchArtifact cpv:ResArtifactFramework . # NamedEntity Research Artifact 1 
-		cpe:Meta4eS2016_28_RO2 a schema:StructuredValue ;
+				spv:researchActionType spv:ResActTypeProvide ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactFramework . # NamedEntity Research Artifact 1 
+		spe:Meta4eS2016_28_RO2 a schema:StructuredValue ;
 				schema:description "integrate data from different digital libraries" ;	
-				cpv:researchActionType cpv:ResActTypeIntegrate ; # NamedEntity Research Activity Type 2
-				cpv:researchArtifact cpv:ResArtifactLinkedData . # NamedEntity Research Artifact 2 
+				spv:researchActionType spv:ResActTypeIntegrate ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactLinkedData . # NamedEntity Research Artifact 2 
 				
 		# Research Methods
-		cpe:Meta4eS2016_28_RM a schema:ItemList ;
+		spe:Meta4eS2016_28_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement cpe:Meta4eS2016_28_RM1 , cpe:Meta4eS2016_28_RM2 .
-		cpe:Meta4eS2016_28_RM1 a schema:StructuredValue ;
+			schema:itemListElement spe:Meta4eS2016_28_RM1 , spe:Meta4eS2016_28_RM2 .
+		spe:Meta4eS2016_28_RM1 a schema:StructuredValue ;
 				schema:description "Development of a framework" ; 
-				cpv:researchMethod cpv:ResMethDesignScience .	# NamedEntity Research Method 1		
-		cpe:Meta4eS2016_28_RM2 a schema:StructuredValue ;
+				spv:researchMethod spv:ResMethDesignScience .	# NamedEntity Research Method 1		
+		spe:Meta4eS2016_28_RM2 a schema:StructuredValue ;
 				schema:description "vertical prototype for SpringerLink" ; 
-				cpv:researchMethod cpv:ResMethPrototyping .	# NamedEntity Research Method 2				
+				spv:researchMethod spv:ResMethPrototyping .	# NamedEntity Research Method 2				
 		
 		# Research Findings
-		cpe:Meta4eS2016_28_RF a schema:ItemList ;
+		spe:Meta4eS2016_28_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "LODPF - linked open data publications framework" , "RDF dataset produced based on LODPF" , "data statistics" . # Text Research Findings 1 and 2 etc.
 
 		# Future Work
-		cpe:Meta4eS2016_28_FW a schema:ItemList ;
+		spe:Meta4eS2016_28_FW a schema:ItemList ;
 			schema:name "Future Work" ;
 			schema:itemListElement "extract semantically enriched data from other well-known publishers"  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		cpe:Meta4eS2016_28_Cr a schema:ItemList ;
+		spe:Meta4eS2016_28_Cr a schema:ItemList ;
 			schema:name "Critique" ;
 			schema:itemListElement "necessary customizations not explained" , "how to manage the system (test?)" . # Text Critique 1 and 2 etc.	

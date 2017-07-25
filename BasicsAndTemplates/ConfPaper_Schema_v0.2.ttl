@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpv: <http://akwi.org/cpv#>.
+@prefix spv: <https://bmake.th-brandenburg.de/spv#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
@@ -62,17 +62,17 @@ schema:ItemList a owl:Class ;
 			rdfs:comment  "Lists of enumerations of aspects specifying a scientific paper, like research methods, research findings, research objectives, and future work." ;
 			rdfs:subClassOf schema:Intangible .
 					
-cpv:ResearchMethod a owl:Class ;
+spv:ResearchMethod a owl:Class ;
 			rdfs:label "Research Method" ;
 			rdfs:comment "List of all relevant research methods used in Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
 					
-cpv:ResearchArtifact a owl:Class ;
+spv:ResearchArtifact a owl:Class ;
 			rdfs:label "Research Artifact" ;
 			rdfs:comment "Classification of all types of research & development artifacts characteristic for Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
 					
-cpv:ResearchActionType a owl:Class ;
+spv:ResearchActionType a owl:Class ;
 			rdfs:label "Research Action Type" ;
 			rdfs:comment "Classification of all types of research & development actions applied in Information Systems." ;
 			rdfs:subClassOf schema:Enumeration .
@@ -186,23 +186,23 @@ schema:itemListElement a rdf:Property ;
   			rdfs:domain schema:ItemList ;
   			rdfs:range [rdf:type owl:Class ; owl:unionOf (xsd:string owl:Thing )] .
   			
-cpv:researchArtifact a owl:ObjectProperty ;
+spv:researchArtifact a owl:ObjectProperty ;
 			rdfs:label "research artifact" ;
 			rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchArtifact .
+			rdfs:range spv:ResearchArtifact .
 			
-cpv:researchActionType a owl:ObjectProperty ;
+spv:researchActionType a owl:ObjectProperty ;
 			rdfs:label "research action type" ;
 			rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchActionType .
+			rdfs:range spv:ResearchActionType .
 			
-cpv:researchMethod a owl:ObjectProperty ;
+spv:researchMethod a owl:ObjectProperty ;
 			rdfs:label "research method" ;
 			rdfs:comment "Is used to indicate a research method described in a scientific paper." ;
 			rdfs:domain schema:StructuredValue ;
-			rdfs:range cpv:ResearchMethod .
+			rdfs:range spv:ResearchMethod .
 
 
 ### Datatype Properties ###
@@ -377,96 +377,96 @@ schema:logo a owl:DatatypeProperty ;
 			
 ### Named Individuals ###
 ## Scientific Methods ##
-cpv:ResMethDesignScience a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethDesignScience a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Design Science (Hevner)"@en ;
 			schema:isBasedOn <http://doi.org/10.1007/978-1-4419-5653-8_2> ;
 			rdfs:comment "Description" .
 			
-cpv:ResMethFormalDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethFormalDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Formal Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Formal-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Logisch-deduktives Schließen im Rahmen mathematisch-formaler Modelle"@de .			
 
-cpv:ResMethConceptualDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethConceptualDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Conceptual Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Konzeptionell-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Logisch-deduktives Schließen im Rahmen semiformaler Modelle (z. B. BPMN)."@de .			
 
-cpv:ResMethArgumentDedAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethArgumentDedAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Argumentative Deductive Analysis (Wilde/Hess)"@en ;
 			schema:name "Argumentativ-deduktive Analyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Rein sprachliches logisch-deduktives Schließen (wie z. B. in der Philosophie)"@de .			
 
-cpv:ResMethSimulation a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethSimulation a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Simulation (Wilde/Hess)"@en ;
 			schema:name "Simulation (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Simulation bildet das Verhalten des zu untersuchenden Systems formal in einem Modell ab und stellt Umweltzustände durch bestimmte Belegungen der Modellparameter nach. Sowohl durch die Modellkonstruktion als auch durch die Beobachtung der endogenen Modellgrößen lassen sich Erkenntnisse gewinnen."@de .	
 
-cpv:ResMethReferenceModeling a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethReferenceModeling a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Reference Modeling (Wilde/Hess)"@en ;
 			schema:name "Reference Modeling (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Referenzmodellierung erstellt induktiv (ausgehend von Beobachtungen) oder deduktiv (bspw. aus Theorien oder Modellen) meist vereinfachte und optimierte Abbildungen (Idealkonzepte) von Systemen, um so bestehende Erkenntnisse zu vertiefen und daraus Gestaltungsvorlagen zu generieren"@de .	
 
-cpv:ResMethActionResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethActionResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Action Research (Wilde/Hess)"@en ;
 			schema:name "Aktionsforschung (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Es wird ein Praxisproblem durch einen gemischten Kreis aus Wissenschaft und Praxis gelöst. Hierbei werden mehrere Zyklen aus Analyse-, Aktions-, und Evaluationsschritten durchlaufen, die jeweils gering strukturierte Instrumente wie Gruppendiskussionen oder Planspiele vorsehen."@de .	
 
-cpv:ResMethPrototyping a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethPrototyping a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Prototyping (Wilde/Hess)"@en ;
 			schema:name "Prototyping (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Es wird eine Vorabversion eines Anwendungssystems entwickelt und evaluiert. Beide Schritte können neue Erkenntnisse generieren."@de .	
 
-cpv:ResMethEthnography a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethEthnography a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Ethnography (Wilde/Hess)"@en ;
 			schema:name "Ethnographie (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Ethnographie möchte durch partizipierende Beobachtung Erkenntnisse generieren. Der Unterschied zur Fallstudie liegt in dem sehr hohen Umfang, in dem sich der Forscher in das untersuchte soziale Umfeld integriert. Eine objektive Distanz ist kaum vorhanden."@de .	
 
-cpv:ResMethCaseStudy a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethCaseStudy a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Case Study (Wilde/Hess)"@en ;
 			schema:name "Fallstudie (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Fallstudie untersucht in der Regel komplexe, schwer abgrenzbare Pha¨nomene in ihrem natu¨rlichen Kontext. Sie stellt eine spezielle Form der qualitativ-empirischen Methodik dar, die wenige Merkmalsträger intensiv untersucht. Es steht entweder die möglichst objektive Untersuchung von Thesen (verhaltenswissenschaftlicher Zugang) oder die Interpretation von Verhaltensmustern als Phänotypen der von den Probanden konstruierten Realitäten (konstruktionsorientierter Zugang) im Mittelpunkt."@de .			
 
-cpv:ResMethGroundedTheory a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethGroundedTheory a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Grounded Theory (Wilde/Hess)"@en ;
 			schema:name "Grounded Theory (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Die Grounded Theory („gegenstandsverankerte Theoriebildung“) zielt auf die induktive Gewinnung neuer Theorien durch intensive Beobachtung des Untersuchungsgegenstandes im Feld. Die verschiedenen Vorgehensweisen zu Kodierung und Auswertung der vorwiegend qualitativen Daten sind exakt spezifiziert."@de .	
 
-cpv:ResMethQualitativeResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethQualitativeResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Qualitative Research (Wilde/Hess)"@en ;
 			schema:name "Qualitative Querschnittsanalyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend qualitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de .	
 
-cpv:ResMethQuantitativeResearch a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethQuantitativeResearch a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Quantitative Research (Wilde/Hess)"@en ;
 			schema:name "Quantitative Querschnittsanalyse (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend quantitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de .	
 
-cpv:ResMethLabExperiment a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethLabExperiment a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Laboratory Experiment (Wilde/Hess)"@en ;
 			schema:name "Laborexperiment (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Das Laborexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in künstlicher Umgebung (im „Labor“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de .	
 
-cpv:ResMethFieldExperiment a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethFieldExperiment a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Field Experiment (Wilde/Hess)"@en ;
 			schema:name "Feldexperiment (Wilde/Hess)"@de ;
 			schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
 			rdfs:comment "Das Feldrexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in seiner natürlichen Umgebung (im „Feld“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de .	
 			
-cpv:ResMethLiteratureAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
+spv:ResMethLiteratureAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
 			schema:name "Literature Analysis)"@en ;
 			schema:name "Literaturanalyse"@de ;
 			#schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
@@ -474,194 +474,194 @@ cpv:ResMethLiteratureAnalysis a owl:NamedIndividual , cpv:ResearchMethod ;
 			
 
 ## Research Action Types ##
-cpv:ResActTypeDevelop a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeDevelop a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "develop"@en ;
 			schema:name "entwickeln"@de .
 			
-cpv:ResActTypeAnalyze a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeAnalyze a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "analyze"@en ;
 			schema:name "analysieren"@de .
 			
-cpv:ResActTypeProve a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeProve a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "prove"@en ;
 			schema:name "prüfen, erproben"@de .
 			
-cpv:ResActTypeConceptualize a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeConceptualize a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "conceptualize"@en ;
 			schema:name "konzeptualisieren"@de .
 			
-cpv:ResActTypeConstruct a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeConstruct a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "construct"@en ;
 			schema:name "konstruieren"@de .
 
-cpv:ResActTypeEvaluate a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeEvaluate a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "evaluate"@en ;
 			schema:name "evaluieren"@de .
 			
-cpv:ResActTypeElicit a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeElicit a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "elicit"@en ;
 			schema:name "erheben"@de .
 			
-cpv:ResActTypeDesign a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeDesign a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "design"@en ;
 			schema:name "entwerfen/konzipieren"@de .
 			
-cpv:ResActTypeStructure a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeStructure a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "structure"@en ;
 			schema:name "strukturieren"@de .
 			
-cpv:ResActTypeCollect a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeCollect a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "collect"@en ;
 			schema:name "sammeln"@de .
 			
-cpv:ResActTypeEnhance a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeEnhance a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "enhance"@en ;
 			schema:name "verbessern"@de .
 
-cpv:ResActTypeExtract a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeExtract a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "extract"@en ;
 			schema:name "extrahieren"@de .
 
-cpv:ResActTypeProvide a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeProvide a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "provide"@en ;
 			schema:name "bereitstellen"@de .
 
-cpv:ResActTypeExtend a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeExtend a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "extend"@en ;
 			schema:name "erweitern"@de .
 
-cpv:ResActTypeImplement a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeImplement a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "implement"@en ;
 			schema:name "implementieren"@de .
 
-cpv:ResActTypeIntegrate a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeIntegrate a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "integrate"@en ;
 			schema:name "integrieren"@de .
 			
-cpv:ResActTypeDefine a owl:NamedIndividual , cpv:ResearchActionType ;
+spv:ResActTypeDefine a owl:NamedIndividual , spv:ResearchActionType ;
 			rdfs:comment "Description" ;
 			schema:name "define"@en ;
 			schema:name "definieren"@de .
 					
 
 ## Artifacts of Research and Development ##
-cpv:ResArtifactBlueprint a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactBlueprint a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Blueprint"@en ;
 			schema:name "Konzept"@de .
 
-cpv:ResArtifactRequirements a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactRequirements a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Requirements"@en ;
 			schema:name "Anforderungen"@de .
 			
-cpv:ResArtifactApplication a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactApplication a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Application"@en ;
 			schema:name "Anwendung"@de .
 			
-cpv:ResArtifactSoftware a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactSoftware a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Software"@en ;
 			schema:name "Software/ Programm"@de .
 			
-cpv:ResArtifactHardware a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactHardware a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Hardware"@en ;
 			schema:name "Hardware"@de .
 			
-cpv:ResArtifactSystem a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactSystem a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "System"@en ;
 			schema:name "System"@de .
 			
-cpv:ResArtifactITSystem a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactITSystem a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "IT System"@en ;
 			schema:name "IT-System"@de .
 			
-cpv:ResArtifactProcess a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactProcess a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Process"@en ;
 			schema:name "Prozess"@de .
 			
-cpv:ResArtifactBusinessProcess a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactBusinessProcess a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Business Process"@en ;
 			schema:name "Geschäftsprozess"@de .
 			
-cpv:ResArtifactMethod a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactMethod a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Method"@en ;
 			schema:name "Method"@de .
 
-cpv:ResArtifactFramework a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactFramework a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Framework"@en ;
 			schema:name "Framework/ Rahmenwerk"@de .
 
-cpv:ResArtifactPolicy a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactPolicy a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Policy"@en ;
 			schema:name "Leitlinie"@de .
 
-cpv:ResArtifactStandard a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactStandard a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Description" ;
 			schema:name "Standard, Guidline"@en ;
 			schema:name "Richtlinie"@de .
 
-cpv:ResArtifactNLPArtifact a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactNLPArtifact a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "Element, Baustein der Verarbeitung natürlicher Sprache, z. B. Schlüsselphrasen, Schlüssel- und Stopwortlisten" ;
 			schema:name "NLP Artifact"@en ;
 			schema:name "NLP Artefakt"@de .
 			
-cpv:ResArtifactOntology a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactOntology a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "semantische Netze unterschiedlicher Ausbaustufe; bis zu formal spezifizierten Konzeptualisierungen einer Domäne" ;
 			schema:name "Ontology"@en ;
 			schema:name "Ontologie"@de .
 						
-cpv:ResArtifactLinkedData a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactLinkedData a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Linked Data"@en ;
 			schema:name "Linked Data"@de .
 			
-cpv:ResArtifactWorkflow a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactWorkflow a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Workflow"@en ;
 			schema:name "Workflow"@de .			
 
-cpv:ResArtifactTermDefinition a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactTermDefinition a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Term Definition"@en ;
 			schema:name "Begriffsdefinition"@de .			
 
-cpv:ResArtifactModelingLanguage a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactModelingLanguage a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Modeling Language"@en ;
 			schema:name "Modellierungssprache"@de .			
 
-cpv:ResArtifactDevFramework a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactDevFramework a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Development Framework"@en ;
 			schema:name "Entwicklungsumgebung"@de .			
 
-cpv:ResArtifactDevDocumentation a owl:NamedIndividual , cpv:ResearchArtifact ;
+spv:ResArtifactDevDocumentation a owl:NamedIndividual , spv:ResearchArtifact ;
 			rdfs:comment "" ;
 			schema:name "Documentation"@en ;
 			schema:name "Dokumentation"@de .			

@@ -2,14 +2,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
 
 ### Person 
 
-cpe:PhilippFrischmuth a schema:Person ; # no ORCID available
+spe:PhilippFrischmuth a schema:Person ; # no ORCID available
 		schema:familyName "Frischmuth" ; # Text
 		schema:givenName "Philipp" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -17,7 +17,7 @@ cpe:PhilippFrischmuth a schema:Person ; # no ORCID available
 		schema:name "Philipp Frischmuth" ; # alternative to givenName and familyName
 		schema:sameAs "http://bis.informatik.uni-leipzig.de/PhilippFrischmuth" . # maybe URL / Website
 		
-cpe:NathanaelArndt a schema:Person ; # no ORCID available
+spe:NathanaelArndt a schema:Person ; # no ORCID available
 		schema:familyName "Arndt" ; # Text
 		schema:givenName "Nathanael" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -25,7 +25,7 @@ cpe:NathanaelArndt a schema:Person ; # no ORCID available
 		schema:name "Nathanael Arndt" ; # alternative to givenName and familyName
 		schema:sameAs "http://aksw.org/NatanaelArndt.html" . # maybe URL / Website
 
-cpe:MichaelMartin a schema:Person ; # several ORCIDs available
+spe:MichaelMartin a schema:Person ; # several ORCIDs available
 		schema:familyName "Martin" ; # Text
 		schema:givenName "Michael" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -33,7 +33,7 @@ cpe:MichaelMartin a schema:Person ; # several ORCIDs available
 		schema:name "Michael Martin" ; # alternative to givenName and familyName
 		schema:sameAs "http://bis.informatik.uni-leipzig.de/MichaelMartin" . # maybe URL / Website
 
-cpe:LisaEhrlinger a schema:Person ; # no ORCID available
+spe:LisaEhrlinger a schema:Person ; # no ORCID available
 		schema:familyName "Ehrlinger" ; # Text
 		schema:givenName "Lisa" ; # Text
 		schema:affiliation wd:Q682739 ; # Wikidata Entity
@@ -41,7 +41,7 @@ cpe:LisaEhrlinger a schema:Person ; # no ORCID available
 		schema:name "Lisa Ehrlinger" ; # alternative to givenName and familyName
 		schema:sameAs "http://www.jku.at/faw/content/e233808/index_html?team_view=section&emp=e233808/employee_groups_wiss243261/employees251241" . # maybe URL / Website
 		
-cpe:WolframWoess a schema:Person ; # no ORCID available
+spe:WolframWoess a schema:Person ; # no ORCID available
 		schema:familyName "Wöß" ; # Text
 		schema:givenName "Wolfram" ; # Text
 		schema:affiliation wd:Q682739 ; # Wikidata Entity
@@ -49,7 +49,7 @@ cpe:WolframWoess a schema:Person ; # no ORCID available
 		schema:name "Wolfram Wöß" ; # alternative to givenName and familyName
 		schema:sameAs "http://wwoess.faw.at/" . # maybe URL / Website
 		
-cpe:BerndMueller a schema:Person ; # several ORCIDs available
+spe:BerndMueller a schema:Person ; # several ORCIDs available
 		schema:familyName "Müller" ; # Text
 		schema:givenName "Bernd" ; # Text
 		schema:affiliation <https://www.zbmed.de/en/> ; # no Wikidata Entity available
@@ -57,7 +57,7 @@ cpe:BerndMueller a schema:Person ; # several ORCIDs available
 		schema:name "Bernd Müller" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Bernd_Mueller5" . # maybe URL / Website
 		
-cpe:AlexandraHagelstein a schema:Person ; # no ORCID available
+spe:AlexandraHagelstein a schema:Person ; # no ORCID available
 		schema:familyName "Hagelstein" ; # Text
 		schema:givenName "Alexandra" ; # Text
 		schema:affiliation <https://www.zbmed.de/en/> ; # no Wikidata Entity available
@@ -65,7 +65,7 @@ cpe:AlexandraHagelstein a schema:Person ; # no ORCID available
 		schema:name "Alexandra Hagelstein" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Alexandra_Hagelstein" . # maybe URL / Website
 		
-cpe:JonasRebstadt a schema:Person ; # no ORCID available
+spe:JonasRebstadt a schema:Person ; # no ORCID available
 		schema:familyName "Rebstadt" ; # Text
 		schema:givenName "Jonas" ; # Text
 		schema:affiliation wd:Q1400766 ; # Wikidata Entity
@@ -73,7 +73,7 @@ cpe:JonasRebstadt a schema:Person ; # no ORCID available
 		schema:name "Jonas Rebstadt" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Jonas_Rebstadt" . # maybe URL / Website
 
-cpe:LuisaBrinkschulte a schema:Person ; # no ORCID available
+spe:LuisaBrinkschulte a schema:Person ; # no ORCID available
 		schema:familyName "Brinkschulte" ; # Text
 		schema:givenName "Luisa" ; # Text
 		schema:affiliation wd:Q1400766 ; # Wikidata Entity
@@ -81,7 +81,7 @@ cpe:LuisaBrinkschulte a schema:Person ; # no ORCID available
 		schema:name "Luisa Brinkschulte" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Luisa_Brinkschulte" . # maybe URL / Website
 
-cpe:ArkadijEnders a schema:Person ; # no ORCID available
+spe:ArkadijEnders a schema:Person ; # no ORCID available
 		schema:familyName "Enders" ; # Text
 		schema:givenName "Arkadij" ; # Text
 		schema:affiliation wd:Q1400766 ; # Wikidata Entity
@@ -89,7 +89,7 @@ cpe:ArkadijEnders a schema:Person ; # no ORCID available
 		schema:name "Arkadij Enders" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/researcher/2096250977_Arkadij_Enders" . # maybe URL / Website
 
-cpe:RobertMertens a schema:Person ; # no ORCID available
+spe:RobertMertens a schema:Person ; # no ORCID available
 		schema:familyName "Mertens" ; # Text
 		schema:givenName "Robert" ; # Text
 		schema:affiliation wd:Q1400766 ; # Wikidata Entity
@@ -97,7 +97,7 @@ cpe:RobertMertens a schema:Person ; # no ORCID available
 		schema:name "Robert Mertens" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Robert_Mertens2" . # maybe URL / Website
 
-cpe:TobiasWeller a schema:Person ; # no ORCID available
+spe:TobiasWeller a schema:Person ; # no ORCID available
 		schema:familyName "Weller" ; # Text
 		schema:givenName "Tobias" ; # Text
 		schema:affiliation wd:Q30343035 ; # Wikidata Entity
@@ -105,7 +105,7 @@ cpe:TobiasWeller a schema:Person ; # no ORCID available
 		schema:name "Tobias Weller" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Tobias_Weller" . # maybe URL / Website
 
-cpe:MariaMaleshkova a schema:Person ; # no ORCID available
+spe:MariaMaleshkova a schema:Person ; # no ORCID available
 		schema:familyName "Maleshkova" ; # Text
 		schema:givenName "Maria" ; # Text
 		schema:affiliation wd:Q30343035 ; # Wikidata Entity
@@ -129,7 +129,7 @@ cpe:MariaMaleshkova a schema:Person ; # no ORCID available
 		schema:name "Dimitris Kontokostas" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Dimitris_Kontokostas" . # maybe URL / Website
 
-cpe:RobertRoessling a schema:Person ; # no ORCID available
+spe:RobertRoessling a schema:Person ; # no ORCID available
 		schema:familyName "Rößling" ; # Text
 		schema:givenName "Robert" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -145,7 +145,7 @@ cpe:RobertRoessling a schema:Person ; # no ORCID available
 		schema:name "Sebastian Hellmann" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Sebastian_Hellmann" . # maybe URL / Website
 
-cpe:MagnusKnuth a schema:Person ; # no ORCID available
+spe:MagnusKnuth a schema:Person ; # no ORCID available
 		schema:familyName "Knuth" ; # Text
 		schema:givenName "Magnus" ; # Text
 		schema:affiliation wd:Q884105 ; # Wikidata Entity
@@ -153,7 +153,7 @@ cpe:MagnusKnuth a schema:Person ; # no ORCID available
 		schema:name "Magnus Knuth" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Magnus_Knuth" . # maybe URL / Website
 
-cpe:FlorianKleedorfer a schema:Person ; # no ORCID available
+spe:FlorianKleedorfer a schema:Person ; # no ORCID available
 		schema:familyName "Florian" ; # Text
 		schema:givenName "Kleedorfer" ; # Text
 		schema:affiliation wd:Q2145569 ; # Wikidata Entity
@@ -161,7 +161,7 @@ cpe:FlorianKleedorfer a schema:Person ; # no ORCID available
 		schema:name "Florian Kleedorfer" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Florian_Kleedorfer" . # maybe URL / Website
 		
-cpe:SoheilHuman a schema:Person ; # no ORCID available
+spe:SoheilHuman a schema:Person ; # no ORCID available
 		schema:familyName "Human" ; # Text
 		schema:givenName "Soheil" ; # Text
 		schema:affiliation wd:Q2145569 ; # Wikidata Entity
@@ -177,7 +177,7 @@ cpe:SoheilHuman a schema:Person ; # no ORCID available
 		schema:name "Heiko Friedrich" ; # alternative to givenName and familyName
 		schema:sameAs "https://sat.researchstudio.at/heiko-friedrich" . # maybe URL / Website
 		
-cpe:ChristianHuemer a schema:Person ; # no ORCID available
+spe:ChristianHuemer a schema:Person ; # no ORCID available
 		schema:familyName "Huemer" ; # Text
 		schema:givenName "Christian" ; # Text
 		schema:affiliation wd:Q689400 ; # Wikidata Entity
@@ -185,7 +185,7 @@ cpe:ChristianHuemer a schema:Person ; # no ORCID available
 		schema:name "Christian Huemer" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/researcher/10020036_Christian_Huemer" . # maybe URL / Website
 		
-cpe:CiroBaronNeto a schema:Person ; # no ORCID available
+spe:CiroBaronNeto a schema:Person ; # no ORCID available
 		schema:familyName "Neto" ; # Text
 		schema:givenName "Ciro Baron" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -209,7 +209,7 @@ cpe:CiroBaronNeto a schema:Person ; # no ORCID available
 		schema:name "Tommaso Soru" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Tommaso_Soru" . # maybe URL / Website
 			
-cpe:DiegoMoussallem a schema:Person ; # no ORCID available
+spe:DiegoMoussallem a schema:Person ; # no ORCID available
 		schema:familyName "Moussallem" ; # Text
 		schema:givenName "Diego" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -241,7 +241,7 @@ cpe:DiegoMoussallem a schema:Person ; # no ORCID available
 		schema:name "Andreas Nareike" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Andreas_Nareike" . # maybe URL / Website
 
-cpe:JoergUnbehauen a schema:Person ; # no ORCID available
+spe:JoergUnbehauen a schema:Person ; # no ORCID available
 		schema:familyName "Unbehauen" ; # Text
 		schema:givenName "Jörg" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -249,7 +249,7 @@ cpe:JoergUnbehauen a schema:Person ; # no ORCID available
 		schema:name "Jörg Unbehauen" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/researcher/70449110_Joerg_Unbehauen" . # maybe URL / Website
 		
-cpe:JohannesSchmidt a schema:Person ; # no ORCID available
+spe:JohannesSchmidt a schema:Person ; # no ORCID available
 		schema:familyName "Schmidt" ; # Text
 		schema:givenName "Johannes" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
@@ -257,7 +257,7 @@ cpe:JohannesSchmidt a schema:Person ; # no ORCID available
 		schema:name "Johannes Schmidt" ; # alternative to givenName and familyName
 		schema:sameAs "" . # maybe URL / Website
 	
-cpe:MichaelVanBekkum a schema:Person ; # no ORCID available
+spe:MichaelVanBekkum a schema:Person ; # no ORCID available
 		schema:familyName "van Bekkum" ; # Text
 		schema:givenName "Michael A." ; # Text
 		schema:affiliation <https://www.tno.nl/en/> ; # no Wikidata Entity available
@@ -273,7 +273,7 @@ cpe:MichaelVanBekkum a schema:Person ; # no ORCID available
 		schema:name "Mark A. Neerincx" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Mark_Neerincx" . # maybe URL / Website
 
-cpe:HansUlrichKrieger a schema:Person ; # no ORCID available
+spe:HansUlrichKrieger a schema:Person ; # no ORCID available
 		schema:familyName "Krieger" ; # Text
 		schema:givenName "Hans-Ulrich" ; # Text
 		schema:affiliation wd:Q896469 ; # Wikidata Entity
@@ -281,7 +281,7 @@ cpe:HansUlrichKrieger a schema:Person ; # no ORCID available
 		schema:name "Hans-Ulrich Krieger" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/researcher/70109338_Hans-Ulrich_Krieger" . # maybe URL / Website
 		
-cpe:BerndKiefer a schema:Person ; # no ORCID available
+spe:BerndKiefer a schema:Person ; # no ORCID available
 		schema:familyName "Kiefer" ; # Text
 		schema:givenName "Bernd" ; # Text
 		schema:affiliation wd:Q896469 ; # Wikidata Entity
@@ -289,7 +289,7 @@ cpe:BerndKiefer a schema:Person ; # no ORCID available
 		schema:name "Bernd Kiefer" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Bernd_Kiefer" . # maybe URL / Website
 		
-cpe:StefaniaRacioppa a schema:Person ; # no ORCID available
+spe:StefaniaRacioppa a schema:Person ; # no ORCID available
 		schema:familyName "Racioppa" ; # Text
 		schema:givenName "Stefania" ; # Text
 		schema:affiliation wd:Q896469 ; # Wikidata Entity
@@ -297,7 +297,7 @@ cpe:StefaniaRacioppa a schema:Person ; # no ORCID available
 		schema:name "Stefania Racioppa" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Stefania_Racioppa" . # maybe URL / Website
 		
-cpe:FrankKaptein a schema:Person ; # ORCID of the person, alternatively a cpe ID
+spe:FrankKaptein a schema:Person ; # ORCID of the person, alternatively a cpe ID
 		schema:familyName "Kaptein" ; # Text
 		schema:givenName "Frank" ; # Text
 		schema:affiliation wd:Q752663 ; # Wikidata Entity
@@ -305,7 +305,7 @@ cpe:FrankKaptein a schema:Person ; # ORCID of the person, alternatively a cpe ID
 		schema:name "Frank Kaptein" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Frank_Kaptein" . # maybe URL / Website
 
-cpe:RifcaPeters a schema:Person ; # ORCID of the person, alternatively a cpe ID
+spe:RifcaPeters a schema:Person ; # ORCID of the person, alternatively a cpe ID
 		schema:familyName "Peters" ; # Text
 		schema:givenName "Rifca" ; # Text
 		schema:affiliation wd:Q752663 ; # Wikidata Entity

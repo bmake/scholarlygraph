@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix cpe: <http://akwi.org/cpe#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix wd: <http://www.wikidata.org/entity/>.
@@ -10,7 +10,7 @@
 
 ### Person Data
 
-cpe:MaksimKhegai a schema:Person ; # no ORCID available
+spe:MaksimKhegai a schema:Person ; # no ORCID available
 		schema:familyName "Khegai" ; # Text
 		schema:givenName "Maksim" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
@@ -18,7 +18,7 @@ cpe:MaksimKhegai a schema:Person ; # no ORCID available
 		schema:name "Maksim Khegai" ; # alternative to givenName and familyName
 		schema:sameAs "http://isc.ifmo.ru/en/viewperson/151305/Khegai_Maksim_Vilorevich.htm" . # maybe URL / Website
 		
-cpe:DmitriiZubok a schema:Person ; # no ORCID available
+spe:DmitriiZubok a schema:Person ; # no ORCID available
 		schema:familyName "Zubok" ; # Text
 		schema:givenName "Dmitrii" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
@@ -26,7 +26,7 @@ cpe:DmitriiZubok a schema:Person ; # no ORCID available
 		schema:name "Dmitrii Zubok" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Dmitrii_Zubok" . # maybe URL / Website
 
-cpe:AleksandrMaiatin a schema:Person ; # no ORCID available
+spe:AleksandrMaiatin a schema:Person ; # no ORCID available
 		schema:familyName "Maiatin" ; # Text
 		schema:givenName "Aleksandr" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
@@ -34,7 +34,7 @@ cpe:AleksandrMaiatin a schema:Person ; # no ORCID available
 		schema:name "Aleksandr Maiatin" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Aleksandr_Maiatin" . # maybe URL / Website
 
-cpe:TatianaKharchenko a schema:Person ; # no ORCID available
+spe:TatianaKharchenko a schema:Person ; # no ORCID available
 		schema:familyName "Kharchenko" ; # Text
 		schema:givenName "Tatiana" ; # Text
 		schema:affiliation wd:Q1342013 ; # Wikidata Entity
@@ -50,7 +50,7 @@ cpe:TatianaKharchenko a schema:Person ; # no ORCID available
 		schema:name "Dmitry Mouromtsev" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Dmitry_Mouromtsev" . # maybe URL / Website
 
-cpe:IrinaAkhmadeeva a schema:Person ; #  no ORCID available
+spe:IrinaAkhmadeeva a schema:Person ; #  no ORCID available
 		schema:familyName "Akhmadeeva" ; # Text
 		schema:givenName "Irina" ; # Text
 		schema:affiliation wd:Q3032414 ; # Wikidata Entity
@@ -58,7 +58,7 @@ cpe:IrinaAkhmadeeva a schema:Person ; #  no ORCID available
 		schema:name "Irina Akhmadeeva" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Irina_Akhmadeeva" . # maybe URL / Website
 
-cpe:YuryZagorulko a schema:Person ; # no ORCID available
+spe:YuryZagorulko a schema:Person ; # no ORCID available
 		schema:familyName "Zagorulko" ; # Text
 		schema:givenName "Yury" ; # Text
 		schema:affiliation wd:Q3032414 ; # Wikidata Entity
@@ -74,7 +74,7 @@ cpe:YuryZagorulko a schema:Person ; # no ORCID available
 		schema:name "Sören Auer" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Soeren_Auer" . # maybe URL / Website
 		
-cpe:MiretteElias a schema:Person ; # no ORCID available
+spe:MiretteElias a schema:Person ; # no ORCID available
 		schema:familyName "Elias" ; # Text
 		schema:givenName "Mirette" ; # Text
 		schema:affiliation wd:Q152171 ; # Wikidata Entity
@@ -82,7 +82,7 @@ cpe:MiretteElias a schema:Person ; # no ORCID available
 		schema:name "Mirette Elias" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Mirette_Elias2" . # maybe URL / Website
 		
-cpe:SteffenLohmann a schema:Person ; # no ORCID available
+spe:SteffenLohmann a schema:Person ; # no ORCID available
 		schema:familyName "Lohmann" ; # Text
 		schema:givenName "Steffen" ; # Text
 		schema:affiliation wd:Q1452013 ; # Wikidata Entity
@@ -98,7 +98,7 @@ cpe:SteffenLohmann a schema:Person ; # no ORCID available
 		schema:name "Anton Anikin" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Anton_Anikin" . # maybe URL / Website
 		
-cpe:ElenaSarkisova a schema:Person ; # ORCID of the person
+spe:ElenaSarkisova a schema:Person ; # ORCID of the person
 		schema:familyName "Sarkisova" ; # Text
 		schema:givenName "Elena" ; # Text
 		schema:affiliation wd:Q4122969 ; # Wikidata Entity
@@ -106,7 +106,7 @@ cpe:ElenaSarkisova a schema:Person ; # ORCID of the person
 		schema:name "Elena Sarkisova" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Elena_Sarkisova" . # maybe URL / Website
 		
-cpe:DmitryLitovkin a schema:Person ; # ORCID of the person
+spe:DmitryLitovkin a schema:Person ; # ORCID of the person
 		schema:familyName "Litovkin" ; # Text
 		schema:givenName "Dmitry" ; # Text
 		schema:affiliation wd:Q4122969 ; # Wikidata Entity
@@ -114,7 +114,7 @@ cpe:DmitryLitovkin a schema:Person ; # ORCID of the person
 		schema:name "Dmitry Litovkin" ; # alternative to givenName and familyName
 		schema:sameAs "" . # maybe URL / Website
 		
-cpe:MarinaKultsova a schema:Person ; # ORCID of the person
+spe:MarinaKultsova a schema:Person ; # ORCID of the person
 		schema:familyName "Kultsova" ; # Text
 		schema:givenName "Marina" ; # Text
 		schema:affiliation wd:Q4122969 ; # Wikidata Entity

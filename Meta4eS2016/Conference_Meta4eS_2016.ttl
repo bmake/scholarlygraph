@@ -1,0 +1,33 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+### Conference Proceedings Data
+
+<http://doi.org/10.1007/978-3-319-55961-2>  a schema:CreativeWorkSeries ; # DOI of the conference proceedings 
+		schema:name "On the Move to Meaningful Internet Systems: OTM 2016 Workshops" ; # Text
+		schema:publisher wd:Q176916 ; # Wikidata entity
+		schema:dateCreated "2017" ; # Date
+		schema:description "Proceedings of the Confederated International Workshops: EI2N, FBM, ICSP, Meta4eS, and OTMA 2016" . # Text
+		
+wd:Q176916 a schema:Organization .
+		
+		
+### Conference Data
+
+cpe:Meta4eS_2016 a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
+		schema:name "Meta4eS 2016" ; # Text, short name
+		schema:alternateName "International Workshop on Methods, Evaluation, Tools and Applications for the Creation and Consumption of Structured Data for the e-Society (Meta4eS) 2016" ; # Text, long name
+		schema:description "Confederated OTM Workshop, Rhodes (Greece), October 2016" ; # Text, short description
+		schema:url <http://www.otmconferences.org/> ; # official conference website
+		schema:startDate "2016-10-24" ; # Date
+		schema:endDate "2016-10-28" ; # Date
+		schema:location wd:Q43048 ; # Wikidata entity
+		schema:recordedIn <http://doi.org/10.1007/978-3-319-55961-2> . # Reference to conference proceedings
+		
+wd:Q43048 a schema:Place .

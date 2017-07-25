@@ -1,0 +1,30 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix doi: <http://www.doi.org/>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+### Conference Proceedings
+
+<http://ceur-ws.org/Vol-1695/>  a schema:CreativeWorkSeries ; # URN of the conference proceedings 
+		schema:name "SEMANTiCs 2016, Poster Session" ; # Text
+		schema:publisher wd:Q273263 ; # Wikidata entity
+		schema:dateCreated "2016" ; # Date
+		schema:description "SEMPDS-2016 Posters&Demos@SEMANTiCS 2016 and SuCCESS'16 Workshop" . # Text
+		
+		
+### Conference 
+
+cpe:SEMPDS_2016 a schema:PublicationEvent ; # proprietory ID (if no Wikidata entry is available)
+		schema:name "SEMPDS-2016" ; # Text, short name
+		schema:alternateName "Posters&Demos@SEMANTiCS 2016 and SuCCESS'16 Workshop" ; # Text, long name
+		schema:description "Joint Proceedings of the Posters and Demos Track of the 12th International Conference on Semantic Systems - SEMANTiCS2016 and the 1st International Workshop on Semantic Change & Evolving Semantics (SuCCESS'16) co-located with the 12th International Conference on Semantic Systems (SEMANTiCS 2016)" ; # Text, short description 
+		schema:url <https://2016.semantics.cc/> ; # official conference website
+		schema:startDate "2016-09-12" ; # Date
+		schema:endDate "2016-09-15" ; # Date
+		schema:location wd:Q2079 ; # Wikidata entity
+		schema:recordedIn <http://ceur-ws.org/Vol-1695/> . # Reference to conference proceedings

@@ -1,0 +1,170 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+
+### Person Data
+
+<https://orcid.org/0000-0003-0276-0874> a schema:Person ; # no ORCID available
+		schema:familyName "Artem" ; # Text
+		schema:givenName "Kuznetsov" ; # Text
+		schema:affiliation wd:Q1506552 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Artem Kuznetsov" . # alternative to givenName and familyName
+
+cpe:PavelBraslavski a schema:Person ; # no ORCID available
+		schema:familyName "Braslavski" ; # Text
+		schema:givenName "Pavel" ; # Text
+		schema:affiliation wd:Q1506552 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Pavel Braslavski" ; # alternative to givenName and familyName
+		schema:sameAs "http://kansas.ru/pb/index_en.html" . # maybe URL / Website
+
+cpe:VladimirIvanov a schema:Person ; # no ORCID available
+		schema:familyName "Ivanov" ; # Text
+		schema:givenName "Vladimir" ; # Text
+		schema:affiliation wd:Q30263296 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Vladimir Ivanov" . # alternative to givenName and familyName
+
+
+
+cpe:AliyaNugumanova a schema:Person ; # no ORCID available
+		schema:familyName "Nugumanova" ; # Text
+		schema:givenName "Aliya" ; # Text
+		schema:affiliation wd:Q4126492 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Aliya Nugumanova" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Aliya_Nugumanova" . # maybe URL / Website		
+
+cpe:IgorBessmertny a schema:Person ; # no ORCID available
+		schema:familyName "Bessmertny" ; # Text
+		schema:givenName "Igor" ; # Text
+		schema:affiliation wd:Q1342013 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Igor Bessmertny" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Igor_Bessmertny" . # maybe URL / Website				
+
+cpe:YerzhanBaiburin a schema:Person ; # no ORCID available
+		schema:familyName "Baiburin" ; # Text
+		schema:givenName "Yerzhan" ; # Text
+		schema:affiliation wd:Q4126492 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Yerzhan Baiburin" . # alternative to givenName and familyName
+	
+<http://orcid.org/0000-0002-9680-2758> a schema:Person ; # no ORCID available
+		schema:familyName "Mansurova" ; # Text
+		schema:givenName "Madina" ; # Text
+		schema:affiliation wd:Q427677 ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "Madina Mansurova" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Madina_Mansurova" . # maybe URL / Website				
+
+<http://orcid.org/0000-0002-5802-2785> a schema:Person ; # no ORCID available
+		schema:familyName "Usbeck" ; # Text
+		schema:givenName "Ricardo" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "usbeck@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Ricardo Usbeck" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Ricardo_Usbeck" . # maybe URL / Website	
+
+cpe:MichaelRoeder a schema:Person ; # no ORCID available
+		schema:familyName "Röder" ; # Text
+		schema:givenName "Michael" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "roeder@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Michael Röder" ; # alternative to givenName and familyName
+		schema:sameAs "http://aksw.org/MichaelRoeder.html" . # maybe URL / Website	
+
+<http://orcid.org/0000-0002-9340-0438> a schema:Person ; # no ORCID available
+		schema:familyName "Haase" ; # Text
+		schema:givenName "Peter" ; # Text
+		schema:affiliation wd:Q22872 ; # Wikidata Entity
+		schema:email "ph@metaphacts.com" ; # mailto:emailAddress
+		schema:name "Peter Haase" . # alternative to givenName and familyName
+
+<http://orcid.org/0000-0002-9521-6263> a schema:Person ; # no ORCID available
+		schema:familyName "Kozlov" ; # Text
+		schema:givenName "Artem" ; # Text
+		schema:affiliation wd:Q22872 ; # Wikidata Entity
+		schema:email "ak@metaphacts.com" ; # mailto:emailAddress
+		schema:name "Artem Kozlov" . # alternative to givenName and familyName
+
+cpe:MuhammadSaleem a schema:Person ; # no ORCID available
+		schema:familyName "Saleem" ; # Text
+		schema:givenName "Muhammad" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "ngonga@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Muhammad Saleem" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Muhammad_Saleem31" . # maybe URL / Website	
+
+cpe:AxelCyrilleNgongaNgomo a schema:Person ; # no ORCID available
+		schema:familyName "Ngonga Ngomo" ; # Text
+		schema:givenName "Axel-Cyrille" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Axel-Cyrille Ngonga Ngomo" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Axel-Cyrille_Ngonga_Ngomo" . # maybe URL / Website	
+
+
+
+
+### Organization Data
+
+wd:Q1506552 a schema:Organization ; # Wikidata entity
+		schema:legalName "Ural Federal University" ; # Text, officially name
+		schema:location wd:Q887 ; # Wikidata entity
+		schema:url "https://urfu.ru" . # URL website
+		
+wd:Q887 a schema:Place .
+
+
+wd:Q30263296 a schema:Organization ; # Wikidata entity
+		schema:legalName "Innopolis University" ; # Text, officially name
+		schema:location wd:Q4201239 ; # Wikidata entity
+		schema:url "https://university.innopolis.ru" . # URL website
+		
+wd:Q4201239 a schema:Place .
+
+
+
+wd:Q4126492 a schema:Organization ; # Wikidata entity
+		schema:legalName "East Kazakhstan State Technical University" ; # Text, officially name
+		schema:location wd:Q162548 ; # Wikidata entity
+		schema:url "http://www.ektu.kz/" . # URL website
+		
+wd:Q162548 a schema:Place .
+
+wd:Q1342013 a schema:Organization ; # Wikidata entity
+		schema:legalName "Saint Petersburg State University of Information Technologies, Mechanics and Optics" ; # Text, officially name
+		schema:location wd:Q656 ; # Wikidata entity
+		schema:url "https://hifmo.ru/en/" . # URL website
+		
+wd:Q656 a schema:Place .
+
+wd:Q427677 a schema:Organization ; # Wikidata entity
+		schema:legalName "Al-Farabi Kazakh National University" ; # Text, officially name
+		schema:location wd:Q35493 ; # Wikidata entity
+		schema:url "https://www.kaznu.kz/" . # URL website
+		
+wd:Q35493 a schema:Place .
+
+
+wd:Q154804 a schema:Organization ; # Wikidata entity
+		schema:legalName "Universität Leipzig" ; # Text, officially name
+		schema:location wd:Q2079 ; # Wikidata entity
+		schema:url "https://www.uni-leipzig.de" . # URL website
+		
+wd:Q2079 a schema:Place .			
+		
+wd:Q22132500 a schema:Organization ; # Wikidata entity
+		schema:legalName "metaphacts GmbH" ; # Text, officially name
+		schema:location wd:Q22872 ; # Wikidata entity
+		schema:url "http://www.metaphacts.com/" . # URL website
+		
+wd:Q22872 a schema:Place .		

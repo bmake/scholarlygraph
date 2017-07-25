@@ -1,0 +1,394 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+### Person 
+
+cpe:PhilippFrischmuth a schema:Person ; # no ORCID available
+		schema:familyName "Frischmuth" ; # Text
+		schema:givenName "Philipp" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "frischmuth@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Philipp Frischmuth" ; # alternative to givenName and familyName
+		schema:sameAs "http://bis.informatik.uni-leipzig.de/PhilippFrischmuth" . # maybe URL / Website
+		
+cpe:NathanaelArndt a schema:Person ; # no ORCID available
+		schema:familyName "Arndt" ; # Text
+		schema:givenName "Nathanael" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "arndt@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Nathanael Arndt" ; # alternative to givenName and familyName
+		schema:sameAs "http://aksw.org/NatanaelArndt.html" . # maybe URL / Website
+
+cpe:MichaelMartin a schema:Person ; # several ORCIDs available
+		schema:familyName "Martin" ; # Text
+		schema:givenName "Michael" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "martin@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Michael Martin" ; # alternative to givenName and familyName
+		schema:sameAs "http://bis.informatik.uni-leipzig.de/MichaelMartin" . # maybe URL / Website
+
+cpe:LisaEhrlinger a schema:Person ; # no ORCID available
+		schema:familyName "Ehrlinger" ; # Text
+		schema:givenName "Lisa" ; # Text
+		schema:affiliation wd:Q682739 ; # Wikidata Entity
+		schema:email "lisa.ehrlinger@jku.at" ; # mailto:emailAddress
+		schema:name "Lisa Ehrlinger" ; # alternative to givenName and familyName
+		schema:sameAs "http://www.jku.at/faw/content/e233808/index_html?team_view=section&emp=e233808/employee_groups_wiss243261/employees251241" . # maybe URL / Website
+		
+cpe:WolframWoess a schema:Person ; # no ORCID available
+		schema:familyName "Wöß" ; # Text
+		schema:givenName "Wolfram" ; # Text
+		schema:affiliation wd:Q682739 ; # Wikidata Entity
+		schema:email "wolfram.woess@jku.at" ; # mailto:emailAddress
+		schema:name "Wolfram Wöß" ; # alternative to givenName and familyName
+		schema:sameAs "http://wwoess.faw.at/" . # maybe URL / Website
+		
+cpe:BerndMueller a schema:Person ; # several ORCIDs available
+		schema:familyName "Müller" ; # Text
+		schema:givenName "Bernd" ; # Text
+		schema:affiliation <https://www.zbmed.de/en/> ; # no Wikidata Entity available
+		schema:email "bernd.mueller@zbmed.de" ; # mailto:emailAddress
+		schema:name "Bernd Müller" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Bernd_Mueller5" . # maybe URL / Website
+		
+cpe:AlexandraHagelstein a schema:Person ; # no ORCID available
+		schema:familyName "Hagelstein" ; # Text
+		schema:givenName "Alexandra" ; # Text
+		schema:affiliation <https://www.zbmed.de/en/> ; # no Wikidata Entity available
+		schema:email "hagelstein@zbmed.de" ; # mailto:emailAddress
+		schema:name "Alexandra Hagelstein" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Alexandra_Hagelstein" . # maybe URL / Website
+		
+cpe:JonasRebstadt a schema:Person ; # no ORCID available
+		schema:familyName "Rebstadt" ; # Text
+		schema:givenName "Jonas" ; # Text
+		schema:affiliation wd:Q1400766 ; # Wikidata Entity
+		schema:email "jonas.rebstadt@hsw-hameln.de" ; # mailto:emailAddress
+		schema:name "Jonas Rebstadt" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Jonas_Rebstadt" . # maybe URL / Website
+
+cpe:LuisaBrinkschulte a schema:Person ; # no ORCID available
+		schema:familyName "Brinkschulte" ; # Text
+		schema:givenName "Luisa" ; # Text
+		schema:affiliation wd:Q1400766 ; # Wikidata Entity
+		schema:email "luisa.brinkschulte@hsw-hameln.de" ; # mailto:emailAddress
+		schema:name "Luisa Brinkschulte" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Luisa_Brinkschulte" . # maybe URL / Website
+
+cpe:ArkadijEnders a schema:Person ; # no ORCID available
+		schema:familyName "Enders" ; # Text
+		schema:givenName "Arkadij" ; # Text
+		schema:affiliation wd:Q1400766 ; # Wikidata Entity
+		schema:email "arkadij.enders@hsw-hameln.de" ; # mailto:emailAddress
+		schema:name "Arkadij Enders" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/researcher/2096250977_Arkadij_Enders" . # maybe URL / Website
+
+cpe:RobertMertens a schema:Person ; # no ORCID available
+		schema:familyName "Mertens" ; # Text
+		schema:givenName "Robert" ; # Text
+		schema:affiliation wd:Q1400766 ; # Wikidata Entity
+		schema:email "robert.mertens@hsw-hameln.de" ; # mailto:emailAddress
+		schema:name "Robert Mertens" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Robert_Mertens2" . # maybe URL / Website
+
+cpe:TobiasWeller a schema:Person ; # no ORCID available
+		schema:familyName "Weller" ; # Text
+		schema:givenName "Tobias" ; # Text
+		schema:affiliation wd:Q30343035 ; # Wikidata Entity
+		schema:email "tobias.weller@kit.edu" ; # mailto:emailAddress
+		schema:name "Tobias Weller" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Tobias_Weller" . # maybe URL / Website
+
+cpe:MariaMaleshkova a schema:Person ; # no ORCID available
+		schema:familyName "Maleshkova" ; # Text
+		schema:givenName "Maria" ; # Text
+		schema:affiliation wd:Q30343035 ; # Wikidata Entity
+		schema:email "maria.maleshkova@kit.edu" ; # mailto:emailAddress
+		schema:name "Maria Maleshkova" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Maria_Maleshkova" . # maybe URL / Website
+
+<http://orcid.org/0000-0003-4844-4260> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Dojchinovski" ; # Text
+		schema:givenName "Milan" ; # Text
+		schema:affiliation wd:Q1329478 ; # Wikidata Entity
+		schema:email "milan.dojchinovski@fit.cvut.cz" ; # mailto:emailAddress
+		schema:name "Milan Dojchinovski" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Milan_Dojchinovski" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-2300-4421> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Kontokostas" ; # Text
+		schema:givenName "Dimitris" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "kontokostas@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Dimitris Kontokostas" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Dimitris_Kontokostas" . # maybe URL / Website
+
+cpe:RobertRoessling a schema:Person ; # no ORCID available
+		schema:familyName "Rößling" ; # Text
+		schema:givenName "Robert" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "roessling@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Robert Rößling" ; # alternative to givenName and familyName
+		schema:sameAs "" . # maybe URL / Website
+
+<http://orcid.org/0000-0001-6006-5103> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Hellmann" ; # Text
+		schema:givenName "Sebastian" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "hellmann@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:name "Sebastian Hellmann" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Sebastian_Hellmann" . # maybe URL / Website
+
+cpe:MagnusKnuth a schema:Person ; # no ORCID available
+		schema:familyName "Knuth" ; # Text
+		schema:givenName "Magnus" ; # Text
+		schema:affiliation wd:Q884105 ; # Wikidata Entity
+		schema:email "magnus.knuth@hpi.unipotsdam.de" ; # mailto:emailAddress
+		schema:name "Magnus Knuth" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Magnus_Knuth" . # maybe URL / Website
+
+cpe:FlorianKleedorfer a schema:Person ; # no ORCID available
+		schema:familyName "Florian" ; # Text
+		schema:givenName "Kleedorfer" ; # Text
+		schema:affiliation wd:Q2145569 ; # Wikidata Entity
+		schema:email "florian.kleedorfer@researchstudio.at" ; # mailto:emailAddress
+		schema:name "Florian Kleedorfer" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Florian_Kleedorfer" . # maybe URL / Website
+		
+cpe:SoheilHuman a schema:Person ; # no ORCID available
+		schema:familyName "Human" ; # Text
+		schema:givenName "Soheil" ; # Text
+		schema:affiliation wd:Q2145569 ; # Wikidata Entity
+		schema:email "soheil.human@researchstudio.at" ; # mailto:emailAddress
+		schema:name "Soheil Human" ; # alternative to givenName and familyName
+		schema:sameAs "https://sat.researchstudio.at/soheil-human" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-3157-6657> a schema:Person ; # identity not assured
+		schema:familyName "Friedrich" ; # Text
+		schema:givenName "Heiko" ; # Text
+		schema:affiliation wd:Q2145569 ; # Wikidata Entity
+		schema:email "heiko.friedrich@researchstudio.at" ; # mailto:emailAddress
+		schema:name "Heiko Friedrich" ; # alternative to givenName and familyName
+		schema:sameAs "https://sat.researchstudio.at/heiko-friedrich" . # maybe URL / Website
+		
+cpe:ChristianHuemer a schema:Person ; # no ORCID available
+		schema:familyName "Huemer" ; # Text
+		schema:givenName "Christian" ; # Text
+		schema:affiliation wd:Q689400 ; # Wikidata Entity
+		schema:email "huemer@big.tuwien.ac.at" ; # mailto:emailAddress
+		schema:name "Christian Huemer" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/researcher/10020036_Christian_Huemer" . # maybe URL / Website
+		
+cpe:CiroBaronNeto a schema:Person ; # no ORCID available
+		schema:familyName "Neto" ; # Text
+		schema:givenName "Ciro Baron" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "cbaron@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Ciro Baron Neto" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Ciro_Neto2" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-1676-545X> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Esteves" ; # Text
+		schema:givenName "Diego" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "esteves@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Diego Esteves" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Diego_Esteves" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-1276-2366> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Soru" ; # Text
+		schema:givenName "Tommaso" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "tsoru@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Tommaso Soru" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Tommaso_Soru" . # maybe URL / Website
+			
+cpe:DiegoMoussallem a schema:Person ; # no ORCID available
+		schema:familyName "Moussallem" ; # Text
+		schema:givenName "Diego" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "moussallem@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Diego Moussallem" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Diego_Moussallem" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-0079-2533> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Andre" ; # Text
+		schema:givenName "Valdestilhas" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "valdestilhas@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Andre Valdestilhas" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Andre_Valdestilhas" . # maybe URL / Website
+	
+<http://orcid.org/0000-0002-3111-9405> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Marx" ; # Text
+		schema:givenName "Edgard" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "marx@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Edgard Marx" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Edgard_Marx" . # maybe URL / Website
+
+<http://orcid.org/0000-0001-5238-9618> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Nareike" ; # Text
+		schema:givenName "Andreas" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "nareike@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Andreas Nareike" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Andreas_Nareike" . # maybe URL / Website
+
+cpe:JoergUnbehauen a schema:Person ; # no ORCID available
+		schema:familyName "Unbehauen" ; # Text
+		schema:givenName "Jörg" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "unbehauen@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Jörg Unbehauen" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/researcher/70449110_Joerg_Unbehauen" . # maybe URL / Website
+		
+cpe:JohannesSchmidt a schema:Person ; # no ORCID available
+		schema:familyName "Schmidt" ; # Text
+		schema:givenName "Johannes" ; # Text
+		schema:affiliation wd:Q154804 ; # Wikidata Entity
+		schema:email "jschmidt@informatik.unileipzig.de" ; # mailto:emailAddress
+		schema:name "Johannes Schmidt" ; # alternative to givenName and familyName
+		schema:sameAs "" . # maybe URL / Website
+	
+cpe:MichaelVanBekkum a schema:Person ; # no ORCID available
+		schema:familyName "van Bekkum" ; # Text
+		schema:givenName "Michael A." ; # Text
+		schema:affiliation <https://www.tno.nl/en/> ; # no Wikidata Entity available
+		schema:email "michael.vanbekkum@tno.nl" ; # mailto:emailAddress
+		schema:name "Michael A. van Bekkum" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Michael_Bekkum" . # maybe URL / Website
+		
+<http://orcid.org/0000-0002-8161-5722> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Neerincx" ; # Text
+		schema:givenName "Mark A." ; # Text
+		schema:affiliation <https://www.tno.nl/en/> ; # no Wikidata Entity available
+		schema:email "mark.neerincx@tno.nl" ; # mailto:emailAddress
+		schema:name "Mark A. Neerincx" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Mark_Neerincx" . # maybe URL / Website
+
+cpe:HansUlrichKrieger a schema:Person ; # no ORCID available
+		schema:familyName "Krieger" ; # Text
+		schema:givenName "Hans-Ulrich" ; # Text
+		schema:affiliation wd:Q896469 ; # Wikidata Entity
+		schema:email "krieger@dfki.de" ; # mailto:emailAddress
+		schema:name "Hans-Ulrich Krieger" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/researcher/70109338_Hans-Ulrich_Krieger" . # maybe URL / Website
+		
+cpe:BerndKiefer a schema:Person ; # no ORCID available
+		schema:familyName "Kiefer" ; # Text
+		schema:givenName "Bernd" ; # Text
+		schema:affiliation wd:Q896469 ; # Wikidata Entity
+		schema:email "bernd.kiefer@dfki.de" ; # mailto:emailAddress
+		schema:name "Bernd Kiefer" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Bernd_Kiefer" . # maybe URL / Website
+		
+cpe:StefaniaRacioppa a schema:Person ; # no ORCID available
+		schema:familyName "Racioppa" ; # Text
+		schema:givenName "Stefania" ; # Text
+		schema:affiliation wd:Q896469 ; # Wikidata Entity
+		schema:email "stefania.racioppa@dfki.de" ; # mailto:emailAddress
+		schema:name "Stefania Racioppa" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Stefania_Racioppa" . # maybe URL / Website
+		
+cpe:FrankKaptein a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Kaptein" ; # Text
+		schema:givenName "Frank" ; # Text
+		schema:affiliation wd:Q752663 ; # Wikidata Entity
+		schema:email "f.c.a.kaptein@tudelft.nl" ; # mailto:emailAddress
+		schema:name "Frank Kaptein" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Frank_Kaptein" . # maybe URL / Website
+
+cpe:RifcaPeters a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "Peters" ; # Text
+		schema:givenName "Rifca" ; # Text
+		schema:affiliation wd:Q752663 ; # Wikidata Entity
+		schema:email "r.m.peters@tudelft.nl" ; # mailto:emailAddress
+		schema:name "Rifca Peters" ; # alternative to givenName and familyName
+		schema:sameAs "https://www.researchgate.net/profile/Rifca_Peters" . # maybe URL / Website
+	
+	
+### Person Template
+<https://orcid.org/OrcidOfThePerson> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "" ; # Text
+		schema:givenName "" ; # Text
+		schema:affiliation wd:Organization ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "" ; # alternative to givenName and familyName
+		schema:sameAs "" . # maybe URL / Website
+		
+		
+### Organization
+
+wd:Q154804 a schema:Organization ; # Wikidata entity
+		schema:legalName "Universität Leipzig" ; # Text, officially name
+		schema:location wd:Q2079 ; # Wikidata entity
+		schema:url "https://www.uni-leipzig.de" . # URL website
+		
+wd:Q682739 a schema:Organization ; # Wikidata entity
+		schema:legalName "Johannes Kepler University Linz" ; # Text, officially name
+		schema:location wd:Q41329 ; # Wikidata entity
+		schema:url "http://www.jku.at/faw/content" . # URL website
+		
+<https://www.zbmed.de/en/> a schema:Organization ; # no Wikidata Entity available
+		schema:legalName "ZB MED Leibniz Information Centre for Life Sciences" ; # Text, officially name
+		schema:location wd:Q365 ; # Wikidata entity
+		schema:url "https://www.zbmed.de/en/" . # URL website	
+
+wd:Q1400766 a schema:Organization ; # Wikidata entity
+		schema:legalName "Hochschule Weserbergland - University of Applied Sciences Hameln" ; # Text, officially name
+		schema:location wd:Q4062 ; # Wikidata entity
+		schema:url "https://www.hsw-hameln.de/" . # URL website
+
+wd:Q30343035 a schema:Organization ; # Wikidata entity
+		schema:legalName "AIFB Institute, KIT" ; # Text, officially name
+		schema:location wd:Q1040 ; # Wikidata entity
+		schema:url "http://www.aifb.kit.edu/" . # URL website		
+		
+wd:Q1329478 a schema:Organization ; # Wikidata entity
+		schema:legalName "Czech Technical University in Prague" ; # Text, officially name
+		schema:location wd:Q1085 ; # Wikidata entity
+		schema:url "http://www.cvut.cz/" . # URL website		
+
+wd:Q884105 a schema:Organization ; # Wikidata entity
+		schema:legalName "Hasso Plattner Institute at University Potsdam" ; # Text, officially name
+		schema:location wd:Q1711 ; # Wikidata entity
+		schema:url "https://hpi.de/" . # URL website	
+		
+wd:Q2145569 a schema:Organization ; # Wikidata entity
+		schema:legalName "Research Studios Austria" ; # Text, officially name
+		schema:location wd:Q34713 ; # Wikidata entity
+		schema:url "http://www.researchstudio.at/" . # URL website	
+
+wd:Q689400 a schema:Organization ; # Wikidata entity
+		schema:legalName "TU Wien" ; # Text, officially name
+		schema:location wd:Q1741 ; # Wikidata entity
+		schema:url "http://www.tuwien.ac.at/" . # URL website	
+		
+<https://www.tno.nl/en/> a schema:Organization ; # Wikidata entity
+		schema:legalName "TNO Netherlands" ; # Text, officially name
+		schema:location wd:Q1025080 ; # Wikidata entity
+		schema:url "https://www.tno.nl/en/" . # URL website		
+		
+wd:Q896469 a schema:Organization ; # Wikidata entity
+		schema:legalName "German Research Centre for Artificial Intelligence" ; # Text, officially name
+		schema:location wd:Q1724 ; # Wikidata entity
+		schema:url "https://www.dfki.de/" . # URL website	
+		
+wd:Q752663 a schema:Organization ; # Wikidata entity
+		schema:legalName "Delft University of Technology" ; # Text, officially name
+		schema:location wd:Q690 ; # Wikidata entity
+		schema:url "http://www.tudelft.nl/" . # URL website		
+		
+		
+### Organization Template		
+wd:Organization a schema:Organization ; # Wikidata entity
+		schema:legalName "" ; # Text, officially name
+		schema:location wd:Place ; # Wikidata entity
+		schema:url "" . # URL website		

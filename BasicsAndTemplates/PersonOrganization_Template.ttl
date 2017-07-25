@@ -1,0 +1,27 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix cpe: <http://akwi.org/cpe#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+### Person Template
+
+<https://orcid.org/OrcidOfThePerson> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "" ; # Text
+		schema:givenName "" ; # Text
+		schema:affiliation wd:Organization ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "" ; # alternative to givenName and familyName
+		schema:sameAs "" . # maybe URL / wWebsite
+		
+### Organization Template
+
+wd:Organization a schema:Organization ; # Wikidata entity
+		schema:legalName "" ; # Text, officially name
+		schema:location wd:Place ; # Wikidata entity
+		schema:url "" . # URL website
+		
+wd:Place a schema:Place .

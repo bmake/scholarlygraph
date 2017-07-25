@@ -1,0 +1,2730 @@
+# Exported with the Erfurt API - http://aksw.org/Projects/Erfurt
+
+@base <https://bmake.th-brandenburg.de/spe> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix doi: <http://www.doi.org/> .
+@prefix spv: <https://bmake.th-brandenburg.de/spv#> .
+@prefix spe: <https://bmake.th-brandenburg.de/spe#> .
+
+_:node1 owl:unionOf "_:node2" .
+
+_:node10 owl:unionOf "_:node11" .
+
+_:node11 rdf:first schema:Event ;
+         rdf:rest "_:node12" .
+
+_:node12 rdf:first schema:CreativeWork ;
+         rdf:rest rdf:nil .
+
+_:node13 owl:unionOf "_:node14" .
+
+_:node14 rdf:first schema:Person ;
+         rdf:rest "_:node15" .
+
+_:node15 rdf:first schema:Organization ;
+         rdf:rest rdf:nil .
+
+_:node16 owl:unionOf "_:node17" .
+
+_:node17 rdf:first schema:Person ;
+         rdf:rest "_:node18" .
+
+_:node18 rdf:first schema:Organization ;
+         rdf:rest rdf:nil .
+
+_:node19 owl:unionOf "_:node20" .
+
+_:node2 rdf:first schema:Person ;
+        rdf:rest "_:node3" .
+
+_:node20 rdf:first schema:Person ;
+         rdf:rest "_:node21" .
+
+_:node21 rdf:first schema:Organization ;
+         rdf:rest rdf:nil .
+
+_:node3 rdf:first schema:Organization ;
+        rdf:rest rdf:nil .
+
+_:node4 owl:unionOf "_:node5" .
+
+_:node5 rdf:first schema:Organization ;
+        rdf:rest "_:node6" .
+
+_:node6 rdf:first schema:Event ;
+        rdf:rest rdf:nil .
+
+_:node7 a owl:Class ;
+        owl:unionOf "_:node8" .
+
+_:node8 rdf:first xsd:string ;
+        rdf:rest "_:node9" .
+
+_:node9 rdf:first owl:Thing ;
+        rdf:rest rdf:nil .
+
+<http://ceur-ws.org/Vol-1695/> a schema:CreativeWorkSeries ;
+                               schema:publisher wd:Q273263 ;
+                               schema:description "SEMPDS-2016 Posters & Demos @ SEMANTiCS 2016 and SuCCESS'16 Workshop" ;
+                               schema:name "SEMANTiCs 2016, Poster & Demo Session" ;
+                               schema:dateCreated "2016" .
+
+<http://ceur-ws.org/Vol-1695/paper1.pdf> a schema:ScholarlyArticle ;
+                                         schema:about spe:SEMPDS2016_1_RO, spe:SEMPDS2016_1_RM, spe:SEMPDS2016_1_RF, spe:SEMPDS2016_1_FW, spe:SEMPDS2016_1_Cr ;
+                                         schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                         schema:author spe:AlexandraHagelstein, spe:BerndMueler ;
+                                         schema:description "Queries in literature search engines are usually conducted on metadata derived from scienti_c publications. The search engine LIVIVO holds a corpus of 63 Million life science pub- lications. About 25 Million publications in LIVIVO are taken from PubMed that have annotations with Medical Subject Headings (MeSH). The other publications have heterogeneous keyword annotations. Hence, a workow is developed us- ing the Unstructured Information Management Architecture (UIMA) to enrich publications from LIVIVO with semantic annotations. The UIMA analysis engine ConceptMapper em- ploys entity recognition based on dictionaries developed us- ing MeSH, the pharmaceutical database DrugBank, and the multilingual agricultural vocabulary AGROVOC . Additionally, ontological relationships amongst the semantic entities are preserved by using the graph database Neo4j. The ontolog- ical information is derived from the MeSH tree, the Anatom- ical Therapeutic Chemical classi_cation system (ATC) for pharmaceuticals and the AGROVOC tree. The ontological struc- ture of semantic entities enables functionalities like query expansion, the aggregation of search results, and concept- based ranking algorithms. " ;
+                                         schema:headline "Beyond Metadata – Enriching Life Science Publications in LIVIVO with Semantic Entities from the Linked Data Cloud" ;
+                                         schema:inLanguage "en" ;
+                                         schema:keywords "linked data, graph database, document database, named entity recognition, semantic search" .
+
+<http://ceur-ws.org/Vol-1695/paper11.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_11_RO, spe:SEMPDS2016_11_RM, spe:SEMPDS2016_11_RF, spe:SEMPDS2016_11_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author spe:PhilippFrischmuth, spe:MichaelMartin, spe:NathaelArndt ;
+                                          schema:description "In this demonstration (with supportive poster) we present the semantic data wiki OntoWiki, which was released in version 1.0 just recently. We focus on the changes introduced to the tool in the latest release and showcase the generic data wiki, improvements we made with regard to the documentation as well as three success stories where OntoWiki was adapted and deployed." ;
+                                          schema:headline "OntoWiki 1.0: 10 Years of Development – What’s New in OntoWiki" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "structured data wiki, domain-independendt data visualization, framework for data-driven applications" .
+
+<http://ceur-ws.org/Vol-1695/paper18.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_18_RO, spe:SEMPDS2016_18_RM, spe:SEMPDS2016_18_RF, spe:SEMPDS2016_18_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author spe:TobiasWeller, spe:MariaMaleshkova ;
+                                          schema:description "Processes need to be captured in a structured way in order to analyse them by using computer-assisted methods. This circumstance becomes more important as processes become complex. Business Process Model and Notation appears as de factor standard in industry as process modeling language. However, it has a limit that semantics like e.g input/output parameters, involved persons or references to external data sources are not captured. This circumstance leads to a negligence of important semantic information. Semantic information can be used in process analysis to enhance them and _nd new insights. In addition are process modeling languages often extended with new elements to adapt its expressiveness to latest scenarios, as well as to model scenarios in speci_c domains. To address these problems we 1) allow users to de_ne BPMN elements, as well as corresponding semantics for them; 2) provide an open-source tool to capture BPMN process models graphically in a Semantic MediaWiki; 3) publish the information according to the Linked Data principles and 4) show that the system is easy extensible to latest process elements. " ;
+                                          schema:headline "Adaptive Semantic Process Modeling Tool" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "Business Process Model and Notation, Adaptive Modeling Tool, Semantic MediaWiki, Linked Data principles" .
+
+<http://ceur-ws.org/Vol-1695/paper21.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_21_RO, spe:SEMPDS2016_21_RM, spe:SEMPDS2016_21_RF, spe:SEMPDS2016_21_FW ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author <http://orcid.org/0000-0003-4844-4260>, <http://orcid.org/0000-0002-2300-4421>, <http://orcid.org/0000-0001-6006-5103>, spe:RobertRoessling, spe:MagnusKnuth ;
+                                          schema:description "Links are the key enabler for retrieval of related information on the Web of Data. Currently, DBpedia is one of the central interlinking hubs in the Linked Open Data (LOD) cloud. With over 28 million of described and localized things it is one of the largest and open datasets. With the increasing number of linked datasets, there is need for proper maintenance of these links. In this paper, we describe the DBpedia Links repository, which maintains linksets between DBpedia and other LOD datasets. We describe the system for maintenance, update and quality assurance of the linksets " ;
+                                          schema:headline "DBpedia Links: The Hub of Links for the Web of Data" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "links, DBpedia, LOD, linking, resource" .
+
+<http://ceur-ws.org/Vol-1695/paper22.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_22_RO, spe:SEMPDS2016_22_RM, spe:SEMPDS2016_22_RF, spe:SEMPDS2016_22_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author <http://orcid.org/0000-0002-3157-6657>, spe:FlorianKleedorfer, spe:SoheilHuman, spe:ChristianHuemer ;
+                                          schema:description "The Web of Needs (WoN) is an approach for expressing and publishing human needs on the Internet as linked data to allow automatic matching of the expressed needs and communication between users who expressed them. In this paper we summarize the processes realized by the different architectural components and explain the decision to use a linked data based messaging subsystem. " ;
+                                          schema:headline "Web of Needs: A Process Overview" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "linked data, electronic marketplaces, messaging" .
+
+<http://ceur-ws.org/Vol-1695/paper28.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_28_RO, spe:SEMPDS2016_28_RM, spe:SEMPDS2016_28_RF, spe:SEMPDS2016_28_FW, spe:SEMPDS2016_28_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author <http://orcid.org/0000-0002-1676-545X>, <http://orcid.org/0000-0002-1276-2366>, <http://orcid.org/0000-0002-0079-2533>, <http://orcid.org/0000-0002-3111-9405>, spe:CiroBaronNeto, spe:DiegoMoussallem ;
+                                          schema:description "Presently, an amount of publications in Machine Learning and Data Mining contexts are contributing to the improvement of algorithms and methods in their respective fields. However, with regard to publication and sharing of scientific experiment achievements, we still face problems on searching and ranking these methods. Scouring the Internet to search state-of-the-art information about specific contexts, such as Named Entity Recognition (NER), is often a timeconsuming task. Besides, this process can lead to an incomplete investigation, either because search engines may return incomplete information or keywords may not be properly defined. To bridge this gap, we present WASOTA, a web portal specifically designed to share and readily present metadata about the state of the art on a specific domain, making the process of searching this information easier." ;
+                                          schema:headline "WASOTA: What Are the States Of The Art?" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "State of the art methods, Metadata, MEX, Interoperability, Provenance, Scientific Experiments" .
+
+<http://ceur-ws.org/Vol-1695/paper35.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_35_RO, spe:SEMPDS2016_35_RM, spe:SEMPDS2016_35_RF, spe:SEMPDS2016_35_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author <http://orcid.org/0000-0001-5238-9618>, spe:JoergUnbehauen, spe:JohannesSchmidt ;
+                                          schema:description "Model-driven software development tools and methods allow fast bootstrapping of software applications and can improve their quality. Using a domain model and adhering to a framework speci_c set of conventions leverages the generation of objects and services in both frontend and backend and an accompanying database schema. However, rapid application development frameworks like JHipster or Spring Roo lack a deep integration of semantic technologies which allow exploration and analytics beyond the operations de- _ned as services. A post-deployment integration of semantic technologies into an existing application can be cumbersome, as knowledge about the domain model can get lost and additional components require deployment. We therefore enrich UML domain models in order to generate database mappings and additional ontologies for exposing both the conceptual model and instance data as RDF. Ultimately, this allows using the expressive power of SPARQL for analytic queries while still using established development frameworks for implementing enterprise applications. " ;
+                                          schema:headline "Adding Semantics to Model-Driven Software Development: A Practical Experience Report" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "Model-driven software development, semantic technology, application development, software development framework" .
+
+<http://ceur-ws.org/Vol-1695/paper37.pdf> a schema:ScholarlyArticle ;
+                                          schema:about spe:SEMPDS2016_37_RO, spe:SEMPDS2016_37_RM, spe:SEMPDS2016_37_RF, spe:SEMPDS2016_37_FW, spe:SEMPDS2016_37_Cr ;
+                                          schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                          schema:author <http://orcid.org/0000-0002-8161-5722>, spe:MichaelVanBekkum, spe:HansUlrichKrieger, spe:BerndKiefer, spe:StefaniaRacioppa, spe:FrankKaptein, spe:RifcaPeters ;
+                                          schema:description "The PAL project1 is developing an embodied conversational agent (robot and its avatar), and applications for child-agent activities that help children from 8 to 14 years old to acquire the required knowledge, skills, and attitude for adequate diabetes selfmanagement. Formal and informal caregivers can use the PAL system to enhance their supportive role for this self-management learning process. We are developing a common ontology (i) to support normative behavior in a flexible way, (ii) to establish mutual understanding in the human-agent system, (iii) to integrate and utilize knowledge from the application and scientific domains, and (iv) to produce sensible human-agent dialogues. The common ontology is constructed by relating and integrating partly existing separate ontologies that are specific to certain contexts or domains. This paper presents the general vision, approach, and state of the art. " ;
+                                          schema:headline "Ontology Engineering for the Design and Implementation of Personal Pervasive Lifestyle Support" ;
+                                          schema:inLanguage "en" ;
+                                          schema:keywords "Ontology engineering; common ontology; embodied conversational agent; DIT++ standard; HFC inference engine; human-agent dialogue" .
+
+<http://ceur-ws.org/Vol-1695/paper4.pdf> a schema:ScholarlyArticle ;
+                                         schema:about spe:SEMPDS2016_4_RO, spe:SEMPDS2016_4_RM, spe:SEMPDS2016_4_RF, spe:SEMPDS2016_4_FW, spe:SEMPDS2016_4_Cr ;
+                                         schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                         schema:author spe:LisaEhrlinger, spe:WolframWoess ;
+                                         schema:description "Recently, the term knowledge graph has been used frequently in research and business, usually in close association with Semantic Web technologies, linked data, large-scale data analytics and cloud computing. Its popularity is clearly in- uenced by the introduction of Google's Knowledge Graph in 2012, and since then the term has been widely used without a de_nition. A large variety of interpretations has hampered the evolution of a common understanding of knowledge graphs. Numerous research papers refer to Google's Knowledge Graph, although no o_cial documentation about the used methods exists. The prerequisite for widespread academic and commercial adoption of a concept or technology is a common understanding, based ideally on a de_nition that is free from ambiguity. We tackle this issue by discussing and de_ning the term knowledge graph, considering its history and diversity in interpretations and use. Our goal is to propose a de_nition of knowledge graphs that serves as basis for discussions on this topic and contributes to a common vision.  " ;
+                                         schema:headline "Towards a Definition of Knowledge Graphs" ;
+                                         schema:inLanguage "en" ;
+                                         schema:keywords "Knowledge Graphs, Knowledge Bases, Ontologies, Knowledge Representation, Semantic Web" .
+
+<http://ceur-ws.org/Vol-1695/paper8.pdf> a schema:ScholarlyArticle ;
+                                         schema:about spe:SEMPDS2016_8_RO, spe:SEMPDS2016_8_RM, spe:SEMPDS2016_8_RF, spe:SEMPDS2016_8_FW, spe:SEMPDS2016_8_Cr ;
+                                         schema:isPartOf <http://ceur-ws.org/Vol-1695/> ;
+                                         schema:author spe:JonasRebstadt, spe:LuisaBrinkschulte, spe:ArkadijEnders, spe:RobertMertens ;
+                                         schema:description "While ontologies are a powerful means for knowledge representation, they are not as wide spread as one would think. A major reason for this fact is the lack of an intuitive visual editor. The visual language presented in this poster tackles part of this problem in that is was developed for a visual editor that allows on-line consistency checking of visual editing steps, i.e. preventing to describe instance configurations that are not allowed by the corresponding class descriptions. The visual language is closely linked to the editor's data model and covers all elements of OWL lite. It is comprised of twelve elements in total, two node elements and ten link types. The language has been implemented in a prototype version of the editor and used to visualize a number of publicly available OWL lite ontologies." ;
+                                         schema:headline "A Visual Language for OWL Lite Editing" ;
+                                         schema:inLanguage "en" ;
+                                         schema:keywords "Ontology, Visualization, OWL Lite, Knowledge Representation" .
+
+<http://doi.org/10.1007/978-3-319-55961-2> a schema:CreativeWorkSeries ;
+                                           schema:publisher wd:Q176916 ;
+                                           schema:description "Proceedings of the Confederated International Workshops: EI2N, FBM, ICSP, Meta4eS, and OTMA 2016" ;
+                                           schema:name "On the Move to Meaningful Internet Systems: OTM 2016 Workshops" ;
+                                           schema:dateCreated "2017" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_22> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_22_RO, spe:Meta4eS2016_22_RM, spe:Meta4eS2016_22_RF, spe:Meta4eS2016_22_FW, spe:Meta4eS2016_22_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:LorenzoServadei, spe:RainerSchmidt, <http://orcid.org/0000-0002-1018-1808> ;
+                                              schema:description "E-health is a key factor in the E-society. E-health, in fact, enhances the efficiency and reduces the costs of the health services. In the diagnostic field, Ehealth can avail of several Machine Learning (ML) algorithms, as Artificial Neural Networks (ANNs) for instance, which often demonstrated a high classification accuracy. Although ANNs have already been applied for medical diagnosis, their influence on the Decision Making Process (DMP) has not been investigated in detail. Therefore, this paper focuses on the impact of ANNs on the DMP for a special kind of medical diagnosis called Spondylolisthesis and Disk Hernia. Through the Decision Model and Notation standard (DMN), the DMP is described, offering a model for possible health policies. In this way ANNs supported decision making for Spondylolisthesis and Disk Hernia diagnosis improve efficiency and quality of health service, especially in developing countries." ;
+                                              schema:headline "Artificial Neural Network for Supporting Medical Decision Making: A Decision Model and Notation Approach to Spondylolisthesis and Disk Hernia" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "clustering scientific abstracts for knowledge extraction, stopword lists, key phrase extraction, part of speech, focus on nouns and adjectives" ;
+                                              schema:pageEnd "227" ;
+                                              schema:pageStart "217" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_23> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_23_RO, spe:Meta4eS2016_23_RM, spe:Meta4eS2016_23_RF, spe:Meta4eS2016_23_FW, spe:Meta4eS2016_23_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:DibyanshuJaiswal, <http://orcid.org/0000-0001-6704-6810> ;
+                                              schema:description "To come up with a semantic web application, it requires skills from two major backgrounds: (a) domain experts to model and populate a semantic knowledge base; and (b) application developers to understand the domain ontology and then build an interface for end users. Learning and using such tools is an overhead and slows down the development process. To address these problems, our paper proposes KSD - Knowledge Serializer and De-serializer tool, that takes an ontology as an input and represents it in a structured form (like JSON, XML) while preserving the underlying semantic information. This format is adaptable to the changes in the underlying ontology and can be used to create user interface, web services and other application modules." ;
+                                              schema:headline "KSD: An Ontology-Driven Yet Semantically Transparent Application Development Tool" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "Serialization, Semantic user interface, Ontology-driven user interface, Semantic data processing" ;
+                                              schema:pageEnd "235" ;
+                                              schema:pageStart "228" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_24> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_24_RO, spe:Meta4eS2016_24_RM, spe:Meta4eS2016_24_RF, spe:Meta4eS2016_24_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:SvetlanaPopova, spe:VeraDanilova ;
+                                              schema:description "Knowledge extraction from scientific documents plays an important role in the development of academic databases and services. We focus on the processing of abstracts to academic papers for the purposes of research data structuring that includes various subtasks, such as key phrase extraction and clustering. The use of abstracts is beneficial, because authors keep up with formal and stylistic requirements imposed by the publishers, and, therefore, informational and language patterns can be revealed. From our viewpoint, the existence of these patterns makes it possible to perform the cross-task application of techniques used for abstracts processing. The aim of the paper is to show it." ;
+                                              schema:headline "Using Extended Stopwords Lists to Improve the Quality of Academic Abstracts Clustering" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "Clustering, Stopwords, Document representation, Extended stopwords list construction, Natural Language Processing" ;
+                                              schema:pageEnd "241" ;
+                                              schema:pageStart "236" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_25> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_25_RO, spe:Meta4eS2016_25_RM, spe:Meta4eS2016_25_RF, spe:Meta4eS2016_25_FW, spe:Meta4eS2016_25_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:JanaAhmad, spe:PetrKremen, <http://orcid.org/0000-0003-2850-2582> ;
+                                              schema:description "Aviation is a high risk industry where safety management is mandatory for organizations. On a global scale, safety management is hierarchical, i.e. national authorities manage safety of the sector, controlling organizations which in turn manage safety of their operations, as well as the safety of their organizational units. It is apparent that safety information management is a key factor to the success of safety management. Improving safety information management in aviation can be achieved by the systematic documentation of safety information and its seamless sharing vertically as well as horizontally through the management hierarchy. Despite attempts to tackle this problem, the industry still suffers from information management issues, e.g. usage of terminologically incompatible safety management frameworks. As a result diverse information repositories, e.g. investigation reports, safety recommendations, or audit reports managed by these frameworks, cannot be efficiently explored and compared. We apply Linked Data principles, e.g. searchability and explorability based on dataset descriptors, to help solving the problem. In this work we propose an ontology-based safety information management for the aviation industry. To achieve this we develop the Aviation Safety Ontology that is modular and covers the contexts of the organization types aerodrome, airline, air traffic management, maintenance and the state civil aviation authority. We test the appropriateness of the proposed ontology by representing safety data in terms of the ontology." ;
+                                              schema:headline "Towards Ontology-Based Safety Information Management in the Aviation Industry" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "" ;
+                                              schema:pageEnd "251" ;
+                                              schema:pageStart "242" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_26> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_26_RO, spe:Meta4eS2016_26_RM, spe:Meta4eS2016_26_RF, spe:Meta4eS2016_26_FW, spe:Meta4eS2016_26_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:AltafHussain, spe:WendyMacCaull, spe:YngveLamo ;
+                                              schema:description "We present the architecture for a framework for semantic web-based service discovery, suitable for integration with relational database systems. Existing discovery algorithms often lead to poor results due to limitations of the service description used and lack of domain data. Our framework incorporates context aware service discovery vis a vis dynamic (run-time) update using relational (domain) data from a legacy system. A template for service ontologies is provided, so the user may represent their services and the interrelationships between them. The domain data is represented as an OWL-ontology. The systems takes information in the service and domain ontologies and performs rule based reasoning using rules articulating inter-service dependencies as well as dependencies between services and domain data. An aggregation over service quality properties allows the aggregated selection of the bestsuited services. The framework is implemented as a web application following the Service Oriented Architecture; extensive testing shows that the system is robust. Features of the framework are illustrated using a detailed case study for the health-care domain." ;
+                                              schema:headline "CASD: A Framework for Context Aware Service Discovery and Selection" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "Ontology, Data integration, Dynamic context representation, Context aware service discovery, Domain and Service Integration" ;
+                                              schema:pageEnd "264" ;
+                                              schema:pageStart "252" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_27> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_27_RO, spe:Meta4eS2016_27_RM, spe:Meta4eS2016_27_RF, spe:Meta4eS2016_27_FW, spe:Meta4eS2016_27_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:BarnabasSzasz, spe:RitaFleiner, spe:AndrasMicsik ;
+                                              schema:description "Óbuda University wanted to build a linked dataset describing their courses in the semester. The concepts to be covered included curricula, subjects, courses, semesters and educators. A particular use case needed the description of lecture rooms and events as well. Although there are several ontologies for the mentioned domains, selecting a set of ontologies fitting our use case was not an easy task. After realizing the problems, we created the Ontology for Linked Open University Data (OLOUD) to fill in the gaps between re-used ontologies. OLOUD acts as a glue for a selection of existing ontologies, and thus enables us to integrate data from several sources and to provide practical information services for students and lecturers. " ;
+                                              schema:headline "A Case Study on Linked Data for University Courses" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "Ontology, Linked Open Data, Linked Open University Data, SPARQL" ;
+                                              schema:pageEnd "276" ;
+                                              schema:pageStart "265" .
+
+<http://doi.org/10.1007/978-3-319-55961-2_28> a schema:ScholarlyArticle ;
+                                              schema:about spe:Meta4eS2016_28_RO, spe:Meta4eS2016_28_RM, spe:Meta4eS2016_28_RF, spe:Meta4eS2016_28_FW, spe:Meta4eS2016_28_Cr ;
+                                              schema:isPartOf <http://doi.org/10.1007/978-3-319-55961-2> ;
+                                              schema:author spe:NaviRadiAljohani, <http://orcid.org/0000-0001-7080-0327>, <http://orcid.org/0000-0002-3787-7039>, <http://orcid.org/0000-0002-7281-5458>, <http://orcid.org/0000-0002-6798-6535> ;
+                                              schema:description "The World Wide Web (WWW) is emerging as the Web of Data, providing information on various domains. A vast number of scientific documents such as books, articles and journals can be found through many publisher’s websites, portals and XML exports. The challenge here is that the data about these scientific documents can not be explored collectively, as they are published as a bounded group of sources organized by different publishers. To address these limitations, we have developed a generic framework termed as Linked Open Publications Data Framework (LOPDF) that facilitates crawling, processing, extracting and producing machine-processable data that is open and linked to other open datasets. We also demonstrate the RDF datasets produced by using LOPDF framework and describe statistics of different datasets entities. " ;
+                                              schema:headline "A Generic Framework for Adding Semantics to Digital Libraries" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "scientific publications, crawling and parsing LOD, extracting and producing LOD" ;
+                                              schema:pageEnd "281" ;
+                                              schema:pageStart "277" .
+
+<http://orcid.org/0000-0001-5238-9618> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Andreas_Nareike" ;
+                                       schema:name "Andreas Nareike" ;
+                                       schema:familyName "Nareike" ;
+                                       schema:givenName "Andreas" ;
+                                       schema:email "nareike@informatik.unileipzig.de" .
+
+<http://orcid.org/0000-0001-6006-5103> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Sebastian_Hellmann" ;
+                                       schema:name "Sebastian Hellmann" ;
+                                       schema:familyName "Hellmann" ;
+                                       schema:givenName "Sebastian" ;
+                                       schema:email "hellmann@informatik.uni-leipzig.de" .
+
+<http://orcid.org/0000-0001-6704-6810> a schema:Person ;
+                                       schema:affiliation spe:TCScom ;
+                                       schema:familyName "Dey" ;
+                                       schema:givenName "Sounak" ;
+                                       schema:email "mailto:sounak.d@tcs.com" .
+
+<http://orcid.org/0000-0001-7080-0327> a schema:Person ;
+                                       schema:affiliation wd:Q1795928 ;
+                                       schema:familyName "Aslam" ;
+                                       schema:givenName "Muhammad Ahtisham" ;
+                                       schema:email "mailto:maaslam@kau.edu.sau" .
+
+<http://orcid.org/0000-0002-0079-2533> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Andre_Valdestilhas" ;
+                                       schema:name "Andre Valdestilhas" ;
+                                       schema:familyName "Andre" ;
+                                       schema:givenName "Valdestilhas" ;
+                                       schema:email "valdestilhas@informatik.unileipzig.de" .
+
+<http://orcid.org/0000-0002-0644-9242> a schema:Person ;
+                                       schema:affiliation wd:Q1342013 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Dmitry_Mouromtsev" ;
+                                       schema:name "Dmitry Mouromtsev" ;
+                                       schema:familyName "Mouromtsev" ;
+                                       schema:givenName "Dmitry" ;
+                                       schema:email "mouromtsev@mail.ifmo.ru" .
+
+<http://orcid.org/0000-0002-0698-2864> a schema:Person ;
+                                       schema:affiliation wd:Q2399120, wd:Q1452013 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Soeren_Auer" ;
+                                       schema:name "Sören Auer" ;
+                                       schema:familyName "Auer" ;
+                                       schema:givenName "Sören" ;
+                                       schema:email "soeren.auer@iais.fraunhofer.de", "soeren.auer@tib.eu" .
+
+<http://orcid.org/0000-0002-1018-1808> a schema:Person ;
+                                       schema:affiliation wd:Q314089 ;
+                                       schema:familyName "Bär" ;
+                                       schema:givenName "Florian" .
+
+<http://orcid.org/0000-0002-1276-2366> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Tommaso_Soru" ;
+                                       schema:name "Tommaso Soru" ;
+                                       schema:familyName "Soru" ;
+                                       schema:givenName "Tommaso" ;
+                                       schema:email "tsoru@informatik.unileipzig.de" .
+
+<http://orcid.org/0000-0002-1676-545X> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Diego_Esteves" ;
+                                       schema:name "Diego Esteves" ;
+                                       schema:familyName "Esteves" ;
+                                       schema:givenName "Diego" ;
+                                       schema:email "esteves@informatik.unileipzig.de" .
+
+<http://orcid.org/0000-0002-2300-4421> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Dimitris_Kontokostas" ;
+                                       schema:name "Dimitris Kontokostas" ;
+                                       schema:familyName "Kontokostas" ;
+                                       schema:givenName "Dimitris" ;
+                                       schema:email "kontokostas@informatik.uni-leipzig.de" .
+
+<http://orcid.org/0000-0002-3111-9405> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Edgard_Marx" ;
+                                       schema:name "Edgard Marx" ;
+                                       schema:familyName "Marx" ;
+                                       schema:givenName "Edgard" ;
+                                       schema:email "marx@informatik.unileipzig.de" .
+
+<http://orcid.org/0000-0002-3157-6657> a schema:Person ;
+                                       schema:affiliation wd:Q2145569 ;
+                                       schema:sameAs "https://sat.researchstudio.at/heiko-friedrich" ;
+                                       schema:name "Heiko Friedrich" ;
+                                       schema:familyName "Friedrich" ;
+                                       schema:givenName "Heiko" ;
+                                       schema:email "heiko.friedrich@researchstudio.at" .
+
+<http://orcid.org/0000-0002-3787-7039> a schema:Person ;
+                                       schema:affiliation wd:Q1795928 ;
+                                       schema:familyName "Abbasi" ;
+                                       schema:givenName "Rabeeh Ayaz" ;
+                                       schema:email "mailto:rabbasi@kau.edu.sau" .
+
+<http://orcid.org/0000-0002-5802-2785> a schema:Person ;
+                                       schema:affiliation wd:Q154804 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Ricardo_Usbeck" ;
+                                       schema:name "Ricardo Usbeck" ;
+                                       schema:familyName "Usbeck" ;
+                                       schema:givenName "Ricardo" ;
+                                       schema:email "usbeck@informatik.uni-leipzig.de" .
+
+<http://orcid.org/0000-0002-6798-6535> a schema:Person ;
+                                       schema:affiliation wd:Q1066188 ;
+                                       schema:familyName "Kabir" ;
+                                       schema:givenName "Muhammad Ashad" ;
+                                       schema:email "mailto:akabir@csu.edu.au" .
+
+<http://orcid.org/0000-0002-7281-5458> a schema:Person ;
+                                       schema:affiliation wd:Q2983711 ;
+                                       schema:familyName "Lytras" ;
+                                       schema:givenName "Miltiadis D." ;
+                                       schema:email "mailto:mlytras@acg.edu" .
+
+<http://orcid.org/0000-0002-8161-5722> a schema:Person ;
+                                       schema:affiliation <https://www.tno.nl/en/> ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Mark_Neerincx" ;
+                                       schema:name "Mark A. Neerincx" ;
+                                       schema:familyName "Neerincx" ;
+                                       schema:givenName "Mark A." ;
+                                       schema:email "mark.neerincx@tno.nl" .
+
+<http://orcid.org/0000-0002-9340-0438> a schema:Person ;
+                                       schema:affiliation wd:Q22872 ;
+                                       schema:name "Peter Haase" ;
+                                       schema:familyName "Haase" ;
+                                       schema:givenName "Peter" ;
+                                       schema:email "ph@metaphacts.com" .
+
+<http://orcid.org/0000-0002-9521-6263> a schema:Person ;
+                                       schema:affiliation wd:Q22872 ;
+                                       schema:name "Artem Kozlov" ;
+                                       schema:familyName "Kozlov" ;
+                                       schema:givenName "Artem" ;
+                                       schema:email "ak@metaphacts.com" .
+
+<http://orcid.org/0000-0002-9680-2758> a schema:Person ;
+                                       schema:affiliation wd:Q427677 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Madina_Mansurova" ;
+                                       schema:name "Madina Mansurova" ;
+                                       schema:familyName "Mansurova" ;
+                                       schema:givenName "Madina" ;
+                                       schema:email "" .
+
+<http://orcid.org/0000-0003-0661-4284> a schema:Person ;
+                                       schema:affiliation wd:Q4122969 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Anton_Anikin" ;
+                                       schema:name "Anton Anikin" ;
+                                       schema:familyName "Anikin" ;
+                                       schema:givenName "Anton" ;
+                                       schema:email "anton@anikin.name" .
+
+<http://orcid.org/0000-0003-2850-2582> a schema:Person ;
+                                       schema:affiliation wd:Q1329478 ;
+                                       schema:familyName "Kostov" ;
+                                       schema:givenName "Bogdan" ;
+                                       schema:email "mailto:bogdan.kostov@fel.cvut.cz" .
+
+<http://orcid.org/0000-0003-4844-4260> a schema:Person ;
+                                       schema:affiliation wd:Q1329478 ;
+                                       schema:sameAs "https://www.researchgate.net/profile/Milan_Dojchinovski" ;
+                                       schema:name "Milan Dojchinovski" ;
+                                       schema:familyName "Dojchinovski" ;
+                                       schema:givenName "Milan" ;
+                                       schema:email "milan.dojchinovski@fit.cvut.cz" .
+
+wd:Q1025080 a schema:Place .
+
+wd:Q1040 a schema:Place .
+
+wd:Q1066188 a schema:Organization ;
+            schema:location wd:Q3130 ;
+            schema:url "http://csu.edu.au/" ;
+            schema:legalName "Charles Sturt University" .
+
+wd:Q1085 a schema:Place .
+
+wd:Q1329478 a schema:Organization ;
+            schema:location wd:Q1085 ;
+            schema:url "http://www.cvut.cz/" ;
+            schema:legalName "Czech Technical University in Prague" .
+
+wd:Q1342013 a schema:Organization ;
+            schema:location wd:Q656 ;
+            schema:url "http://www.ifmo.ru/", "https://hifmo.ru/en/" ;
+            schema:legalName "Saint Petersburg State University of Information Technologies, Mechanics and Optics (ITMO)", "Saint Petersburg State University of Information Technologies, Mechanics and Optics" .
+
+wd:Q1348 a schema:Place .
+
+wd:Q1400766 a schema:Organization ;
+            schema:location wd:Q4062 ;
+            schema:url "https://www.hsw-hameln.de/" ;
+            schema:legalName "Hochschule Weserbergland - University of Applied Sciences Hameln" .
+
+wd:Q1412435 a schema:Organization ;
+            schema:location wd:Q1781 ;
+            schema:url "https://www.uni-obuda.hu/" ;
+            schema:legalName "Óbuda University" .
+
+wd:Q1452013 a schema:Organization ;
+            schema:location wd:Q4090 ;
+            schema:url "https://www.iais.fraunhofer.de/" ;
+            schema:legalName "Fraunhofer Institute for Intelligent Analysis and Information Systems" .
+
+wd:Q1506552 a schema:Organization ;
+            schema:location wd:Q887 ;
+            schema:url "https://urfu.ru" ;
+            schema:legalName "Ural Federal University" .
+
+wd:Q152171 a schema:Organization ;
+           schema:location wd:Q586 ;
+           schema:url "http://uni-bonn.de/" ;
+           schema:legalName "University of Bonn" .
+
+wd:Q15245 a schema:Place .
+
+wd:Q154804 a schema:Organization ;
+           schema:location wd:Q2079 ;
+           schema:url "https://www.uni-leipzig.de" ;
+           schema:legalName "Universität Leipzig" .
+
+wd:Q1622091 a schema:Organization ;
+            schema:location wd:Q26793 ;
+            schema:url "http://www.hib.no/" ;
+            schema:legalName "Bergen University College" .
+
+wd:Q162548 a schema:Place .
+
+wd:Q1711 a schema:Place .
+
+wd:Q1715 a schema:Place .
+
+wd:Q1724 a schema:Place .
+
+wd:Q1726 a schema:Place .
+
+wd:Q1741 a schema:Place .
+
+wd:Q176916 a schema:Organization ;
+           schema:legalName "Springer Science+Business Media" .
+
+wd:Q1781 a schema:Place .
+
+wd:Q1795928 a schema:Organization ;
+            schema:location wd:Q374365 ;
+            schema:url "http://www.kau.edu.sa/home_english.aspx" ;
+            schema:legalName "King Abdulaziz University" .
+
+wd:Q2079 a schema:Place .
+
+wd:Q2145569 a schema:Organization ;
+            schema:location wd:Q34713 ;
+            schema:url "http://www.researchstudio.at/" ;
+            schema:legalName "Research Studios Austria" .
+
+wd:Q22132500 a schema:Organization ;
+             schema:location wd:Q22872 ;
+             schema:url "http://www.metaphacts.com/" ;
+             schema:legalName "metaphacts GmbH" .
+
+wd:Q22872 a schema:Place .
+
+wd:Q2399120 a schema:Organization ;
+            schema:location wd:Q1715 ;
+            schema:url "https://www.tib.eu/de/" ;
+            schema:legalName "German National Library of Science and Technology " .
+
+wd:Q26793 a schema:Place .
+
+wd:Q273263 a schema:Organization ;
+           schema:legalName "RWTH Aachen University" .
+
+wd:Q2822458 a schema:Organization ;
+            schema:location wd:Q649 ;
+            schema:url "http://www.ranepa.ru/" ;
+            schema:legalName "Russian Presidential Academy of National Economy and Public Administration" .
+
+wd:Q2983711 a schema:Organization ;
+            schema:location wd:Q15245 ;
+            schema:url "http://www.acg.edu/" ;
+            schema:legalName "American College of Greece" .
+
+wd:Q30263296 a schema:Organization ;
+             schema:location wd:Q4201239 ;
+             schema:url "https://university.innopolis.ru" ;
+             schema:legalName "Innopolis University" .
+
+wd:Q3032414 a schema:Organization ;
+            schema:location wd:Q883 ;
+            schema:url "http://www.iis.nsk.su/" ;
+            schema:legalName "Siberian Branch of the Russian Academy of Sciences - A.P. Ershov Institute of Informatics Systems" .
+
+wd:Q30343035 a schema:Organization ;
+             schema:location wd:Q1040 ;
+             schema:url "http://www.aifb.kit.edu/" ;
+             schema:legalName "AIFB Institute, KIT" .
+
+wd:Q3130 a schema:Place .
+
+wd:Q314089 a schema:Organization ;
+           schema:location wd:Q1726 ;
+           schema:url "https://www.hm.edu/" ;
+           schema:legalName "Munich University of Applied Sciences" .
+
+wd:Q34713 a schema:Place .
+
+wd:Q35493 a schema:Place .
+
+wd:Q365 a schema:Place .
+
+wd:Q374365 a schema:Place .
+
+wd:Q4062 a schema:Place .
+
+wd:Q4090 a schema:Place .
+
+wd:Q4122969 a schema:Organization ;
+            schema:location wd:Q914 ;
+            schema:url "http://www.vstu.ru/eng/" ;
+            schema:legalName "Volgograd State Technical University" .
+
+wd:Q4126492 a schema:Organization ;
+            schema:location wd:Q162548 ;
+            schema:url "http://www.ektu.kz/" ;
+            schema:legalName "East Kazakhstan State Technical University" .
+
+wd:Q41329 a schema:Place .
+
+wd:Q4201239 a schema:Place .
+
+wd:Q427677 a schema:Organization ;
+           schema:location wd:Q35493 ;
+           schema:url "https://www.kaznu.kz/" ;
+           schema:legalName "Al-Farabi Kazakh National University" .
+
+wd:Q43048 a schema:Place .
+
+wd:Q57548 a schema:Place .
+
+wd:Q586 a schema:Place .
+
+wd:Q649 a schema:Place .
+
+wd:Q656 a schema:Place .
+
+wd:Q6718411 a schema:Organization ;
+            schema:location wd:Q1781 ;
+            schema:url "http://www.sztaki.hu/" ;
+            schema:legalName "MTA SZTAKI Laboratory of Parallel and Distributed Systems" .
+
+wd:Q682739 a schema:Organization ;
+           schema:location wd:Q41329 ;
+           schema:url "http://www.jku.at/faw/content" ;
+           schema:legalName "Johannes Kepler University Linz" .
+
+wd:Q689400 a schema:Organization ;
+           schema:location wd:Q1741 ;
+           schema:url "http://www.tuwien.ac.at/" ;
+           schema:legalName "TU Wien" .
+
+wd:Q690 a schema:Place .
+
+wd:Q752663 a schema:Organization ;
+           schema:location wd:Q690 ;
+           schema:url "http://www.tudelft.nl/" ;
+           schema:legalName "Delft University of Technology" .
+
+wd:Q883 a schema:Place .
+
+wd:Q884105 a schema:Organization ;
+           schema:location wd:Q1711 ;
+           schema:url "https://hpi.de/" ;
+           schema:legalName "Hasso Plattner Institute at University Potsdam" .
+
+wd:Q887 a schema:Place .
+
+wd:Q896469 a schema:Organization ;
+           schema:location wd:Q1724 ;
+           schema:url "https://www.dfki.de/" ;
+           schema:legalName "German Research Centre for Artificial Intelligence" .
+
+wd:Q903092 a schema:Organization ;
+           schema:location wd:Q79880 ;
+           schema:url "http://www.unideb.hu/" ;
+           schema:legalName "University of Debrecen" .
+
+wd:Q914 a schema:Place .
+
+<https://bmake.th-brandenburg.de/spe> a owl:Ontology ;
+                                      rdfs:label "BMaKE Seminar Papers" .
+
+spe:AleksandrMaiatin a schema:Person ;
+                     schema:affiliation wd:Q1342013 ;
+                     schema:sameAs "https://www.researchgate.net/profile/Aleksandr_Maiatin" ;
+                     schema:name "Aleksandr Maiatin" ;
+                     schema:familyName "Maiatin" ;
+                     schema:givenName "Aleksandr" ;
+                     schema:email "mayatin@mail.ifmo.ru" .
+
+spe:AlexandraHagelstein a schema:Person ;
+                        schema:affiliation <https://www.zbmed.de/en/> ;
+                        schema:sameAs "https://www.researchgate.net/profile/Alexandra_Hagelstein" ;
+                        schema:name "Alexandra Hagelstein" ;
+                        schema:familyName "Hagelstein" ;
+                        schema:givenName "Alexandra" ;
+                        schema:email "hagelstein@zbmed.de" .
+
+spe:AliyaNugumanova a schema:Person ;
+                    schema:affiliation wd:Q4126492 ;
+                    schema:sameAs "https://www.researchgate.net/profile/Aliya_Nugumanova" ;
+                    schema:name "Aliya Nugumanova" ;
+                    schema:familyName "Nugumanova" ;
+                    schema:givenName "Aliya" ;
+                    schema:email "" .
+
+spe:AltafHussain a schema:Person ;
+                 schema:affiliation spe:SFXUnivAntigonish ;
+                 schema:familyName "Hussain" ;
+                 schema:givenName "Altaf" ;
+                 schema:email "mailto:altaf sust 82@yahoo.com" .
+
+spe:AndrasMicsik a schema:Person ;
+                 schema:affiliation wd:Q6718411 ;
+                 schema:familyName "Miscik" ;
+                 schema:givenName "Andras" ;
+                 schema:email "mailto:micsik@sztaki.mta.hu" .
+
+spe:ArkadijEnders a schema:Person ;
+                  schema:affiliation wd:Q1400766 ;
+                  schema:sameAs "https://www.researchgate.net/researcher/2096250977_Arkadij_Enders" ;
+                  schema:name "Arkadij Enders" ;
+                  schema:familyName "Enders" ;
+                  schema:givenName "Arkadij" ;
+                  schema:email "arkadij.enders@hsw-hameln.de" .
+
+spe:AxelCyrilleNgongaNgomo a schema:Person ;
+                           schema:affiliation wd:Q154804 ;
+                           schema:sameAs "https://www.researchgate.net/profile/Axel-Cyrille_Ngonga_Ngomo" ;
+                           schema:name "Axel-Cyrille Ngonga Ngomo" ;
+                           schema:familyName "Ngonga Ngomo" ;
+                           schema:givenName "Axel-Cyrille" ;
+                           schema:email "@informatik.uni-leipzig.de" .
+
+spe:BarnabasSzasz a schema:Person ;
+                  schema:affiliation wd:Q903092 ;
+                  schema:familyName "Szasz" ;
+                  schema:givenName "Barnabas" ;
+                  schema:email "mailto:bszasz@gmail.com" .
+
+spe:BerndKiefer a schema:Person ;
+                schema:affiliation wd:Q896469 ;
+                schema:sameAs "https://www.researchgate.net/profile/Bernd_Kiefer" ;
+                schema:name "Bernd Kiefer" ;
+                schema:familyName "Kiefer" ;
+                schema:givenName "Bernd" ;
+                schema:email "bernd.kiefer@dfki.de" .
+
+spe:BerndMueller a schema:Person ;
+                 schema:affiliation <https://www.zbmed.de/en/> ;
+                 schema:sameAs "https://www.researchgate.net/profile/Bernd_Mueller5" ;
+                 schema:name "Bernd Müller" ;
+                 schema:familyName "Müller" ;
+                 schema:givenName "Bernd" ;
+                 schema:email "bernd.mueller@zbmed.de" .
+
+spe:ChristianHuemer a schema:Person ;
+                    schema:affiliation wd:Q689400 ;
+                    schema:sameAs "https://www.researchgate.net/researcher/10020036_Christian_Huemer" ;
+                    schema:name "Christian Huemer" ;
+                    schema:familyName "Huemer" ;
+                    schema:givenName "Christian" ;
+                    schema:email "huemer@big.tuwien.ac.at" .
+
+spe:CiroBaronNeto a schema:Person ;
+                  schema:affiliation wd:Q154804 ;
+                  schema:sameAs "https://www.researchgate.net/profile/Ciro_Neto2" ;
+                  schema:name "Ciro Baron Neto" ;
+                  schema:familyName "Neto" ;
+                  schema:givenName "Ciro Baron" ;
+                  schema:email "cbaron@informatik.unileipzig.de" .
+
+spe:DibyanshuJaiswal a schema:Person ;
+                     schema:affiliation spe:TCScom ;
+                     schema:familyName "Jaiswal" ;
+                     schema:givenName "Dibyanshu" ;
+                     schema:email "mailto:dibyanshu.jaiswal@tcs.com" .
+
+spe:DiegoMoussallem a schema:Person ;
+                    schema:affiliation wd:Q154804 ;
+                    schema:sameAs "https://www.researchgate.net/profile/Diego_Moussallem" ;
+                    schema:name "Diego Moussallem" ;
+                    schema:familyName "Moussallem" ;
+                    schema:givenName "Diego" ;
+                    schema:email "moussallem@informatik.unileipzig.de" .
+
+spe:DmitriiZubok a schema:Person ;
+                 schema:affiliation wd:Q1342013 ;
+                 schema:sameAs "https://www.researchgate.net/profile/Dmitrii_Zubok" ;
+                 schema:name "Dmitrii Zubok" ;
+                 schema:familyName "Zubok" ;
+                 schema:givenName "Dmitrii" ;
+                 schema:email "zubok@mail.ifmo.ru" .
+
+spe:DmitryLitovkin a schema:Person ;
+                   schema:affiliation wd:Q4122969 ;
+                   schema:sameAs "" ;
+                   schema:name "Dmitry Litovkin" ;
+                   schema:familyName "Litovkin" ;
+                   schema:givenName "Dmitry" ;
+                   schema:email "" .
+
+spe:ElenaSarkisova a schema:Person ;
+                   schema:affiliation wd:Q4122969 ;
+                   schema:sameAs "https://www.researchgate.net/profile/Elena_Sarkisova" ;
+                   schema:name "Elena Sarkisova" ;
+                   schema:familyName "Sarkisova" ;
+                   schema:givenName "Elena" ;
+                   schema:email "" .
+
+spe:FlorianKleedorfer a schema:Person ;
+                      schema:affiliation wd:Q2145569 ;
+                      schema:sameAs "https://www.researchgate.net/profile/Florian_Kleedorfer" ;
+                      schema:name "Florian Kleedorfer" ;
+                      schema:familyName "Florian" ;
+                      schema:givenName "Kleedorfer" ;
+                      schema:email "florian.kleedorfer@researchstudio.at" .
+
+spe:FrankKaptein a schema:Person ;
+                 schema:affiliation wd:Q752663 ;
+                 schema:sameAs "https://www.researchgate.net/profile/Frank_Kaptein" ;
+                 schema:name "Frank Kaptein" ;
+                 schema:familyName "Kaptein" ;
+                 schema:givenName "Frank" ;
+                 schema:email "f.c.a.kaptein@tudelft.nl" .
+
+spe:HansUlrichKrieger a schema:Person ;
+                      schema:affiliation wd:Q896469 ;
+                      schema:sameAs "https://www.researchgate.net/researcher/70109338_Hans-Ulrich_Krieger" ;
+                      schema:name "Hans-Ulrich Krieger" ;
+                      schema:familyName "Krieger" ;
+                      schema:givenName "Hans-Ulrich" ;
+                      schema:email "krieger@dfki.de" .
+
+spe:IgorBessmertny a schema:Person ;
+                   schema:affiliation wd:Q1342013 ;
+                   schema:sameAs "https://www.researchgate.net/profile/Igor_Bessmertny" ;
+                   schema:name "Igor Bessmertny" ;
+                   schema:familyName "Bessmertny" ;
+                   schema:givenName "Igor" ;
+                   schema:email "" .
+
+spe:IrinaAkhmadeeva a schema:Person ;
+                    schema:affiliation wd:Q3032414 ;
+                    schema:sameAs "https://www.researchgate.net/profile/Irina_Akhmadeeva" ;
+                    schema:name "Irina Akhmadeeva" ;
+                    schema:familyName "Akhmadeeva" ;
+                    schema:givenName "Irina" ;
+                    schema:email "i.r.akhmadeeva@iis.nsk.su" .
+
+spe:JanaAhmad a schema:Person ;
+              schema:affiliation wd:Q1329478 ;
+              schema:familyName "Ahmad" ;
+              schema:givenName "Jana" ;
+              schema:email "mailto:jana.ahmad@fel.cvut.cz" .
+
+spe:JoergUnbehauen a schema:Person ;
+                   schema:affiliation wd:Q154804 ;
+                   schema:sameAs "https://www.researchgate.net/researcher/70449110_Joerg_Unbehauen" ;
+                   schema:name "Jörg Unbehauen" ;
+                   schema:familyName "Unbehauen" ;
+                   schema:givenName "Jörg" ;
+                   schema:email "unbehauen@informatik.unileipzig.de" .
+
+spe:JohannesSchmidt a schema:Person ;
+                    schema:affiliation wd:Q154804 ;
+                    schema:sameAs "" ;
+                    schema:name "Johannes Schmidt" ;
+                    schema:familyName "Schmidt" ;
+                    schema:givenName "Johannes" ;
+                    schema:email "jschmidt@informatik.unileipzig.de" .
+
+spe:JonasRebstadt a schema:Person ;
+                  schema:affiliation wd:Q1400766 ;
+                  schema:sameAs "https://www.researchgate.net/profile/Jonas_Rebstadt" ;
+                  schema:name "Jonas Rebstadt" ;
+                  schema:familyName "Rebstadt" ;
+                  schema:givenName "Jonas" ;
+                  schema:email "jonas.rebstadt@hsw-hameln.de" .
+
+spe:KESW2016_10_Cr a schema:ItemList ;
+                   schema:name "Critique" ;
+                   schema:itemListElement "assessment of relevance of retrieved resources is based on frequency vectors, problems may araise from implicitely supposed independency of terms", "information about underlying ontologies and the investigated knowledge area are missed - may be in reference [1]" .
+
+spe:KESW2016_10_FW a schema:ItemList ;
+                   schema:name "Future Work" ;
+                   schema:itemListElement "generating these patterns is quite a laborious task; therefore, a complete automation of this process requires further research", "develop information extraction methods relying on manual annotations made by web masters on the basis of microdata vocabularies", "develop methods for  xtracting information from the documents of various formats", "improve the HTML page analysis" .
+
+spe:KESW2016_10_RF a schema:ItemList ;
+                   schema:name "Research Findings" ;
+                   schema:itemListElement "Method for the creation of ontology-based query templates for link detection", "patterns for information extraction from HTML pages based on the DOM tree of pages", "Architecture of the information collection subsystem", "evaluation of the whole pipeline of ontology population" .
+
+spe:KESW2016_10_RM a schema:ItemList ;
+                   schema:name "Research Methods" ;
+                   schema:itemListElement spe:KESW2016_10_RM1, spe:KESW2016_10_RM2 .
+
+spe:KESW2016_10_RM1 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethPrototyping ;
+                    schema:description "subsystem for automating information collection from HTML pages" .
+
+spe:KESW2016_10_RM2 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethFormalDedAnalysis ;
+                    schema:description "performance measurment based on a gold standard (CleanEval)" .
+
+spe:KESW2016_10_RO a schema:ItemList ;
+                   schema:name "Research Objectives" ;
+                   schema:itemListElement spe:KESW2016_10_RO1, spe:KESW2016_10_RO2 .
+
+spe:KESW2016_10_RO1 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactNLPArtifact ;
+                    spv:researchActionType spv:ResActTypeDevelop ;
+                    schema:description "develop automated methods for populating the ISIR with relevant information from the Internet about scientific activities related to the ISIR knowledge area" .
+
+spe:KESW2016_10_RO2 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactNLPArtifact ;
+                    spv:researchActionType spv:ResActTypeEvaluate ;
+                    schema:description "evaluation of the proposed approach with respect to recall, precision and F-score" .
+
+spe:KESW2016_19_FW a schema:ItemList ;
+                   schema:name "Future Work" ;
+                   schema:itemListElement "apply selected ontologies to OCW in order to collect empirical data on how ontologies can support the creation and consumption of learning materials in such contexts", "developing an OCW platform that will be used as a testbed for further investigating the topic of accessibility in such environments and how Semantic Web technologies can be used to foster accessible OCW" .
+
+spe:KESW2016_19_RF a schema:ItemList ;
+                   schema:name "Research Findings" ;
+                   schema:itemListElement "List of accessibility ontologies", "table of accessibility standards and guidelines", "recommendations for ontology development regarding the building of OCW services: (i) accessible course content, (ii) support of browsing and navigation, (iii) design and representation of questions and assessments" .
+
+spe:KESW2016_19_RM a schema:ItemList ;
+                   schema:name "Research Methods" ;
+                   schema:itemListElement spe:KESW2016_19_RM1, spe:KESW2016_19_RM2 .
+
+spe:KESW2016_19_RM1 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethLiteratureAnalysis ;
+                    schema:description "comprehensive analysis of accessibility guidelines, related ontologies and vocabularies, and corresponding scientific literature" .
+
+spe:KESW2016_19_RM2 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethArgumentDedAnalysis ;
+                    schema:description "derivation of three main aspects that must be addressed to develop accessible OCWs and that could be well supported by SW technologies" .
+
+spe:KESW2016_19_RO a schema:ItemList ;
+                   schema:name "Research Objectives" ;
+                   schema:itemListElement spe:KESW2016_19_RO1, spe:KESW2016_19_RO2 .
+
+spe:KESW2016_19_RO1 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactPolicy ;
+                    spv:researchActionType spv:ResActTypeElicit ;
+                    schema:description "review and compare guidelines and best practices for creating accessible OpenCourseWare using Semantic Web technologies" .
+
+spe:KESW2016_19_RO2 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactOntology ;
+                    spv:researchActionType spv:ResActTypeAnalyze ;
+                    schema:description "analyze the use of ontologies to represent knowledge required for developing accessible OCW systems" .
+
+spe:KESW2016_23_Cr a schema:ItemList ;
+                   schema:name "Critique" ;
+                   schema:itemListElement "it is not explained, how the competencies of person or groups influence the output: a ranked list of information resources", "instead of the proposed ontologies for cognitive and information spaces SKOS could be implemented - all introduced features would be supported", "No demo available - at least not found, seems to be a contradiction to the paradigma of Open Science" .
+
+spe:KESW2016_23_FW a schema:ItemList ;
+                   schema:name "Future Work" ;
+                   schema:itemListElement "testing and evaluation of the proposed approach and developed software tools for information support of scientific research and learning process", "extending the set of SWRL-rules for the purpose of automatic generation of information space", "implementation of the repository of information spaces" .
+
+spe:KESW2016_23_RF a schema:ItemList ;
+                   schema:name "Research Findings" ;
+                   schema:itemListElement "exemplary test of automatic creation of personal repositories in the course 'Programming Languages'", "knowledge-based Collection Builder using C#", "Cognitive information space editor as Java server application", "Mapping algorithm for cognitive and information spaces based on SWRL rules", "Ontology of cognitive and information spaces in OWL" .
+
+spe:KESW2016_23_RM a schema:ItemList ;
+                   schema:name "Research Methods" ;
+                   schema:itemListElement spe:KESW2016_23_RM1, spe:KESW2016_23_RM2 .
+
+spe:KESW2016_23_RM1 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethReferenceModeling ;
+                    schema:description "Modeling Cognitive Space ontology (OWL), application architecture (UML package d.), search process (UML activity d.), and rules (SWRL)" .
+
+spe:KESW2016_23_RM2 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMethPrototyping ;
+                    schema:description "Cognitive information space editor & collection builder" .
+
+spe:KESW2016_23_RO a schema:ItemList ;
+                   schema:name "Research Objectives" ;
+                   schema:itemListElement spe:KESW2016_23_RO1, spe:KESW2016_23_RO2 .
+
+spe:KESW2016_23_RO1 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactMethod ;
+                    spv:researchActionType spv:ResActTypeProvide ;
+                    schema:description "allow collaborative setting of associative relations between information resources and concepts of subject domain to retrieve the ’top’ information resources for persons or groups" .
+
+spe:KESW2016_23_RO2 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifactProcess ;
+                    spv:researchActionType spv:ResActTypeEnhance ;
+                    schema:description "improve the process of identification adequate information resources according to learning or research objectives in a subject domain" .
+
+spe:KESW2016_25_Cr a schema:ItemList ;
+                   schema:name "Critique" ;
+                   schema:itemListElement "" .
+
+spe:KESW2016_25_FW a schema:ItemList ;
+                   schema:name "Future Work" ;
+                   schema:itemListElement "" .
+
+spe:KESW2016_25_RF a schema:ItemList ;
+                   schema:name "Research Findings" ;
+                   schema:itemListElement "" .
+
+spe:KESW2016_25_RM a schema:ItemList ;
+                   schema:name "Research Methods" ;
+                   schema:itemListElement spe:KESW2016_25_RM1, spe:KESW2016_25_RM2 .
+
+spe:KESW2016_25_RM1 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMeth1 ;
+                    schema:description "" .
+
+spe:KESW2016_25_RM2 a schema:StructuredValue ;
+                    spv:researchMethod spv:ResMeth2 ;
+                    schema:description "" .
+
+spe:KESW2016_25_RO a schema:ItemList ;
+                   schema:name "Research Objectives" ;
+                   schema:itemListElement spe:KESW2016_25_RO1, spe:KESW2016_25_RO2 .
+
+spe:KESW2016_25_RO1 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifact1 ;
+                    spv:researchActionType spv:ResActType1 ;
+                    schema:description "" .
+
+spe:KESW2016_25_RO2 a schema:StructuredValue ;
+                    spv:researchArtifact spv:ResArtifact2 ;
+                    spv:researchActionType spv:ResActType2 ;
+                    schema:description "" .
+
+spe:KESW2016_4_Cr a schema:ItemList ;
+                  schema:name "Critique" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_4_FW a schema:ItemList ;
+                  schema:name "Future Work" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_4_RF a schema:ItemList ;
+                  schema:name "Research Findings" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_4_RM a schema:ItemList ;
+                  schema:name "Research Methods" ;
+                  schema:itemListElement spe:KESW2016_4_RM1, spe:KESW2016_4_RM2 .
+
+spe:KESW2016_4_RM1 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth1 ;
+                   schema:description "" .
+
+spe:KESW2016_4_RM2 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth2 ;
+                   schema:description "" .
+
+spe:KESW2016_4_RO a schema:ItemList ;
+                  schema:name "Research Objectives" ;
+                  schema:itemListElement spe:KESW2016_4_RO1, spe:KESW2016_4_RO2 .
+
+spe:KESW2016_4_RO1 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact1 ;
+                   spv:researchActionType spv:ResActType1 ;
+                   schema:description "" .
+
+spe:KESW2016_4_RO2 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact2 ;
+                   spv:researchActionType spv:ResActType2 ;
+                   schema:description "" .
+
+spe:KESW2016_7_Cr a schema:ItemList ;
+                  schema:name "Critique" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_7_FW a schema:ItemList ;
+                  schema:name "Future Work" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_7_RF a schema:ItemList ;
+                  schema:name "Research Findings" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_7_RM a schema:ItemList ;
+                  schema:name "Research Methods" ;
+                  schema:itemListElement spe:KESW2016_7_RM1, spe:KESW2016_7_RM2 .
+
+spe:KESW2016_7_RM1 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth1 ;
+                   schema:description "" .
+
+spe:KESW2016_7_RM2 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth2 ;
+                   schema:description "" .
+
+spe:KESW2016_7_RO a schema:ItemList ;
+                  schema:name "Research Objectives" ;
+                  schema:itemListElement spe:KESW2016_7_RO1, spe:KESW2016_7_RO2 .
+
+spe:KESW2016_7_RO1 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact1 ;
+                   spv:researchActionType spv:ResActType1 ;
+                   schema:description "" .
+
+spe:KESW2016_7_RO2 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact2 ;
+                   spv:researchActionType spv:ResActType2 ;
+                   schema:description "" .
+
+spe:KESW2016_9_Cr a schema:ItemList ;
+                  schema:name "Critique" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_9_FW a schema:ItemList ;
+                  schema:name "Future Work" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_9_RF a schema:ItemList ;
+                  schema:name "Research Findings" ;
+                  schema:itemListElement "" .
+
+spe:KESW2016_9_RM a schema:ItemList ;
+                  schema:name "Research Methods" ;
+                  schema:itemListElement spe:KESW2016_9_RM1, spe:KESW2016_9_RM2 .
+
+spe:KESW2016_9_RM1 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth1 ;
+                   schema:description "" .
+
+spe:KESW2016_9_RM2 a schema:StructuredValue ;
+                   spv:researchMethod spv:ResMeth2 ;
+                   schema:description "" .
+
+spe:KESW2016_9_RO a schema:ItemList ;
+                  schema:name "Research Objectives" ;
+                  schema:itemListElement spe:KESW2016_9_RO1, spe:KESW2016_9_RO2 .
+
+spe:KESW2016_9_RO1 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact1 ;
+                   spv:researchActionType spv:ResActType1 ;
+                   schema:description "" .
+
+spe:KESW2016_9_RO2 a schema:StructuredValue ;
+                   spv:researchArtifact spv:ResArtifact2 ;
+                   spv:researchActionType spv:ResActType2 ;
+                   schema:description "" .
+
+spe:KESW_2016 a schema:PublicationEvent ;
+              schema:recordedIn <https://doi.org/10.1007/978-3-319-45880-9> ;
+              schema:location wd:Q1085 ;
+              schema:description "Proceedings of all accepted paper - Knowledge base content only a selection of papers" ;
+              schema:name "KESW 2016" ;
+              schema:alternateName "Knowledge Engineering and Semantic Web - 7th International Conference, KESW 2016" ;
+              schema:url <http://2016.kesw.ru/> ;
+              schema:startDate "2016-09-21" ;
+              schema:endDate "2016-09-23" .
+
+spe:LisaEhrlinger a schema:Person ;
+                  schema:affiliation wd:Q682739 ;
+                  schema:sameAs "http://www.jku.at/faw/content/e233808/index_html?team_view=section&emp=e233808/employee_groups_wiss243261/employees251241" ;
+                  schema:name "Lisa Ehrlinger" ;
+                  schema:familyName "Ehrlinger" ;
+                  schema:givenName "Lisa" ;
+                  schema:email "lisa.ehrlinger@jku.at" .
+
+spe:LorenzoServadei a schema:Person ;
+                    schema:affiliation wd:Q314089 ;
+                    schema:familyName "Servadei" ;
+                    schema:givenName "Lorenzo" ;
+                    schema:email "mailto:lorenzo.servadei@hm.edu" .
+
+spe:LuisaBrinkschulte a schema:Person ;
+                      schema:affiliation wd:Q1400766 ;
+                      schema:sameAs "https://www.researchgate.net/profile/Luisa_Brinkschulte" ;
+                      schema:name "Luisa Brinkschulte" ;
+                      schema:familyName "Brinkschulte" ;
+                      schema:givenName "Luisa" ;
+                      schema:email "luisa.brinkschulte@hsw-hameln.de" .
+
+spe:MagnusKnuth a schema:Person ;
+                schema:affiliation wd:Q884105 ;
+                schema:sameAs "https://www.researchgate.net/profile/Magnus_Knuth" ;
+                schema:name "Magnus Knuth" ;
+                schema:familyName "Knuth" ;
+                schema:givenName "Magnus" ;
+                schema:email "magnus.knuth@hpi.unipotsdam.de" .
+
+spe:MaksimKhegai a schema:Person ;
+                 schema:affiliation wd:Q1342013 ;
+                 schema:sameAs "http://isc.ifmo.ru/en/viewperson/151305/Khegai_Maksim_Vilorevich.htm" ;
+                 schema:name "Maksim Khegai" ;
+                 schema:familyName "Khegai" ;
+                 schema:givenName "Maksim" ;
+                 schema:email "MaxHegai@rambler.ru" .
+
+spe:MariaMaleshkova a schema:Person ;
+                    schema:affiliation wd:Q30343035 ;
+                    schema:sameAs "https://www.researchgate.net/profile/Maria_Maleshkova" ;
+                    schema:name "Maria Maleshkova" ;
+                    schema:familyName "Maleshkova" ;
+                    schema:givenName "Maria" ;
+                    schema:email "maria.maleshkova@kit.edu" .
+
+spe:MarinaKultsova a schema:Person ;
+                   schema:affiliation wd:Q4122969 ;
+                   schema:sameAs "" ;
+                   schema:name "Marina Kultsova" ;
+                   schema:familyName "Kultsova" ;
+                   schema:givenName "Marina" ;
+                   schema:email "" .
+
+spe:Meta4eS2016_22_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "errors in BPMN model (diverse message flow, specification of task, logic is ok but may have been modeled in DMN more complete)", "error in DMN model (Fig. 4) - input data connect per information requirement to knowledge model (not allowed)" .
+
+spe:Meta4eS2016_22_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "research other machine learning algorithms", "implement decision management processes (DMP) in other use cases" .
+
+spe:Meta4eS2016_22_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "suggestion for e-health implementation correspondig with lower costs and risks", "process implementation with good results shown for specific kind of deseases and ML methods" .
+
+spe:Meta4eS2016_22_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_22_RM1, spe:Meta4eS2016_22_RM2, spe:Meta4eS2016_22_RM3 .
+
+spe:Meta4eS2016_22_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethConceptualDedAnalysis, spv:ResMethLabExperiment ;
+                       schema:description "Decision Model and Notation (DMN)", "using the CICling, EasyAbstracts and SEPLN-CICling collections" .
+
+spe:Meta4eS2016_22_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethFormalDedAnalysis, spv:ResMethLiteratureAnalysis ;
+                       schema:description "Natural Language Processing, semiformal method", "Systematic Literature Analysis" .
+
+spe:Meta4eS2016_22_RM3 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethFormalDedAnalysis ;
+                       schema:description "Artificial Neural Network (ANN), Machine Learning (ML)" .
+
+spe:Meta4eS2016_22_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_22_RO1, spe:Meta4eS2016_22_RO2 .
+
+spe:Meta4eS2016_22_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactSystem, spv:ResArtifactProcess ;
+                       spv:researchActionType spv:ResActTypeImplement ;
+                       schema:description "implement a ML based E-health system into a decision management process" .
+
+spe:Meta4eS2016_22_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactPolicy ;
+                       spv:researchActionType spv:ResActTypeDesign ;
+                       schema:description "design a specific health policy for vertebral column disorders in low budget healthcare systems" .
+
+spe:Meta4eS2016_23_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_23_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_23_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_23_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_23_RM1, spe:Meta4eS2016_23_RM2 .
+
+spe:Meta4eS2016_23_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_23_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_23_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_23_RO1, spe:Meta4eS2016_23_RO2 .
+
+spe:Meta4eS2016_23_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact1 ;
+                       spv:researchActionType spv:ResActType1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_23_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact2 ;
+                       spv:researchActionType spv:ResActType2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_24_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "The own abstract doesn't  match the assumed properties to abstracts and their usefulnes regarding formality and styles" .
+
+spe:Meta4eS2016_24_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "very little effect from extending the the stopword lists", "part of speech (PoS) effect in performance is more valuable" .
+
+spe:Meta4eS2016_24_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_24_RM1, spe:Meta4eS2016_24_RM2 .
+
+spe:Meta4eS2016_24_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_24_RO1, spe:Meta4eS2016_24_RO2, spe:Meta4eS2016_24_RO3 .
+
+spe:Meta4eS2016_24_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactMethod ;
+                       spv:researchActionType spv:ResActTypeEnhance ;
+                       schema:description "enhance the performance of clustering academic abstracts" .
+
+spe:Meta4eS2016_24_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactNLPArtifact ;
+                       spv:researchActionType spv:ResActTypeExtract ;
+                       schema:description "extract key phrases" .
+
+spe:Meta4eS2016_24_RO3 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactNLPArtifact ;
+                       spv:researchActionType spv:ResActTypeExtend ;
+                       schema:description "extend stopword list by key phrases" .
+
+spe:Meta4eS2016_25_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_25_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_25_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_25_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_25_RM1, spe:Meta4eS2016_25_RM2 .
+
+spe:Meta4eS2016_25_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_25_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_25_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_25_RO1, spe:Meta4eS2016_25_RO2 .
+
+spe:Meta4eS2016_25_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact1 ;
+                       spv:researchActionType spv:ResActType1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_25_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact2 ;
+                       spv:researchActionType spv:ResActType2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_26_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_26_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_26_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "" .
+
+spe:Meta4eS2016_26_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_26_RM1, spe:Meta4eS2016_26_RM2 .
+
+spe:Meta4eS2016_26_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_26_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMeth2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_26_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_26_RO1, spe:Meta4eS2016_26_RO2 .
+
+spe:Meta4eS2016_26_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact1 ;
+                       spv:researchActionType spv:ResActType1 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_26_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifact2 ;
+                       spv:researchActionType spv:ResActType2 ;
+                       schema:description "" .
+
+spe:Meta4eS2016_27_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "ontology visualization is suboptimal", "some choices of vocabularies are elusive", "sustainability of approach?" .
+
+spe:Meta4eS2016_27_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "implementing more constraints", "using reasoners for inferencing new knowledge" .
+
+spe:Meta4eS2016_27_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "knowledge services: inhouse guiding, individual course plannig, proving inconsistencies and contradictions", "OLOUD ontology; integration of university data from different sources (RDB, crawling, scraping, automatic enfolding, manual curation)" .
+
+spe:Meta4eS2016_27_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_27_RM1, spe:Meta4eS2016_27_RM2 .
+
+spe:Meta4eS2016_27_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethConceptualDedAnalysis ;
+                       schema:description "Ontology Engineering, Modeling, Re-using existing ontologies" .
+
+spe:Meta4eS2016_27_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethPrototyping ;
+                       schema:description "prototypical development and implementation of practical information services for students and lecturers" .
+
+spe:Meta4eS2016_27_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_27_RO1, spe:Meta4eS2016_27_RO2 .
+
+spe:Meta4eS2016_27_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactOntology ;
+                       spv:researchActionType spv:ResActTypeDevelop ;
+                       schema:description "develop an ontology for university course data" .
+
+spe:Meta4eS2016_27_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactLinkedData ;
+                       spv:researchActionType spv:ResActTypeProvide ;
+                       schema:description "provide linked data for university courses" .
+
+spe:Meta4eS2016_28_Cr a schema:ItemList ;
+                      schema:name "Critique" ;
+                      schema:itemListElement "how to manage the system (test?)", "necessary customizations not explained" .
+
+spe:Meta4eS2016_28_FW a schema:ItemList ;
+                      schema:name "Future Work" ;
+                      schema:itemListElement "extract semantically enriched data from other well-known publishers" .
+
+spe:Meta4eS2016_28_RF a schema:ItemList ;
+                      schema:name "Research Findings" ;
+                      schema:itemListElement "LODPF - linked open data publications framework", "RDF dataset produced based on LODPF", "data statistics" .
+
+spe:Meta4eS2016_28_RM a schema:ItemList ;
+                      schema:name "Research Methods" ;
+                      schema:itemListElement spe:Meta4eS2016_28_RM1, spe:Meta4eS2016_28_RM2 .
+
+spe:Meta4eS2016_28_RM1 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethDesignScience ;
+                       schema:description "Development of a framework" .
+
+spe:Meta4eS2016_28_RM2 a schema:StructuredValue ;
+                       spv:researchMethod spv:ResMethPrototyping ;
+                       schema:description "vertical prototype for SpringerLink" .
+
+spe:Meta4eS2016_28_RO a schema:ItemList ;
+                      schema:name "Research Objectives" ;
+                      schema:itemListElement spe:Meta4eS2016_28_RO1, spe:Meta4eS2016_28_RO2 .
+
+spe:Meta4eS2016_28_RO1 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactFramework ;
+                       spv:researchActionType spv:ResActTypeProvide ;
+                       schema:description "provide a framework for adding structured data to digital libraries (Spedia similar to Dbpedia)" .
+
+spe:Meta4eS2016_28_RO2 a schema:StructuredValue ;
+                       spv:researchArtifact spv:ResArtifactLinkedData ;
+                       spv:researchActionType spv:ResActTypeIntegrate ;
+                       schema:description "integrate data from different digital libraries" .
+
+spe:Meta4eS_2016 a schema:PublicationEvent ;
+                 schema:recordedIn <http://doi.org/10.1007/978-3-319-55961-2> ;
+                 schema:location wd:Q43048 ;
+                 schema:description "Confederated OTM Workshop, Rhodes (Greece), October 2016" ;
+                 schema:name "Meta4eS 2016" ;
+                 schema:alternateName "International Workshop on Methods, Evaluation, Tools and Applications for the Creation and Consumption of Structured Data for the e-Society (Meta4eS) 2016" ;
+                 schema:url <http://www.otmconferences.org/> ;
+                 schema:startDate "2016-10-24" ;
+                 schema:endDate "2016-10-28" .
+
+spe:MichaelMartin a schema:Person ;
+                  schema:affiliation wd:Q154804 ;
+                  schema:sameAs "http://bis.informatik.uni-leipzig.de/MichaelMartin" ;
+                  schema:name "Michael Martin" ;
+                  schema:familyName "Martin" ;
+                  schema:givenName "Michael" ;
+                  schema:email "martin@informatik.uni-leipzig.de" .
+
+spe:MichaelRoeder a schema:Person ;
+                  schema:affiliation wd:Q154804 ;
+                  schema:sameAs "http://aksw.org/MichaelRoeder.html" ;
+                  schema:name "Michael Röder" ;
+                  schema:familyName "Röder" ;
+                  schema:givenName "Michael" ;
+                  schema:email "roeder@informatik.uni-leipzig.de" .
+
+spe:MichaelVanBekkum a schema:Person ;
+                     schema:affiliation <https://www.tno.nl/en/> ;
+                     schema:sameAs "https://www.researchgate.net/profile/Michael_Bekkum" ;
+                     schema:name "Michael A. van Bekkum" ;
+                     schema:familyName "van Bekkum" ;
+                     schema:givenName "Michael A." ;
+                     schema:email "michael.vanbekkum@tno.nl" .
+
+spe:MiretteElias a schema:Person ;
+                 schema:affiliation wd:Q152171 ;
+                 schema:sameAs "https://www.researchgate.net/profile/Mirette_Elias2" ;
+                 schema:name "Mirette Elias" ;
+                 schema:familyName "Elias" ;
+                 schema:givenName "Mirette" ;
+                 schema:email "melias@uni-bonn.de" .
+
+spe:MuhammadSaleem a schema:Person ;
+                   schema:affiliation wd:Q154804 ;
+                   schema:sameAs "https://www.researchgate.net/profile/Muhammad_Saleem31" ;
+                   schema:name "Muhammad Saleem" ;
+                   schema:familyName "Saleem" ;
+                   schema:givenName "Muhammad" ;
+                   schema:email "ngonga@informatik.uni-leipzig.de" .
+
+spe:NathanaelArndt a schema:Person ;
+                   schema:affiliation wd:Q154804 ;
+                   schema:sameAs "http://aksw.org/NatanaelArndt.html" ;
+                   schema:name "Nathanael Arndt" ;
+                   schema:familyName "Arndt" ;
+                   schema:givenName "Nathanael" ;
+                   schema:email "arndt@informatik.uni-leipzig.de" .
+
+spe:NaviRadiAljohani a schema:Person ;
+                     schema:affiliation wd:Q1795928 ;
+                     schema:familyName "Aljohani" ;
+                     schema:givenName "Nafi Radi" ;
+                     schema:email "mailto:nraljohani@kau.edu.sau" .
+
+spe:PavelBraslavski a schema:Person ;
+                    schema:affiliation wd:Q1506552 ;
+                    schema:sameAs "http://kansas.ru/pb/index_en.html" ;
+                    schema:name "Pavel Braslavski" ;
+                    schema:familyName "Braslavski" ;
+                    schema:givenName "Pavel" ;
+                    schema:email "" .
+
+spe:PetrKremen a schema:Person ;
+               schema:affiliation wd:Q1329478 ;
+               schema:familyName "Kremen" ;
+               schema:givenName "Petr" ;
+               schema:email "mailto:petr.kremen@fel.cvut.cz" .
+
+spe:PhilippFrischmuth a schema:Person ;
+                      schema:affiliation wd:Q154804 ;
+                      schema:sameAs "http://bis.informatik.uni-leipzig.de/PhilippFrischmuth" ;
+                      schema:name "Philipp Frischmuth" ;
+                      schema:familyName "Frischmuth" ;
+                      schema:givenName "Philipp" ;
+                      schema:email "frischmuth@informatik.uni-leipzig.de" .
+
+spe:RainerSchmidt a schema:Person ;
+                  schema:affiliation wd:Q314089 ;
+                  schema:familyName "Schmidt" ;
+                  schema:givenName "Rainer" .
+
+spe:RifcaPeters a schema:Person ;
+                schema:affiliation wd:Q752663 ;
+                schema:sameAs "https://www.researchgate.net/profile/Rifca_Peters" ;
+                schema:name "Rifca Peters" ;
+                schema:familyName "Peters" ;
+                schema:givenName "Rifca" ;
+                schema:email "r.m.peters@tudelft.nl" .
+
+spe:RitaFleiner a schema:Person ;
+                schema:affiliation wd:Q1412435 ;
+                schema:familyName "Fleiner" ;
+                schema:givenName "Rita" ;
+                schema:email "mailto:fleiner.rita@nik.uni-obuda.hu" .
+
+spe:RobertMertens a schema:Person ;
+                  schema:affiliation wd:Q1400766 ;
+                  schema:sameAs "https://www.researchgate.net/profile/Robert_Mertens2" ;
+                  schema:name "Robert Mertens" ;
+                  schema:familyName "Mertens" ;
+                  schema:givenName "Robert" ;
+                  schema:email "robert.mertens@hsw-hameln.de" .
+
+spe:RobertRoessling a schema:Person ;
+                    schema:affiliation wd:Q154804 ;
+                    schema:sameAs "" ;
+                    schema:name "Robert Rößling" ;
+                    schema:familyName "Rößling" ;
+                    schema:givenName "Robert" ;
+                    schema:email "roessling@informatik.uni-leipzig.de" .
+
+spe:SEMPDS2016_11_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "OntoWiki is described as a web based application that supports the authoring, publication and visualization of arbitrary structured information in distributed scenarios. The characteristic 'arbitrary' may be questioned, since OntoWiki is not able to traverse blank nodes in a semantic graph.", "regarding the knowledge engineering and querying the documentation is very limited, most emphasis is given to developer support" .
+
+spe:SEMPDS2016_11_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "", "three productive implementations: 1 for library services, 2 for prosopographical knowledge bases" .
+
+spe:SEMPDS2016_11_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_11_RM1, spe:SEMPDS2016_11_RM2 .
+
+spe:SEMPDS2016_11_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethDesignScience ;
+                      schema:description "systematic user-driven development of productive software artifacts and corresponding documentation" .
+
+spe:SEMPDS2016_11_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethCaseStudy ;
+                      schema:description "implementation of different domain-specific wiki systems using the dedicated development framework" .
+
+spe:SEMPDS2016_11_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_11_RO1, spe:SEMPDS2016_11_RO2, spe:SEMPDS2016_11_RO3 .
+
+spe:SEMPDS2016_11_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactApplication ;
+                      spv:researchActionType spv:ResActTypeImplement ;
+                      schema:description "productive implementation of a semantic wiki in different domains" .
+
+spe:SEMPDS2016_11_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactFramework ;
+                      spv:researchActionType spv:ResActTypeEnhance ;
+                      schema:description "improvements of a framework for building data-driven applications" .
+
+spe:SEMPDS2016_11_RO3 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactDocumentation ;
+                      spv:researchActionType spv:ResActTypeEnhance ;
+                      schema:description "enhance, streamline and structure the documentation of application and development framework" .
+
+spe:SEMPDS2016_18_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "The statement: 'BPMN ... has a limit that semantics like e.g input/output parameters, involved persons or references to external data sources are not captured' isn't true. In BPMN there are attributes as well as modeling elements (data objects) for input and output data and external sources. In addition, for user tasks roles and even specific person may be assigned. This is obvious, since BPMN in the first place isn't a graphical modeling language, but a executable process model.", "A lot of mistakes in BPMN example provided in fig. 2: tasks not specified, events and one sequence flow not labeled, serious mistake in the join-logic leading to a process deadlock and false success states.", "It is not true, that BPMN covers only or primarily structural information and labels of process elements, there is a lot of process semantics covered, if modeled properly and in detail.", "analysis of related work seems random, no clear relation to presented work outlined", "It is not an advantage of BPMN 2.0 to allow defining new, customized elements, this is a minor aspect which can be viewed as a compromise or irrelevant opening feature. It's relevant only for people misunderstanding BPMN as primarily graphical notation.", "The phrase 'Our Cognitive Process Designer' is misleading, since it is based on the bpmn.io library provided by Camunda.", "The analysis of collaborative process modeling platforms is more than incomplete: Signavio, ARIS, MID aren't even mentioned.", "The statement: 'The focus of BPMN are business people, however this modeling language can also be understood by technical people and therefore used as intermediate language for different user groups.' It is based on a false understandig of the term 'business people', since it include also the IT staff. In fact it is vice versa: BPMN is designed to serve technical experts and can also be understood by clerks, domain experts and the like. So, yes, it is a bridging technology." .
+
+spe:SEMPDS2016_18_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "Method for semantic annotation of BPMN elements based on bpmn.io and semantic forms", "Prototype of Cognitive Process Designer as an extension of Semantic Media Wiki (SMW)" .
+
+spe:SEMPDS2016_18_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_18_RM1, spe:SEMPDS2016_18_RM2 .
+
+spe:SEMPDS2016_18_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethPrototyping ;
+                      schema:description "Collaborative platform for modeling and semantic annotation of business processes" .
+
+spe:SEMPDS2016_18_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethReferenceModeling ;
+                      schema:description "modeling of semantic annotations for BPMN elements - only stated, no details provided" .
+
+spe:SEMPDS2016_18_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_18_RO1, spe:SEMPDS2016_18_RO2 .
+
+spe:SEMPDS2016_18_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactApplication ;
+                      spv:researchActionType spv:ResActTypeDevelop ;
+                      schema:description "develop a prototypical application for semantic annotation and analysis for business processes" .
+
+spe:SEMPDS2016_18_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactModelingLanguage ;
+                      spv:researchActionType spv:ResActTypeEnhance ;
+                      schema:description "enhance BPMN modeling language for capturing semantic annotations" .
+
+spe:SEMPDS2016_1_Cr a schema:ItemList ;
+                    schema:name "Critique" ;
+                    schema:itemListElement "Analysis is restricted to available metadata including title, abstract and keywords of a publication; no total text analysis is performed." .
+
+spe:SEMPDS2016_1_FW a schema:ItemList ;
+                    schema:name "Future Work" ;
+                    schema:itemListElement "not implemented yet: Concept-based ranking algorithms", "focus on a higher specificity for the entity classes with a higher granularity of  their categorizations", "not implemented up to now: Aggregation of search results on the basis of co-occurring semantic entities detected in the search results." .
+
+spe:SEMPDS2016_1_RF a schema:ItemList ;
+                    schema:name "Research Findings" ;
+                    schema:itemListElement "Prototype: http://labs.livivo.de for visualizing word clouds according to the implemented vocabularies", "JSON-LD: https://datahub.io/dataset/livtdm dataset of text mining results", "search results as list of documents ranked according to their relevancy relative to the query terms" .
+
+spe:SEMPDS2016_1_RM a schema:ItemList ;
+                    schema:name "Research Methods" ;
+                    schema:itemListElement spe:SEMPDS2016_1_RM1, spe:SEMPDS2016_1_RM2 .
+
+spe:SEMPDS2016_1_RM1 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethPrototyping ;
+                     schema:description "Semantic enrichment of a huge publications corpus based on three LOD vocabularies/datasets" .
+
+spe:SEMPDS2016_1_RM2 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethFormalDedAnalysis ;
+                     schema:description "Statistical analysis of frequencies/occurances" .
+
+spe:SEMPDS2016_1_RO a schema:ItemList ;
+                    schema:name "Research Objectives" ;
+                    schema:itemListElement spe:SEMPDS2016_1_RO1, spe:SEMPDS2016_1_RO2 .
+
+spe:SEMPDS2016_1_RO1 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactWorkflow ;
+                     spv:researchActionType spv:ResActTypeProvide ;
+                     schema:description "provide a UIMA based text and data mining workflow" .
+
+spe:SEMPDS2016_1_RO2 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactNLPArtifact ;
+                     spv:researchActionType spv:ResActTypeExtract ;
+                     schema:description "acquire terminological information from publication applying SotA techniques of lexical acquisition" .
+
+spe:SEMPDS2016_21_FW a schema:ItemList ;
+                     schema:name "Future Work" ;
+                     schema:itemListElement "provide maintenance also for links between other datasets", "collect, describe, integrate and maintain additional links and scripts for generation of links to other datasets, such as Freebase, YAGO and GeoNames", "provide support for link discovery frameworks, such as SILK or LIMES", "validation of the approach on DBpedia links, collection and implemention of feedback from the community" .
+
+spe:SEMPDS2016_21_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "contributions to DBpedia are going under a fully automated process of validation, re-generation and patching, before they are accepted as part of the DBpedia Links repository", "sustainable support of various tasks which are dependent on cross-linked information" .
+
+spe:SEMPDS2016_21_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_21_RM1, spe:SEMPDS2016_21_RM2 .
+
+spe:SEMPDS2016_21_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethDesignScience ;
+                      schema:description "Design and implementation of a novel comprehensive system for DBpedia linkset maintenence closing a substantial gap in this LOD environment" .
+
+spe:SEMPDS2016_21_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethReferenceModeling ;
+                      schema:description "design and implementation of a fully automated method for support of DBpedia linksets lifecycle" .
+
+spe:SEMPDS2016_21_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_21_RO1, spe:SEMPDS2016_21_RO2 .
+
+spe:SEMPDS2016_21_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactSystem ;
+                      spv:researchActionType spv:ResActTypeDevelop ;
+                      schema:description "DBpedia Links, a system which maintains links between DBpedia and other data sources" .
+
+spe:SEMPDS2016_21_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactWorkflow ;
+                      spv:researchActionType spv:ResActTypeImplement ;
+                      schema:description "lifecycle for maintenance, update and quality assurance of DBpedia linksets" .
+
+spe:SEMPDS2016_22_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "serious BPMN mistakes: one event modeled as activity; misuse of timer events; one end event missing; specification of timer event modeled as annotation - in general problems with event labeling ", "Multiple BPMN modeling errors: each pool must contain only one process (may be excused by the wish to visualize all processes on one sheet of paper); message flows between expanded pools must connect to the elements receiving or sending the message, not to the pool border" .
+
+spe:SEMPDS2016_22_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "BPMN models and textual descriptions of implemented processes", "ontologies for description of the application data in RDF as a framework suitable for many contental domains", "implementation of the Web of Needs (WoN) as an infrastructure for expressing and publishing human needs on the Internet as linked data to allow automatic matching of the expressed needs and communication between users who expressed" .
+
+spe:SEMPDS2016_22_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_22_RM1, spe:SEMPDS2016_22_RM2 .
+
+spe:SEMPDS2016_22_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethDesignScience ;
+                      schema:description "systematic development and deployment of the WoN infrastructure" .
+
+spe:SEMPDS2016_22_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethConceptualDedAnalysis ;
+                      schema:description "BPMN graphical notation" .
+
+spe:SEMPDS2016_22_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_22_RO1, spe:SEMPDS2016_22_RO2 .
+
+spe:SEMPDS2016_22_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactInfrastructure ;
+                      spv:researchActionType spv:ResActTypeImplement ;
+                      schema:description "implement Web of Nodes as a istributed network that consists of three different types of nodes: WoN nodes, owner applications, and matching services" .
+
+spe:SEMPDS2016_22_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactDocumentation ;
+                      spv:researchActionType spv:ResActTypeProvide ;
+                      schema:description "provide an overview of architecture and the functionality of WoN" .
+
+spe:SEMPDS2016_28_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "relevance of importing e. g. Weka scripts is not discussed in the text - only scetched in figure 2", "figures  and listings don't deliver valuable information - could be omitted", "current process of annotation remains unclear, seems to be manual" .
+
+spe:SEMPDS2016_28_FW a schema:ItemList ;
+                     schema:name "Future Work" ;
+                     schema:itemListElement "integration of WASOTA and current scientific web repositories, such as OpenML", "expand the features in order to support the representation of specific tasks and challenges", "give users the possibility to insert metadata manually without any knowledge of the underlying vocabulary through CRUD webforms", "integration of WASOTA in existing scientific frameworks and benchmarks in order to automatically export metadata for running experiments" .
+
+spe:SEMPDS2016_28_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "WASOTA - a prototype of web repository for sharing state of the art information about scientific experiments", "Application of MEX - an interchange format for machine learning experiments metadata" .
+
+spe:SEMPDS2016_28_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_28_RM1, spe:SEMPDS2016_28_RM2 .
+
+spe:SEMPDS2016_28_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethPrototyping ;
+                      schema:description "research-based devolopment of a prototypical web portal" .
+
+spe:SEMPDS2016_28_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethConceptionalDedAnalysis ;
+                      schema:description "Application and implementation of WEX ontology" .
+
+spe:SEMPDS2016_28_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_28_RO1, spe:SEMPDS2016_28_RO2 .
+
+spe:SEMPDS2016_28_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactBusinessProcess ;
+                      spv:researchActionType spv:ResActTypeEnhance ;
+                      schema:description "gracefully reduce the searching time of current state of the art methods and algorithms for a given domain" .
+
+spe:SEMPDS2016_28_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactWorkflow ;
+                      spv:researchActionType spv:ResActTypeProvide ;
+                      schema:description "provide a tool-based workflow for generation and upload of metadata about scientific experiments" .
+
+spe:SEMPDS2016_35_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "the implementation of rule sets is not explained, only mentioned - no detailed resources provided", "UML stereotype modeling is shown by trivial examples, it would be interesting to get to know to a more complex use case" .
+
+spe:SEMPDS2016_35_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "UML model-based software generator (based on Eclips Xpand) creating different artifacts: UI and Application Backend together with JPA to DB, Sparql map together with a meta model, and  an ontology-based triple store together with SPARQL endpoint", "simplified use case (Power Plant) for illustration", "UML profiles based on reuse or declaration of UML stereotypes to map domain semantics to UML classes: e.g. hierarchy for taxonomies (lightweight mechanism for UML metamodel extension)" .
+
+spe:SEMPDS2016_35_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_35_RM1, spe:SEMPDS2016_35_RM2 .
+
+spe:SEMPDS2016_35_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethReferenceModeling ;
+                      schema:description "enrichement of UML by profiles bundeling a set of custom UML stereotypes" .
+
+spe:SEMPDS2016_35_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethPrototyping ;
+                      schema:description "synthesis of existing frameworks and technologies based on the semantic UML profiling" .
+
+spe:SEMPDS2016_35_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_35_RO1, spe:SEMPDS2016_35_RO2 .
+
+spe:SEMPDS2016_35_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactModelingLanguage ;
+                      spv:researchActionType spv:ResActTypeExtend ;
+                      schema:description "enrich UML domain models in order to generate database mappings and additional ontologies for exposing both the conceptual model and instance data as RDF" .
+
+spe:SEMPDS2016_35_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifact2DevFramework ;
+                      spv:researchActionType spv:ResActTypeEnhance ;
+                      schema:description "enhance rapid application development frameworks to allow deep integration of semantic technologies" .
+
+spe:SEMPDS2016_37_Cr a schema:ItemList ;
+                     schema:name "Critique" ;
+                     schema:itemListElement "poor information on reused ontologies", "the whole process of ontology engineering isn't explicated properly - specific details are discussed in detail, e.g. the modeling of time periods" .
+
+spe:SEMPDS2016_37_FW a schema:ItemList ;
+                     schema:name "Future Work" ;
+                     schema:itemListElement "further development of the ontology in the frame of the project", "incrementally testing and refining" .
+
+spe:SEMPDS2016_37_RF a schema:ItemList ;
+                     schema:name "Research Findings" ;
+                     schema:itemListElement "common ontology that underpins the design and implementation of an embodied conversational agent for children, that help these children to acquire the required knowledge, skills, and attitude for adequate diabetes self-management", "exemplary reflection on ontology requirements (challenges), e. g. gathering and saving of time periods of mood states of system users" .
+
+spe:SEMPDS2016_37_RM a schema:ItemList ;
+                     schema:name "Research Methods" ;
+                     schema:itemListElement spe:SEMPDS2016_37_RM1, spe:SEMPDS2016_37_RM2 .
+
+spe:SEMPDS2016_37_RM1 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethDesignScience ;
+                      schema:description "" .
+
+spe:SEMPDS2016_37_RM2 a schema:StructuredValue ;
+                      spv:researchMethod spv:ResMethReferenceModeling ;
+                      schema:description "" .
+
+spe:SEMPDS2016_37_RO a schema:ItemList ;
+                     schema:name "Research Objectives" ;
+                     schema:itemListElement spe:SEMPDS2016_37_RO1, spe:SEMPDS2016_37_RO2 .
+
+spe:SEMPDS2016_37_RO1 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactOntology ;
+                      spv:researchActionType spv:ResActTypeDevelop ;
+                      schema:description "Develop a common ontology for applications and agents usable in the frame of Personal Assistance in healthy lifestyle (PAL)" .
+
+spe:SEMPDS2016_37_RO2 a schema:StructuredValue ;
+                      spv:researchArtifact spv:ResArtifactDocumentation ;
+                      spv:researchActionType spv:ResActTypeProvide ;
+                      schema:description "present the general vision, approach, and state of the art" .
+
+spe:SEMPDS2016_4_Cr a schema:ItemList ;
+                    schema:name "Critique" ;
+                    schema:itemListElement "statement about the Semantic Web as the most comprehensive KG is misleading, since integration capabilities of a knowledge graph may address a lot of other sources not available in the SW", "Terms and technologies of the SW stack are not used correctly or even mixed up (e.g. companies might use proprietary identifiers in place of URIs and JSON-LD as serialization format substituting XML and RDF)", "Provision of knowledge (in different formats and for different purposes via different APIs) and appropriate management processes remain out of focus" .
+
+spe:SEMPDS2016_4_FW a schema:ItemList ;
+                    schema:name "Future Work" ;
+                    schema:itemListElement "assessment of data quality in knowledge graphs and their accessed sources", "in-depth analysis of the new definition with respect to existing KG implementations" .
+
+spe:SEMPDS2016_4_RF a schema:ItemList ;
+                    schema:name "Research Findings" ;
+                    schema:itemListElement "the terms knowledge graph and knowledge base are used interchangeably", "A knowledge graph acquires and integrates information into an ontology and applies a reasoner  to derive new knowledge.", "a KG bears more resemblance to an abstract framework than to a mathematical structure" .
+
+spe:SEMPDS2016_4_RM a schema:ItemList ;
+                    schema:name "Research Methods" ;
+                    schema:itemListElement spe:SEMPDS2016_4_RM1, spe:SEMPDS2016_4_RM2 .
+
+spe:SEMPDS2016_4_RM1 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethLiteratureAnalysis ;
+                     schema:description "analyze the definitions of KG used in current literature" .
+
+spe:SEMPDS2016_4_RM2 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethArgumentDedAnalysis ;
+                     schema:description "provide a terminological analysis of used definitions and discuss the implications" .
+
+spe:SEMPDS2016_4_RO a schema:ItemList ;
+                    schema:name "Research Objectives" ;
+                    schema:itemListElement spe:SEMPDS2016_4_RO1, spe:SEMPDS2016_4_RO2 .
+
+spe:SEMPDS2016_4_RO1 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactTermDefinition ;
+                     spv:researchActionType spv:ResActTypeAnalyze ;
+                     schema:description "discuss the definitions of the term knowledge graph in current scientific work" .
+
+spe:SEMPDS2016_4_RO2 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactTermDefinition ;
+                     spv:researchActionType spv:ResActTypeProvide ;
+                     schema:description "propose a definition of knowledge graphs that contributes to a common vision" .
+
+spe:SEMPDS2016_8_Cr a schema:ItemList ;
+                    schema:name "Critique" ;
+                    schema:itemListElement "implementation of rdfs:domain and rdfs:range are not made explicit", "weak implementation of rdf:type, rdfs:subClassOf, rdfs:subPropertyOf, owl:sameAs, owl:sameClass - all together with 'isA'" .
+
+spe:SEMPDS2016_8_FW a schema:ItemList ;
+                    schema:name "Future Work" ;
+                    schema:itemListElement "conducting studies for further validation of user needs and requirements", "developing an editor implementing the semantics, i.e. online consistency checking in the course of modeling" .
+
+spe:SEMPDS2016_8_RF a schema:ItemList ;
+                    schema:name "Research Findings" ;
+                    schema:itemListElement "formal grammar for the visual representation language for OWL Lite elements in EBNF", "Visual Representation Language for OWL Lite Elements comprising 12 language elements" .
+
+spe:SEMPDS2016_8_RM a schema:ItemList ;
+                    schema:name "Research Methods" ;
+                    schema:itemListElement spe:SEMPDS2016_8_RM1, spe:SEMPDS2016_8_RM2 .
+
+spe:SEMPDS2016_8_RM1 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethDesignScience ;
+                     schema:description "design and development of a new modeling language for visual OWL Lite ontology modeling" .
+
+spe:SEMPDS2016_8_RM2 a schema:StructuredValue ;
+                     spv:researchMethod spv:ResMethPrototyping ;
+                     schema:description "design and development of an visual editor implementing the new modeling language" .
+
+spe:SEMPDS2016_8_RO a schema:ItemList ;
+                    schema:name "Research Objectives" ;
+                    schema:itemListElement spe:SEMPDS2016_8_RO1, spe:SEMPDS2016_8_RO2 .
+
+spe:SEMPDS2016_8_RO1 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactModelingLanguage ;
+                     spv:researchActionType spv:ResActTypeDevelop ;
+                     schema:description "develop a well-specified visual language for user-oriented representation of ontologies" .
+
+spe:SEMPDS2016_8_RO2 a schema:StructuredValue ;
+                     spv:researchArtifact spv:ResArtifactApplication ;
+                     spv:researchActionType spv:ResActTypeDesign ;
+                     schema:description "design an ituitively and interactively usable editor for OWL lite ontologies providing syntax checking" .
+
+spe:SEMPDS_2016 a schema:PublicationEvent ;
+                schema:recordedIn <http://ceur-ws.org/Vol-1695/> ;
+                schema:location wd:Q2079 ;
+                schema:description "Joint Proceedings of the Posters and Demos Track of the 12th International Conference on Semantic Systems - SEMANTiCS2016 and the 1st International Workshop on Semantic Change & Evolving Semantics (SuCCESS'16) co-located with the 12th International Conference on Semantic Systems (SEMANTiCS 2016)" ;
+                schema:name "SEMPDS-2016" ;
+                schema:alternateName "Posters&Demos@SEMANTiCS 2016 and SuCCESS'16 Workshop" ;
+                schema:url <https://2016.semantics.cc/> ;
+                schema:startDate "2016-09-12" ;
+                schema:endDate "2016-09-15" .
+
+spe:SFXUnivAntigonish a schema:Organization ;
+                      schema:location wd:Q575483 ;
+                      schema:url "https://www.stfx.ca/" ;
+                      schema:legalName "St. Francis Xavier University" .
+
+spe:SoheilHuman a schema:Person ;
+                schema:affiliation wd:Q2145569 ;
+                schema:sameAs "https://sat.researchstudio.at/soheil-human" ;
+                schema:name "Soheil Human" ;
+                schema:familyName "Human" ;
+                schema:givenName "Soheil" ;
+                schema:email "soheil.human@researchstudio.at" .
+
+spe:StefaniaRacioppa a schema:Person ;
+                     schema:affiliation wd:Q896469 ;
+                     schema:sameAs "https://www.researchgate.net/profile/Stefania_Racioppa" ;
+                     schema:name "Stefania Racioppa" ;
+                     schema:familyName "Racioppa" ;
+                     schema:givenName "Stefania" ;
+                     schema:email "stefania.racioppa@dfki.de" .
+
+spe:SteffenLohmann a schema:Person ;
+                   schema:affiliation wd:Q1452013 ;
+                   schema:sameAs "https://www.researchgate.net/profile/Steffen_Lohmann" ;
+                   schema:name "Steffen Lohmann" ;
+                   schema:familyName "Lohmann" ;
+                   schema:givenName "Steffen" ;
+                   schema:email "steffen.lohmann@iais.fraunhofer.de" .
+
+spe:SvetlanaPopova a schema:Person ;
+                   schema:affiliation wd:Q1342013 ;
+                   schema:familyName "Popova" ;
+                   schema:givenName "Svetlana" ;
+                   schema:email "mailto:svp@list.ru" .
+
+spe:TCSRaILcom a schema:Organization ;
+               schema:location wd:Q1348 ;
+               schema:url "https://www.tcs.com/research-innovation/" ;
+               schema:legalName "TCS Research and Innovation Lab" .
+
+spe:TatianaKharchenko a schema:Person ;
+                      schema:affiliation wd:Q1342013 ;
+                      schema:sameAs "http://ditp.ifmo.ru/en/viewperson/127615/Kharchenko_Tatiana_Vladimirovna.htm" ;
+                      schema:name "Tatiana Kharchenko" ;
+                      schema:familyName "Kharchenko" ;
+                      schema:givenName "Tatiana" ;
+                      schema:email "kharchenko@mail.ifmo.ru" .
+
+spe:TobiasWeller a schema:Person ;
+                 schema:affiliation wd:Q30343035 ;
+                 schema:sameAs "https://www.researchgate.net/profile/Tobias_Weller" ;
+                 schema:name "Tobias Weller" ;
+                 schema:familyName "Weller" ;
+                 schema:givenName "Tobias" ;
+                 schema:email "tobias.weller@kit.edu" .
+
+spe:VeraDanilova a schema:Person ;
+                 schema:affiliation wd:Q2822458 ;
+                 schema:familyName "Danilova" ;
+                 schema:givenName "Vera" ;
+                 schema:email "mailto:vera.danilova@e-campus.uab.cat" .
+
+spe:VladimirIvanov a schema:Person ;
+                   schema:affiliation wd:Q30263296 ;
+                   schema:name "Vladimir Ivanov" ;
+                   schema:familyName "Ivanov" ;
+                   schema:givenName "Vladimir" ;
+                   schema:email "" .
+
+spe:WendyMacCaull a schema:Person ;
+                  schema:affiliation spe:SFXUnivAntigonish ;
+                  schema:familyName "MacCaull" ;
+                  schema:givenName "Wendy" ;
+                  schema:email "mailto:wmaccaul@stfx.ca" .
+
+spe:WolframWoess a schema:Person ;
+                 schema:affiliation wd:Q682739 ;
+                 schema:sameAs "http://wwoess.faw.at/" ;
+                 schema:name "Wolfram Wöß" ;
+                 schema:familyName "Wöß" ;
+                 schema:givenName "Wolfram" ;
+                 schema:email "wolfram.woess@jku.at" .
+
+spe:YerzhanBaiburin a schema:Person ;
+                    schema:affiliation wd:Q4126492 ;
+                    schema:name "Yerzhan Baiburin" ;
+                    schema:familyName "Baiburin" ;
+                    schema:givenName "Yerzhan" ;
+                    schema:email "" .
+
+spe:YngveLamo a schema:Person ;
+              schema:affiliation wd:Q1622091 ;
+              schema:familyName "Lamo" ;
+              schema:givenName "Yngve" ;
+              schema:email "mailto:yngve.lamo@hib.no" .
+
+spe:YuryZagorulko a schema:Person ;
+                  schema:affiliation wd:Q3032414 ;
+                  schema:sameAs "https://www.researchgate.net/profile/Yury_Zagorulko" ;
+                  schema:name "Yury Zagorulko" ;
+                  schema:familyName "Zagorulko" ;
+                  schema:givenName "Yury" ;
+                  schema:email "zagor@iis.nsk.su" .
+
+spv:ResActTypeAnalyze a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "analysieren"@de, "analyze"@en .
+
+spv:ResActTypeCollect a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "collect"@en, "sammeln"@de .
+
+spv:ResActTypeConceptualize a spv:ResearchActionType, owl:NamedIndividual ;
+                            rdfs:comment "Description" ;
+                            schema:name "conceptualize"@en, "konzeptualisieren"@de .
+
+spv:ResActTypeConstruct a spv:ResearchActionType, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "construct"@en, "konstruieren"@de .
+
+spv:ResActTypeDefine a spv:ResearchActionType, owl:NamedIndividual ;
+                     rdfs:comment "Description" ;
+                     schema:name "define"@en, "definieren"@de .
+
+spv:ResActTypeDesign a spv:ResearchActionType, owl:NamedIndividual ;
+                     rdfs:comment "Description" ;
+                     schema:name "design"@en, "entwerfen/konzipieren"@de .
+
+spv:ResActTypeDevelop a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "develop"@en, "entwickeln"@de .
+
+spv:ResActTypeElicit a spv:ResearchActionType, owl:NamedIndividual ;
+                     rdfs:comment "Description" ;
+                     schema:name "elicit"@en, "erheben"@de .
+
+spv:ResActTypeEnhance a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "enhance"@en, "verbessern"@de .
+
+spv:ResActTypeEvaluate a spv:ResearchActionType, owl:NamedIndividual ;
+                       rdfs:comment "Description" ;
+                       schema:name "evaluate"@en, "evaluieren"@de .
+
+spv:ResActTypeExtend a spv:ResearchActionType, owl:NamedIndividual ;
+                     rdfs:comment "Description" ;
+                     schema:name "erweitern"@de, "extend"@en .
+
+spv:ResActTypeExtract a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "extract"@en, "extrahieren"@de .
+
+spv:ResActTypeImplement a spv:ResearchActionType, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "implement"@en, "implementieren"@de .
+
+spv:ResActTypeIntegrate a spv:ResearchActionType, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "integrate"@en, "integrieren"@de .
+
+spv:ResActTypeProve a spv:ResearchActionType, owl:NamedIndividual ;
+                    rdfs:comment "Description" ;
+                    schema:name "prove"@en, "prüfen, erproben"@de .
+
+spv:ResActTypeProvide a spv:ResearchActionType, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "bereitstellen"@de, "provide"@en .
+
+spv:ResActTypeStructure a spv:ResearchActionType, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "structure"@en, "strukturieren"@de .
+
+spv:ResArtifactApplication a spv:ResearchArtifact, owl:NamedIndividual ;
+                           rdfs:comment "Description" ;
+                           schema:name "Anwendung"@de, "Application"@en .
+
+spv:ResArtifactBlueprint a spv:ResearchArtifact, owl:NamedIndividual ;
+                         rdfs:comment "Description" ;
+                         schema:name "Blueprint"@en, "Konzept"@de .
+
+spv:ResArtifactBusinessProcess a spv:ResearchArtifact, owl:NamedIndividual ;
+                               rdfs:comment "Description" ;
+                               schema:name "Business Process"@en, "Geschäftsprozess"@de .
+
+spv:ResArtifactDevFramework a spv:ResearchArtifact, owl:NamedIndividual ;
+                            rdfs:comment "" ;
+                            schema:name "Development Framework"@en, "Entwicklungsumgebung"@de .
+
+spv:ResArtifactDocumentation a spv:ResearchArtifact, owl:NamedIndividual ;
+                             rdfs:comment "" ;
+                             schema:name "Documentation"@en, "Dokumentation"@de .
+
+spv:ResArtifactFramework a spv:ResearchArtifact, owl:NamedIndividual ;
+                         rdfs:comment "Description" ;
+                         schema:name "Framework"@en, "Framework/ Rahmenwerk"@de .
+
+spv:ResArtifactHardware a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "Hardware"@en, "Hardware"@de .
+
+spv:ResArtifactITSystem a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "IT System"@en, "IT-System"@de .
+
+spv:ResArtifactLinkedData a spv:ResearchArtifact, owl:NamedIndividual ;
+                          rdfs:comment "" ;
+                          schema:name "Linked Data"@en, "Linked Data"@de .
+
+spv:ResArtifactMethod a spv:ResearchArtifact, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "Method"@en, "Method"@de .
+
+spv:ResArtifactModelingLanguage a spv:ResearchArtifact, owl:NamedIndividual ;
+                                rdfs:comment "" ;
+                                schema:name "Modeling Language"@en, "Modellierungssprache"@de .
+
+spv:ResArtifactNLPArtifact a spv:ResearchArtifact, owl:NamedIndividual ;
+                           rdfs:comment "Element, Baustein der Verarbeitung natürlicher Sprache, z. B. Schlüsselphrasen, Schlüssel- und Stopwortlisten" ;
+                           schema:name "NLP Artefakt"@de, "NLP Artifact"@en .
+
+spv:ResArtifactOntology a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "semantische Netze unterschiedlicher Ausbaustufe; bis zu formal spezifizierten Konzeptualisierungen einer Domäne" ;
+                        schema:name "Ontologie"@de, "Ontology"@en .
+
+spv:ResArtifactPolicy a spv:ResearchArtifact, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "Leitlinie"@de, "Policy"@en .
+
+spv:ResArtifactProcess a spv:ResearchArtifact, owl:NamedIndividual ;
+                       rdfs:comment "Description" ;
+                       schema:name "Process"@en, "Prozess"@de .
+
+spv:ResArtifactRequirements a spv:ResearchArtifact, owl:NamedIndividual ;
+                            rdfs:comment "Description" ;
+                            schema:name "Anforderungen"@de, "Requirements"@en .
+
+spv:ResArtifactSoftware a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "Software"@en, "Software/ Programm"@de .
+
+spv:ResArtifactStandard a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "Description" ;
+                        schema:name "Richtlinie"@de, "Standard, Guidline"@en .
+
+spv:ResArtifactSystem a spv:ResearchArtifact, owl:NamedIndividual ;
+                      rdfs:comment "Description" ;
+                      schema:name "System"@en, "System"@de .
+
+spv:ResArtifactTermDefinition a spv:ResearchArtifact, owl:NamedIndividual ;
+                              rdfs:comment "" ;
+                              schema:name "Begriffsdefinition"@de, "Term Definition"@en .
+
+spv:ResArtifactWorkflow a spv:ResearchArtifact, owl:NamedIndividual ;
+                        rdfs:comment "" ;
+                        schema:name "Workflow"@en, "Workflow"@de .
+
+spv:ResMethActionResearch a spv:ResearchMethod, owl:NamedIndividual ;
+                          rdfs:comment "Es wird ein Praxisproblem durch einen gemischten Kreis aus Wissenschaft und Praxis gelöst. Hierbei werden mehrere Zyklen aus Analyse-, Aktions-, und Evaluationsschritten durchlaufen, die jeweils gering strukturierte Instrumente wie Gruppendiskussionen oder Planspiele vorsehen."@de ;
+                          schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                          schema:name "Action Research (Wilde/Hess)"@en, "Aktionsforschung (Wilde/Hess)"@de .
+
+spv:ResMethArgumentDedAnalysis a spv:ResearchMethod, owl:NamedIndividual ;
+                               rdfs:comment "Rein sprachliches logisch-deduktives Schließen (wie z. B. in der Philosophie)"@de ;
+                               schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                               schema:name "Argumentativ-deduktive Analyse (Wilde/Hess)"@de, "Argumentative Deductive Analysis (Wilde/Hess)"@en .
+
+spv:ResMethCaseStudy a spv:ResearchMethod, owl:NamedIndividual ;
+                     rdfs:comment "Die Fallstudie untersucht in der Regel komplexe, schwer abgrenzbare Pha¨nomene in ihrem natu¨rlichen Kontext. Sie stellt eine spezielle Form der qualitativ-empirischen Methodik dar, die wenige Merkmalsträger intensiv untersucht. Es steht entweder die möglichst objektive Untersuchung von Thesen (verhaltenswissenschaftlicher Zugang) oder die Interpretation von Verhaltensmustern als Phänotypen der von den Probanden konstruierten Realitäten (konstruktionsorientierter Zugang) im Mittelpunkt."@de ;
+                     schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                     schema:name "Case Study (Wilde/Hess)"@en, "Fallstudie (Wilde/Hess)"@de .
+
+spv:ResMethConceptualDedAnalysis a spv:ResearchMethod, owl:NamedIndividual ;
+                                 rdfs:comment "Logisch-deduktives Schließen im Rahmen semiformaler Modelle (z. B. BPMN)."@de ;
+                                 schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                                 schema:name "Conceptual Deductive Analysis (Wilde/Hess)"@en, "Konzeptionell-deduktive Analyse (Wilde/Hess)"@de .
+
+spv:ResMethDesignScience a spv:ResearchMethod, owl:NamedIndividual ;
+                         rdfs:comment "Description" ;
+                         schema:isBasedOn <http://doi.org/10.1007/978-1-4419-5653-8_2> ;
+                         schema:name "Design Science (Hevner)"@en .
+
+spv:ResMethEthnography a spv:ResearchMethod, owl:NamedIndividual ;
+                       rdfs:comment "Die Ethnographie möchte durch partizipierende Beobachtung Erkenntnisse generieren. Der Unterschied zur Fallstudie liegt in dem sehr hohen Umfang, in dem sich der Forscher in das untersuchte soziale Umfeld integriert. Eine objektive Distanz ist kaum vorhanden."@de ;
+                       schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                       schema:name "Ethnographie (Wilde/Hess)"@de, "Ethnography (Wilde/Hess)"@en .
+
+spv:ResMethFieldExperiment a spv:ResearchMethod, owl:NamedIndividual ;
+                           rdfs:comment "Das Feldrexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in seiner natürlichen Umgebung (im „Feld“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de ;
+                           schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                           schema:name "Feldexperiment (Wilde/Hess)"@de, "Field Experiment (Wilde/Hess)"@en .
+
+spv:ResMethFormalDedAnalysis a spv:ResearchMethod, owl:NamedIndividual ;
+                             rdfs:comment "Logisch-deduktives Schließen im Rahmen mathematisch-formaler Modelle"@de ;
+                             schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                             schema:name "Formal Deductive Analysis (Wilde/Hess)"@en, "Formal-deduktive Analyse (Wilde/Hess)"@de .
+
+spv:ResMethGroundedTheory a spv:ResearchMethod, owl:NamedIndividual ;
+                          rdfs:comment "Die Grounded Theory („gegenstandsverankerte Theoriebildung“) zielt auf die induktive Gewinnung neuer Theorien durch intensive Beobachtung des Untersuchungsgegenstandes im Feld. Die verschiedenen Vorgehensweisen zu Kodierung und Auswertung der vorwiegend qualitativen Daten sind exakt spezifiziert."@de ;
+                          schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                          schema:name "Grounded Theory (Wilde/Hess)"@en, "Grounded Theory (Wilde/Hess)"@de .
+
+spv:ResMethLabExperiment a spv:ResearchMethod, owl:NamedIndividual ;
+                         rdfs:comment "Das Laborexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in künstlicher Umgebung (im „Labor“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden."@de ;
+                         schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                         schema:name "Laboratory Experiment (Wilde/Hess)"@en, "Laborexperiment (Wilde/Hess)"@de .
+
+spv:ResMethLiteratureAnalysis a spv:ResearchMethod, owl:NamedIndividual ;
+                              rdfs:comment " "@de ;
+                              schema:name "Literaturanalyse"@de, "Literature Analysis)"@en, "Literature Analysis"@en .
+
+spv:ResMethPrototyping a spv:ResearchMethod, owl:NamedIndividual ;
+                       rdfs:comment "Es wird eine Vorabversion eines Anwendungssystems entwickelt und evaluiert. Beide Schritte können neue Erkenntnisse generieren."@de ;
+                       schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                       schema:name "Prototyping (Wilde/Hess)"@en, "Prototyping (Wilde/Hess)"@de .
+
+spv:ResMethQualitativeResearch a spv:ResearchMethod, owl:NamedIndividual ;
+                               rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend qualitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de ;
+                               schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                               schema:name "Qualitative Querschnittsanalyse (Wilde/Hess)"@de, "Qualitative Research (Wilde/Hess)"@en .
+
+spv:ResMethQuantitativeResearch a spv:ResearchMethod, owl:NamedIndividual ;
+                                rdfs:comment "Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend quantitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt."@de ;
+                                schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                                schema:name "Quantitative Querschnittsanalyse (Wilde/Hess)"@de, "Quantitative Research (Wilde/Hess)"@en .
+
+spv:ResMethReferenceModeling a spv:ResearchMethod, owl:NamedIndividual ;
+                             rdfs:comment "Die Referenzmodellierung erstellt induktiv (ausgehend von Beobachtungen) oder deduktiv (bspw. aus Theorien oder Modellen) meist vereinfachte und optimierte Abbildungen (Idealkonzepte) von Systemen, um so bestehende Erkenntnisse zu vertiefen und daraus Gestaltungsvorlagen zu generieren"@de ;
+                             schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                             schema:name "Reference Modeling (Wilde/Hess)"@en, "Reference Modeling (Wilde/Hess)"@de .
+
+spv:ResMethSimulation a spv:ResearchMethod, owl:NamedIndividual ;
+                      rdfs:comment "Die Simulation bildet das Verhalten des zu untersuchenden Systems formal in einem Modell ab und stellt Umweltzustände durch bestimmte Belegungen der Modellparameter nach. Sowohl durch die Modellkonstruktion als auch durch die Beobachtung der endogenen Modellgrößen lassen sich Erkenntnisse gewinnen."@de ;
+                      schema:isBasedOn <http://doi.org/10.1007/s11576-007-0064-z> ;
+                      schema:name "Simulation (Wilde/Hess)"@en, "Simulation (Wilde/Hess)"@de .
+
+spv:ResearchActionType a owl:Class ;
+                       rdfs:label "Research Action Type" ;
+                       rdfs:comment "Classification of all types of research & development actions applied in Information Systems." ;
+                       rdfs:subClassOf schema:Enumeration .
+
+spv:ResearchArtifact a owl:Class ;
+                     rdfs:label "Research Artifact" ;
+                     rdfs:comment "Classification of all types of research & development artifacts characteristic for Information Systems." ;
+                     rdfs:subClassOf schema:Enumeration .
+
+spv:ResearchMethod a owl:Class ;
+                   rdfs:label "Research Method" ;
+                   rdfs:comment "List of all relevant research methods used in Information Systems." ;
+                   rdfs:subClassOf schema:Enumeration .
+
+spv:researchActionType a owl:ObjectProperty ;
+                       rdfs:label "research action type" ;
+                       rdfs:domain schema:StructuredValue ;
+                       rdfs:range spv:ResearchActionType ;
+                       rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." .
+
+spv:researchArtifact a owl:ObjectProperty ;
+                     rdfs:label "research artifact" ;
+                     rdfs:domain schema:StructuredValue ;
+                     rdfs:range spv:ResearchArtifact ;
+                     rdfs:comment "Is used in combination with research action type to indicate a research objective of a scientific paper." .
+
+spv:researchMethod a owl:ObjectProperty ;
+                   rdfs:label "research method" ;
+                   rdfs:domain schema:StructuredValue ;
+                   rdfs:range spv:ResearchMethod ;
+                   rdfs:comment "Is used to indicate a research method described in a scientific paper." .
+
+<https://doi.org/10.1007/978-3-319-45880-9> a schema:CreativeWorkSeries ;
+                                            schema:publisher wd:Q176916 ;
+                                            schema:description "Knowledge Engineering and Semantic Web - Proceedings of the 7th International Conference, KESW 2016" ;
+                                            schema:name "KESW 2016" ;
+                                            schema:dateCreated "2016" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_10> a schema:ScholarlyArticle ;
+                                               schema:about spe:KESW2016_10_RO, spe:KESW2016_10_RM, spe:KESW2016_10_RF, spe:KESW2016_10_FW, spe:KESW2016_10_Cr ;
+                                               schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                               schema:author <https://orcid.org/0000-0002-0644-9242>, spe:IrinaAkhmadeeva, spe:YuryZagorulko ;
+                                               schema:description "The paper considers the problems of ontology-based collection of information from the Internet about scientific activity for the population of the Intelligent Scientific Internet Resource. An approach to automating this process is proposed, which combines metasearch and information extraction methods based on ontology, thesaurus and pattern technique. In accordance with the approach, specific methods of information extraction adjustable to the knowledge area and types of information resources are developed for every type of entities (ontology class). Each of these methods includes a set of query templates and a set of information extraction patterns. The query templates constructed on the basis of an ontology class description are used to generate queries to search engines in order to collect web documents containing information about the individuals of this class. Web documents gathered using metasearch methods are analyzed by applying the information extraction patterns. For every kind of information to be extracted, these patterns give text markers defining their position in a web document. The patterns are generated on the basis of an ontology taking into consideration the structure of web documents. Several patterns can be combined together to extract information about related entities. To improve the recall of information extraction, the patterns use alternative terms in different languages from the thesaurus (synonyms and hyponyms) to describe the markers. Experiments showed that the proposed approach allows us to achieve an acceptable recall of the extraction from the Internet of information about scientific activity." ;
+                                               schema:headline "Ontology-Based Information Extraction for Populating the Intelligent Scientific Internet Resources" ;
+                                               schema:inLanguage "en" ;
+                                               schema:keywords "Scientific activity, Knowledge area, Ontology, Thesaurus, Information extraction, Metasearch" ;
+                                               schema:pageEnd "128" ;
+                                               schema:pageStart "119" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_19> a schema:ScholarlyArticle ;
+                                               schema:about spe:KESW2016_19_RO, spe:KESW2016_19_RM, spe:KESW2016_19_RF, spe:KESW2016_19_FW ;
+                                               schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                               schema:author <https://orcid.org/0000-0002-0698-2864>, spe:MiretteElias, spe:SteffenLohmann ;
+                                               schema:description "Accessibility has become a fundamental requirement for web applications, especially when it comes to e-learning and educational websites for OpenCourseWare. There are various types of disabilities and numerous ways of addressing them. Using semantic technologies to structure and represent the available concepts and taxonomies enables sharing and reusing the knowledge in a variety of systems. This paper provides a literature review of standards and ontologies that were developed to address accessibility requirements. The findings and recommendations reveal missing and future needs for building accessible OpenCourseWare services." ;
+                                               schema:headline "Fostering Accessibility of OpenCourseWare with Semantic Technologies – A Literature Review" ;
+                                               schema:inLanguage "en" ;
+                                               schema:keywords "Accessibility, OpenCourseWare, OCW, Semantic Web, Disabilities, Ontologies, E-learning, Accessibility standards" ;
+                                               schema:pageEnd "256" ;
+                                               schema:pageStart "241" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_23> a schema:ScholarlyArticle ;
+                                               schema:about spe:KESW2016_23_RO, spe:KESW2016_23_RM, spe:KESW2016_23_RF, spe:KESW2016_23_FW, spe:KESW2016_23_Cr ;
+                                               schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                               schema:author <https://orcid.org/0000-0003-0661-4284>, spe:ElenaSarkisova, spe:DmitryLitovkin, spe:MarinaKultsova ;
+                                               schema:description "This paper is devoted to a problem of creating a domain information space for information retrieval and reuse in various subject domains. We proposed an ontology-based approach to the collaborative development of the domain information space using personal human cognitive spaces. In framework of the proposed approach an information space ontology was created, an algorithm for generation of the domain information space was developed on the basis of the personal cognitive spaces using the rule-based reasoning over ontology. We considered three scenarios of the information space construction: an individual and collaborative creation of the information space, as well as creation of the new information space on the basis of the existing spaces. Also we presented a software architecture for the construction of domain information space which includes two software applications: web-application for individual and collaborative creation of the domain information space and builder of personal electronic learning collections. The implementation of the developed approach was illustrated by the example of information space construction for the programming languages domain. The proposed approach is consistent with the concept of Open Science and allows describing the domain structure, combining the distributed open scientific information resources into thematic collections and creating the domain information spaces using these resources. The ontology-based approach and software tools can be used in the scientific research and learning process for the open educational resources retrieval and reuse, as well as for extending the personal cognitive spaces of learners, teachers and researchers." ;
+                                               schema:headline "Ontology-Based Collaborative Development of Domain Information Space for Learning and Scientific Research" ;
+                                               schema:inLanguage "en" ;
+                                               schema:keywords "Semantic web, Ontology, OWL-DL, Open Science, Reasoning, Human cognitive space, Information space, Information retrieval, Collaborative knowledge construction" ;
+                                               schema:pageEnd "315" ;
+                                               schema:pageStart "301" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_25> a schema:ScholarlyArticle ;
+                                               schema:about spe:KESW2016_25_RO, spe:KESW2016_25_RM, spe:KESW2016_25_RF, spe:KESW2016_25_FW, spe:KESW2016_25_Cr ;
+                                               schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                               schema:author spe:MichaelRoeder, <http://orcid.org/0000-0002-9340-0438>, <http://orcid.org/0000-0002-9521-6263>, spe:MuhammadSaleem, spe:Axel-CyrilleNgongaNgomo ;
+                                               schema:description "Since the introduction of computing machines into companies and industries, searching large enterprise data is an open challenge including diverse and distributed datasets, missing alignment of vocabularies within divisions as well as data isolated in format silos. In this article, we report the requirements of commercial enterprises to the next generation of semantic search engine for large, distributed data. We describe our elicitation process to gather end user requirements, the challenges arising for real-world use cases as well as how such an implementation of this paradigm can be benchmarked. In the end, we present the design of the DIESEL search engine, which aims to implement the requirements of commercial enterprise to semantic search." ;
+                                               schema:headline "Requirements to Modern Semantic Search Engine" ;
+                                               schema:inLanguage "en" ;
+                                               schema:pageEnd "" ;
+                                               schema:pageStart "" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_4> a schema:ScholarlyArticle ;
+                                              schema:about spe:KESW2016_4_RO, spe:KESW2016_4_RM, spe:KESW2016_4_RF, spe:KESW2016_4_FW, spe:KESW2016_4_Cr ;
+                                              schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                              schema:author spe:MaksimKhegai, spe:DmitriiZubok, spe:AleksandrMaiatin, spe:TatianaKharchenko ;
+                                              schema:description "Providing high performance to large systems based on service-oriented architecture is a difficult issue. Such systems are composed of a big number of interacting composite services, each consisting of one or several applications. To process jobs that income to such a system collaboration between several applications is needed and processing time will be influenced by choice of a set of applications, resources that they have and time consumed to exchange data between them. For effective hardware resources utilization virtualization technologies are used. Applications that implement services functionality are placed in virtual machines, deployed in a number of physical servers. One of main advantages of a service-oriented architecture is scalability that leads to frequent changes in applications set, their placement in virtual machines and resources available to them. To provide high performance jobs queuing is needed to choose optimal set and order of applications for processing. Efficiency of jobs queuing algorithms highly depends on up-to-date information about every object in a system: applications, virtual machines, physical servers and telecommunications. That, because of inconsistency in configuration may become difficult. One of the proven methods of choosing a set of interacting services to process a complex job is use of ontologies. In this paper an extension to this method is proposed to increase performance of a system. Ontology that describes not only functional abilities of services but also information about their current performance and communicative abilities is described." ;
+                                              schema:headline "Ontology for Performance Control in Service-Oriented System with Composite Services" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "Ontology, Performance optimization, Service-oriented architecture, Queuing" ;
+                                              schema:pageEnd "55" ;
+                                              schema:pageStart "42" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_7> a schema:ScholarlyArticle ;
+                                              schema:about spe:KESW2016_7_RO, spe:KESW2016_7_RM, spe:KESW2016_7_RF, spe:KESW2016_7_FW, spe:KESW2016_7_Cr ;
+                                              schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                              schema:author <https://orcid.org/0000-0003-0276-0874>, spe:PavelBraslavski, spe:VladimirIvanov ;
+                                              schema:description "The study described in the paper deals with the extraction of relations between organizations from the Russian Wikipedia. We experiment with two data sources for supervised methods – manual annotations made from scratch and relations from infoboxes with subsequent sentence matching, as well as different feature sets and learning methods – SVM, CRF, and UIMA Ruta. Results show that the automatically obtained training data delivers worse results than manually annotated data, but the former approach is promising due to its scalability. Evaluation of relations extracted from a subset of Wikipedia pages that are mapped to the Russian state company registry proves that external sources can enrich and complement official databases." ;
+                                              schema:headline "Family Matters: Company Relations Extraction from Wikipedia" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "" ;
+                                              schema:citation <https://doi.org/DOIofCitedPaper> ;
+                                              schema:pageEnd "" ;
+                                              schema:pageStart "" .
+
+<https://doi.org/10.1007/978-3-319-45880-9_9> a schema:ScholarlyArticle ;
+                                              schema:about spe:KESW2016_9_RO, spe:KESW2016_9_RM, spe:KESW2016_9_RF, spe:KESW2016_9_FW, spe:KESW2016_9_Cr ;
+                                              schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ;
+                                              schema:author spe:AliyaNugumanova, spe:IgorBessmertny, spe:YerzhanBaiburin, <http://orcid.org/0000-0002-9680-2758> ;
+                                              schema:description "A contrastive approach to term extraction is an extensive class of methods based on the assumption that the words frequently occurring within a domain and rarely beyond it are most likely terms. The disadvantage of this approach is a great number of type II errors – false negatives. The cause of these errors is in the idea of contrastive selection when the most representative high frequent terms are extracted from the texts and rare terms are discarded. In this work, we propose a new operationalization of the contrastive approach, which supports the capture of both high frequent and low frequent domain terms. Proposed operationalization reduces the number of false negatives. The experiments performed on the texts of the subject domain “Geology” show promising of proposed approach." ;
+                                              schema:headline "A New Operationalization of Contrastive Term Extraction Approach Based on Recognition of Both Representative and Specific Terms" ;
+                                              schema:inLanguage "en" ;
+                                              schema:keywords "" ;
+                                              schema:citation <https://doi.org/DOIofCitedPaper> ;
+                                              schema:pageEnd "" ;
+                                              schema:pageStart "" .
+
+<https://orcid.org/0000-0003-0276-0874> a schema:Person ;
+                                        schema:affiliation wd:Q1506552 ;
+                                        schema:name "Artem Kuznetsov" ;
+                                        schema:familyName "Artem" ;
+                                        schema:givenName "Kuznetsov" ;
+                                        schema:email "" .
+
+schema:CreativeWork a owl:Class ;
+                    rdfs:label "Creative Work" ;
+                    rdfs:comment "Here used primarily for scientific papers, conference proceeding and related creative work." .
+
+schema:CreativeWorkSeries a owl:Class ;
+                          rdfs:label "Creative Work Series" ;
+                          rdfs:comment "The class of Conference proceedings - independent of the publication format." ;
+                          rdfs:subClassOf schema:CreativeWork .
+
+schema:DataType a rdfs:Class ;
+                rdfs:label "Data Type" ;
+                rdfs:comment "Encompasses basic data types for typing literals. " .
+
+schema:Date a rdfs:Class ;
+            rdfs:label "Date" ;
+            rdfs:comment "General class for all literals indicating a data." ;
+            rdfs:subClassOf schema:DataType .
+
+schema:DateTime a rdfs:Class ;
+                rdfs:label "Date and Time" ;
+                rdfs:comment "General class for all literals indicating a data and a time." ;
+                rdfs:subClassOf schema:DataType .
+
+schema:Enumeration a owl:Class ;
+                   rdfs:label "Enumeration" ;
+                   rdfs:comment "Lists or enumerations of aspects specifying a scientific paper, like research methods, research artifacts and research action types." ;
+                   rdfs:subClassOf schema:Intangible .
+
+schema:Event a owl:Class ;
+             rdfs:label "Event" ;
+             rdfs:comment "Here used primarily for scientific conferences." .
+
+schema:Intangible a owl:Class ;
+                  rdfs:label "Inangible" ;
+                  rdfs:comment "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc. (taken from schema.org)." .
+
+schema:ItemList a owl:Class ;
+                rdfs:label "Item List" ;
+                rdfs:comment "Lists of enumerations of aspects specifying a scientific paper, like research methods, research findings, research objectives, and future work." ;
+                rdfs:subClassOf schema:Intangible .
+
+schema:Language a owl:Class ;
+                rdfs:label "Language" ;
+                rdfs:comment "Natural languages such as Spanish, Tamil, Hindi, English, etc." ;
+                rdfs:subClassOf schema:Intangible .
+
+schema:Organization a owl:Class ;
+                    rdfs:label "Organization" ;
+                    rdfs:comment "Here used for two objectives: (i) to denote the affiliations of authors and other Person and (ii) for indicate publishers and conference organizers." .
+
+schema:Person a owl:Class ;
+              rdfs:label "Person" ;
+              rdfs:comment "Mainly used for identifying authors, editors, attendees, contributers, organizers and other human agents." .
+
+schema:Place a owl:Class ;
+             rdfs:label "Place" ;
+             rdfs:comment "Here used for specifying the locations of conferences and organizations." .
+
+schema:PublicationEvent a owl:Class ;
+                        rdfs:label "Publication Event" ;
+                        rdfs:comment "The class of scientific conferences." ;
+                        rdfs:subClassOf schema:Event .
+
+schema:ScholarlyArticle a owl:Class ;
+                        rdfs:label "Scholarly Article" ;
+                        rdfs:comment "The class of scientific papers." ;
+                        rdfs:subClassOf schema:CreativeWork .
+
+schema:StructuredValue a owl:Class ;
+                       rdfs:label "Structured Value" ;
+                       rdfs:comment "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing. Here used for specifying research objectives characterized by research actions applied to research artifacts." ;
+                       rdfs:subClassOf schema:Intangible .
+
+schema:Text a rdfs:Class ;
+            rdfs:label "Data Type" ;
+            rdfs:comment "General class for all literals being of any textual Datatype." ;
+            rdfs:subClassOf schema:DataType .
+
+schema:URL a rdfs:Class ;
+           rdfs:label "URL" ;
+           rdfs:comment "General class for all literals being an URL." ;
+           rdfs:subClassOf schema:Text .
+
+schema:about a owl:ObjectProperty ;
+             rdfs:label "about" ;
+             rdfs:domain schema:CreativeWork ;
+             rdfs:range owl:Thing ;
+             rdfs:comment "Is used to relate to subject matters of a creative work, mainly a scientific paper. Here mainly used to relate to blank nodes of type schema:ItemList for specifying characteristics of a scientific paper, like research findings, research methods and research objectives." .
+
+schema:additionalName a owl:DatatypeProperty ;
+                      rdfs:label "additional name" ;
+                      rdfs:domain schema:Person ;
+                      rdfs:range schema:Text ;
+                      rdfs:comment "The additional name for Person, can be used for a middle name." .
+
+schema:affiliation a owl:ObjectProperty ;
+                   rdfs:label "affiliation" ;
+                   rdfs:domain schema:Person ;
+                   rdfs:range schema:Organization ;
+                   rdfs:comment "Is used to indicate the affiliation of a person to an organization." .
+
+schema:alternateName a owl:DatatypeProperty ;
+                     rdfs:label "alternative name" ;
+                     rdfs:range schema:Text ;
+                     rdfs:comment "General datatype property, potentially usable for specifying alternative names of a resource." .
+
+schema:alternativeHeadline a owl:DatatypeProperty ;
+                           rdfs:label "alternative headline" ;
+                           rdfs:domain schema:ScholarlyArticle ;
+                           rdfs:range schema:Text ;
+                           rdfs:comment "A secondary title of a scientific paper." .
+
+schema:attendee a owl:ObjectProperty ;
+                rdfs:label "attendee" ;
+                rdfs:domain schema:PublicationEvent ;
+                rdfs:range schema:Person ;
+                rdfs:comment "Is used to indicate a person attending a conference." .
+
+schema:author a owl:ObjectProperty ;
+              rdfs:label "author" ;
+              rdfs:domain schema:ScholarlyArticle ;
+              rdfs:range schema:Person ;
+              rdfs:comment "Is used to indicate a author of a scientific paper." .
+
+schema:award a owl:DatatypeProperty ;
+             rdfs:label "award" ;
+             rdfs:domain schema:ScholarlyArticle ;
+             rdfs:range schema:Text ;
+             rdfs:comment "An award won by or for this scientific paper." .
+
+schema:citation a owl:ObjectProperty ;
+                rdfs:label "citation" ;
+                rdfs:domain schema:ScholarlyArticle ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Is used to create references of a scientific paper to other items of creative work (particularly other papers)." .
+
+schema:contributor a owl:ObjectProperty ;
+                   rdfs:label "contributor" ;
+                   rdfs:domain schema:PublicationEvent ;
+                   rdfs:range schema:Person ;
+                   rdfs:comment "Is used to indicate a person contributing to a conference." .
+
+schema:dateCreated a owl:DatatypeProperty ;
+                   rdfs:label "date created" ;
+                   rdfs:domain schema:CreativeWork ;
+                   rdfs:range schema:Date ;
+                   rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." .
+
+schema:dateModified a owl:DatatypeProperty ;
+                    rdfs:label "date modified" ;
+                    rdfs:domain schema:CreativeWork ;
+                    rdfs:range schema:Date ;
+                    rdfs:comment "The date on which the CreativeWork was modified or the item's entry was modified within a DataFeed." .
+
+schema:description a owl:DatatypeProperty ;
+                   rdfs:label "description" ;
+                   rdfs:range schema:Text ;
+                   rdfs:comment "General datatype property, potentially usable for description of all resources." .
+
+schema:editor a owl:ObjectProperty ;
+              rdfs:label "editor" ;
+              rdfs:domain schema:CreativeWork ;
+              rdfs:range schema:Person ;
+              rdfs:comment "Is used to indicate an editor of a scientific paper or conference proceedings." .
+
+schema:email a owl:DatatypeProperty ;
+             rdfs:label "email" ;
+             rdfs:domain "_:node13" ;
+             rdfs:range schema:Text ;
+             rdfs:comment "Email address of a person or an organization." .
+
+schema:endTime a owl:DatatypeProperty ;
+               rdfs:label "end time" ;
+               rdfs:domain schema:Event ;
+               rdfs:range schema:DateTime ;
+               rdfs:comment "The end time of some event." .
+
+schema:familyName a owl:DatatypeProperty ;
+                  rdfs:label "family name" ;
+                  rdfs:domain schema:Person ;
+                  rdfs:range schema:Text ;
+                  rdfs:comment "The last name of a Person." .
+
+schema:faxNumber a owl:DatatypeProperty ;
+                 rdfs:label "fax number" ;
+                 rdfs:domain "_:node19" ;
+                 rdfs:range schema:Text ;
+                 rdfs:comment "Fax number of a person or an organization." .
+
+schema:givenName a owl:DatatypeProperty ;
+                 rdfs:label "given name" ;
+                 rdfs:domain schema:Person ;
+                 rdfs:range schema:Text ;
+                 rdfs:comment "The first name of a Person." .
+
+schema:headline a owl:DatatypeProperty ;
+                rdfs:label "headline" ;
+                rdfs:domain schema:ScholarlyArticle ;
+                rdfs:range schema:Text ;
+                rdfs:comment "Headline of a scientific paper." .
+
+schema:honoricPrefix a owl:DatatypeProperty ;
+                     rdfs:label "honoric prefix" ;
+                     rdfs:domain schema:Person ;
+                     rdfs:range schema:Text ;
+                     rdfs:comment "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." .
+
+schema:honoricSuffix a owl:DatatypeProperty ;
+                     rdfs:label "honoric suffix" ;
+                     rdfs:domain schema:Person ;
+                     rdfs:range schema:Text ;
+                     rdfs:comment "An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW." .
+
+schema:image a owl:DatatypeProperty ;
+             rdfs:label "image" ;
+             rdfs:range schema:URL ;
+             rdfs:comment "General datatype property, potentially usable for relating an image of a resource." .
+
+schema:inLanguage a owl:DatatypeProperty ;
+                  rdfs:label "in language" ;
+                  rdfs:domain "_:node10" ;
+                  rdfs:range schema:Language ;
+                  rdfs:comment "The language of the content or performance or used in an event." .
+
+schema:isPartOf a owl:ObjectProperty ;
+                rdfs:label "is part of" ;
+                rdfs:domain schema:ScholarlyArticle ;
+                rdfs:range schema:CreativeWorkSeries ;
+                rdfs:comment "Is used to indicate the proceedings where a scientific paper is published." .
+
+schema:itemListElement a rdf:Property ;
+                       rdfs:label "item list element" ;
+                       rdfs:domain schema:ItemList ;
+                       rdfs:range "_:node7" ;
+                       rdfs:comment "For itemListElement values simple strings or existing entities can be used." .
+
+schema:jobTitle a owl:DatatypeProperty ;
+                rdfs:label "job title" ;
+                rdfs:domain schema:Person ;
+                rdfs:range schema:Text ;
+                rdfs:comment "The job title of the person (for example, Knowledge Engineer)." .
+
+schema:keywords a owl:DatatypeProperty ;
+                rdfs:label "keywords" ;
+                rdfs:domain schema:CreativeWork ;
+                rdfs:range schema:Text ;
+                rdfs:comment "Keywords or tags used to describe the content of a creative work. Multiple entries in a keywords list are typically delimited by commas." .
+
+schema:legalName a owl:DatatypeProperty ;
+                 rdfs:label "legal name" ;
+                 rdfs:domain schema:Organization ;
+                 rdfs:range schema:Text ;
+                 rdfs:comment "The legal name of an Organization." .
+
+schema:location a owl:ObjectProperty ;
+                rdfs:label "location" ;
+                rdfs:domain "_:node4" ;
+                rdfs:range schema:Place ;
+                rdfs:comment "Is used for different purposes to referring to a geographical place, e. g. for event locations (termporal) or for organization locations (permanent)." .
+
+schema:logo a owl:DatatypeProperty ;
+            rdfs:label "logo" ;
+            rdfs:domain schema:Organization ;
+            rdfs:range schema:URL ;
+            rdfs:comment "An associated logo of an Organization." .
+
+schema:name a owl:DatatypeProperty ;
+            rdfs:label "name" ;
+            rdfs:range schema:Text ;
+            rdfs:comment "General datatype property, potentially usable for specifying the name of a resource." .
+
+schema:organizer a owl:ObjectProperty ;
+                 rdfs:label "organizer" ;
+                 rdfs:domain schema:PublicationEvent ;
+                 rdfs:range "_:node1" ;
+                 rdfs:comment "Is used to indicate a person or an organization organizing a conference." .
+
+schema:pageEnd a owl:DatatypeProperty ;
+               rdfs:label "end page" ;
+               rdfs:domain schema:ScholarlyArticle ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The page on which the scientific paper ends." .
+
+schema:pageStart a owl:DatatypeProperty ;
+                 rdfs:label "start page" ;
+                 rdfs:domain schema:ScholarlyArticle ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The page on which the scientific paper starts." .
+
+schema:publisher a owl:ObjectProperty ;
+                 rdfs:label "publisher" ;
+                 rdfs:domain schema:CreativeWork ;
+                 rdfs:range schema:Organization ;
+                 rdfs:comment "Is used to indicate a publishing organization of a scientific paper or conference proceedings." .
+
+schema:recordedIn a owl:ObjectProperty ;
+                  rdfs:label "recorded in" ;
+                  rdfs:domain schema:PublicationEvent ;
+                  rdfs:range schema:CreativeWorkSeries ;
+                  rdfs:comment "Is used to relate a conference to the corresponding proceedings." .
+
+schema:sameAs a owl:DatatypeProperty ;
+              rdfs:label "same as" ;
+              rdfs:range schema:URL ;
+              rdfs:comment "General datatype property, potentially usable for relating one resource to a URL representing the same resource." .
+
+schema:startTime a owl:DatatypeProperty ;
+                 rdfs:label "start time" ;
+                 rdfs:domain schema:Event ;
+                 rdfs:range schema:DateTime ;
+                 rdfs:comment "The start time of some event." .
+
+schema:telephone a owl:DatatypeProperty ;
+                 rdfs:label "telephone" ;
+                 rdfs:domain "_:node16" ;
+                 rdfs:range schema:Text ;
+                 rdfs:comment "Telephone number of a person or an organization." .
+
+schema:text a owl:DatatypeProperty ;
+            rdfs:label "text" ;
+            rdfs:domain schema:CreativeWork ;
+            rdfs:range schema:Text ;
+            rdfs:comment "The textual content of this creative work." .
+
+schema:url a owl:ObjectProperty ;
+           rdfs:label "url" ;
+           rdfs:range schema:URL ;
+           rdfs:comment "General datatype property, potentially usable for specifying the URL of a resource." .
+
+<https://www.tno.nl/en/> a schema:Organization ;
+                         schema:location wd:Q1025080 ;
+                         schema:url "https://www.tno.nl/en/" ;
+                         schema:legalName "TNO Netherlands" .
+
+<https://www.zbmed.de/en/> a schema:Organization ;
+                           schema:location wd:Q365 ;
+                           schema:url "https://www.zbmed.de/en/" ;
+                           schema:legalName "ZB MED Leibniz Information Centre for Life Sciences" .

@@ -235,7 +235,7 @@ spe:MuhammadSaleem a schema:Person ; # no ORCID available
 		schema:familyName "Saleem" ; # Text
 		schema:givenName "Muhammad" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
-		schema:email "ngonga@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:email "saleem@informatik.uni-leipzig.de" ; # mailto:emailAddress
 		schema:name "Muhammad Saleem" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Muhammad_Saleem31" . # maybe URL / Website	
 
@@ -243,7 +243,7 @@ spe:AxelCyrilleNgongaNgomo a schema:Person ; # no ORCID available
 		schema:familyName "Ngonga Ngomo" ; # Text
 		schema:givenName "Axel-Cyrille" ; # Text
 		schema:affiliation wd:Q154804 ; # Wikidata Entity
-		schema:email "@informatik.uni-leipzig.de" ; # mailto:emailAddress
+		schema:email "ngonga@informatik.uni-leipzig.de" ; # mailto:emailAddress
 		schema:name "Axel-Cyrille Ngonga Ngomo" ; # alternative to givenName and familyName
 		schema:sameAs "https://www.researchgate.net/profile/Axel-Cyrille_Ngonga_Ngomo" . # maybe URL / Website	
 

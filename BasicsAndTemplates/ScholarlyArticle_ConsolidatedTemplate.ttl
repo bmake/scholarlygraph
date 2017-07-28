@@ -1,0 +1,110 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix spv: <https://bmake.th-brandenburg.de/spv#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#">.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+
+
+### Conference Proceedings or Journal Template
+
+<https://doi.org/DOIofConfProc>  a schema:CreativeWorkSeries ; # DOI of the conference proceedings 
+		schema:name "" ; # Text
+		schema:publisher wd:PUBLISHER ; # Wikidata entity
+		schema:dateCreated "" ; # Date
+		schema:description "" . # Text
+		
+wd:PUBLISHER a schema:Organization .
+		
+		
+### Conference Template
+
+spe:ConferenceAbbr a schema:PublicationEvent ; # propriatory ID (if no Wikidata entry is available)
+		schema:name "" ; # Text, short name
+		schema:alternateName "" ; # Text, long name
+		schema:description "" ; # Text, short description 
+		schema:url <http://confWebseite.org> ; # official conference website
+		schema:startDate "" ; # Date
+		schema:endDate "" ; # Date
+		schema:location wd:PLACE ; # Wikidata entity
+		schema:recordedIn <https://doi.org/DOIofConfProc> . # Reference to conference proceedings
+		
+
+### Person Template
+
+<https://orcid.org/OrcidOfThePerson> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+		schema:familyName "" ; # Text
+		schema:givenName "" ; # Text
+		schema:affiliation wd:Organization ; # Wikidata Entity
+		schema:email "" ; # mailto:emailAddress
+		schema:name "" ; # alternative to givenName and familyName
+		schema:sameAs "" . # maybe URL / wWebsite
+		
+### Organization Template
+
+wd:Organization a schema:Organization ; # Wikidata entity
+		schema:legalName "" ; # Text, officially name
+		schema:location wd:Place ; # Wikidata entity
+		schema:url "" . # URL website
+		
+wd:Place a schema:Place .
+
+
+### Scholarly Article Template without blank nodes
+
+<https://doi.org/DOI_ScholarlyArticle> a schema:ScholarlyArticle ; # DOI of the conference paper
+		schema:headline "" ; # Text, title of the paper
+		schema:inLanguage "" ; # Language identifyer
+		schema:keywords "" ; # Text, List of keywords, separated by commas
+		schema:description "" ; # Text, abstract of the paper
+		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:isPartOf <https://doi.org/DOIofConfProceedings> ; # DOI of conference proceedings
+		schema:pageStart "" ; # Text or Integer first page
+		schema:pageEnd "" ; # Text or integer last page
+		schema:citation <https://doi.org/DOIofCitedPaper> ; # DOI of cited paper(s)
+		schema:about spe:ConfAbbrYear_ArtNo_RO , spe:ConfAbbrYear_ArtNo_RM , spe:ConfAbbrYear_ArtNo_RF , spe:ConfAbbrYear_ArtNo_FW , spe:ConfAbbrYear_ArtNo_Cr .
+		
+		# Research Objectives
+		spe:ConfAbbrYear_ArtNo_RO a schema:ItemList ;
+			schema:name "Research Objectives" ;
+			schema:itemListElement spe:ConfAbbrYear_ArtNo_RO1 , spe:ConfAbbrYear_ArtNo_RO2 .
+		spe:ConfAbbrYear_ArtNo_RO1 a schema:StructuredValue ; 
+				schema:description "" ;				
+				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+		spe:ConfAbbrYear_ArtNo_RO2 a schema:StructuredValue ;
+				schema:description "" ;
+				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
+		# proceed if necessary
+		
+		# Research Methods
+		spe:ConfAbbrYear_ArtNo_RM a schema:ItemList ;
+			schema:name "Research Methods" ;
+			schema:itemListElement spe:ConfAbbrYear_ArtNo_RM1 , spe:ConfAbbrYear_ArtNo_RM2 .
+		spe:ConfAbbrYear_ArtNo_RM1 a schema:StructuredValue ;
+				schema:description "" ; 
+				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+		spe:ConfAbbrYear_ArtNo_RM2 a schema:StructuredValue ;
+				schema:description "" ; 
+				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
+		# proceed if necessary
+			
+		# Research Findings
+		spe:ConfAbbrYear_ArtNo_RF a schema:ItemList ;
+			schema:name "Research Findings" ;
+			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
+			
+		# Future Work
+		spe:ConfAbbrYear_ArtNo_FW a schema:ItemList ;
+			schema:name "Future Work" ;
+			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
+
+		# Critique
+		spe:ConfAbbrYear_ArtNo_Cr a schema:ItemList ;
+			schema:name "Critique" ;
+			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+			

@@ -811,4 +811,4 @@ spe:JoachimKoehler a schema:Person ; # ORCID of the person, alternatively a cpe 
 		# Critique
 		spe:GLU2017_1_Cr a schema:ItemList ;
 			schema:name "Critique" ;
-			schema:itemListElement "Used approach should be visualized " , "" . # Text Critique 1 and 2 etc.
+			schema:itemListElement "Used approach should be better visualized " . # Text Critique 1 and 2 etc.

@@ -664,15 +664,20 @@ spe:DiegoCollarana a schema:Person ; # ORCID of the person, alternatively a cpe 
 		# Research Objectives
 		spe:SEM2017_1_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement spe:SEM2017_1_RO1 , spe:SEM2017_1_RO2 .
+			schema:itemListElement spe:SEM2017_1_RO1, spe:SEM2017_1_RO2, spe:SEM2017_1_RO3 .
 		spe:SEM2017_1_RO1 a schema:StructuredValue ; 
-				schema:description "" ;				
-				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
-				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		spe:SEM2017_1_RO2 a schema:StructuredValue ;
-				schema:description "" ;
-				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
-				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				schema:description "Comprehensive co-word analysis to determine skill demand based on a co-word matrix that is build by querying and analyzing the RDF knowledge base" ;				
+				spv:researchActionType spv:ResActTypeAnalyze ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactRequirements . # NamedEntity Research Artifact 1 
+		spe:SEM2017_1_RO2 a schema:StructuredValue ; 
+				schema:description "SARO ontology based on schema.org and ESCO" ;				
+				spv:researchActionType spv:ResActTypeDesign ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactOntology . # NamedEntity Research Artifact 1 				
+		spe:SEM2017_1_RO3 a schema:StructuredValue ; 
+				schema:description "Software arechitecture and implementation of the OBIE method to process job adverts" ;				
+				spv:researchActionType spv:ResActTypeDevelop ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactApplication . # NamedEntity Research Artifact 1 
+						
 		# proceed if necessary
 		
 		# Research Methods
@@ -680,27 +685,30 @@ spe:DiegoCollarana a schema:Person ; # ORCID of the person, alternatively a cpe 
 			schema:name "Research Methods" ;
 			schema:itemListElement spe:SEM2017_1_RM1 , spe:SEM2017_1_RM2 .
 		spe:SEM2017_1_RM1 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+				schema:description "Overview of related work focusing on IT related needs" ; 
+				spv:researchMethod spv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 1		
 		spe:SEM2017_1_RM2 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
+				schema:description "Development of the SARO ontology" ; 
+				spv:researchMethod spv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 2	
+		spe:SEM2017_1_RM2 a schema:StructuredValue ;
+				schema:description "Implementation of IE infrastructure" ; 
+				spv:researchMethod spv:ResMethPrototyping  .	# NamedEntity Research Method 2					
 		# proceed if necessary
 			
 		# Research Findings
 		spe:SEM2017_1_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
-			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
+			schema:itemListElement "Ontology-based information extraction methods, guided by a domain vocabulary (SARO)" , "Identify data science skills in job posts", "Proof of concept validating the value and potential of the extracted demand data to identify skill".
 			
 		# Future Work
 		spe:SEM2017_1_FW a schema:ItemList ;
 			schema:name "Future Work" ;
-			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
+			schema:itemListElement "Improving the information extraction process" , "Web-based User Interface offering insights into trends over custom periods"  . # Text Future Work 1 and 2 etc.
 
 		# Critique
 		spe:SEM2017_1_Cr a schema:ItemList ;
 			schema:name "Critique" ;
-			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+			schema:itemListElement "Work focuses more on the approach, less on the results. The analysis of the results could be stronger." . # Text Critique 1 and 2 etc.
 
 
 
@@ -765,38 +773,42 @@ spe:JoachimKoehler a schema:Person ; # ORCID of the person, alternatively a cpe 
 			schema:name "Research Objectives" ;
 			schema:itemListElement spe:GLU2017_1_RO1 , spe:GLU2017_1_RO2 .
 		spe:GLU2017_1_RO1 a schema:StructuredValue ; 
-				schema:description "" ;				
-				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
-				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+				schema:description "Novel approach for a knowledge-graph-based speech interface" ;				
+				spv:researchActionType spv:ResActTypeConstruct ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactMethod . # NamedEntity Research Artifact 1 
 		spe:GLU2017_1_RO2 a schema:StructuredValue ;
-				schema:description "" ;
-				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
-				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				schema:description "Demonstration of the use of a knowledge graph for automatic speech recognition" ;
+				spv:researchActionType spv:ResActTypeProvide ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactApplication . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
 		spe:GLU2017_1_RM a schema:ItemList ;
 			schema:name "Research Methods" ;
-			schema:itemListElement spe:GLU2017_1_RM1 , spe:GLU2017_1_RM2 .
+			schema:itemListElement spe:GLU2017_1_RM1 , spe:GLU2017_1_RM2, spe:GLU2017_1_RM3 .
 		spe:GLU2017_1_RM1 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+				schema:description "Description of approach how to link speech to knowledge graphs" ; 
+				spv:researchMethod spv:ResMethArgumentDedAnalysis .	# NamedEntity Research Method 1		
 		spe:GLU2017_1_RM2 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
+				schema:description "Brief literature analysis of 4 related papers are described " ; 
+				spv:researchMethod spv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 2	
+		spe:GLU2017_1_RM3 a schema:StructuredValue ;
+				schema:description "Evluation based on Wall Street Journal and TED LIUM corpus and usage of the Kaldi toolkit " ; 
+				spv:researchMethod spv:ResMethLabExperiment .	# NamedEntity Research Method 2					
+
 		# proceed if necessary
 			
 		# Research Findings
 		spe:GLU2017_1_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
-			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
+			schema:itemListElement "Knowledge graph based speech interface system" , "Methodology of linking the speech input to a knowledge graph" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
 		spe:GLU2017_1_FW a schema:ItemList ;
 			schema:name "Future Work" ;
-			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
+			schema:itemListElement "Exploring the use of semantic information from knowledge graphs to improve the recognition accuracy"  . # Text Future Work 1 and 2 etc.
 
 		# Critique
 		spe:GLU2017_1_Cr a schema:ItemList ;
 			schema:name "Critique" ;
-			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+			schema:itemListElement "Used approach should be visualized " , "" . # Text Critique 1 and 2 etc.

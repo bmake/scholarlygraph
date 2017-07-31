@@ -5,6 +5,8 @@
 @prefix spv: <https://bmake.th-brandenburg.de/spv#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix spe: <https://bmake.th-brandenburg.de/spe#> .
+@prefix wd: <http://www.wikidata.org/entity/>.
 
 
 ### Class Definitions ###

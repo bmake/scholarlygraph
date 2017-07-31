@@ -69,7 +69,7 @@
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Scientific activity, Knowledge area, Ontology, Thesaurus, Information extraction, Metasearch" ; # Text, List of keywords, separated by commas
 		schema:description "The paper considers the problems of ontology-based collection of information from the Internet about scientific activity for the population of the Intelligent Scientific Internet Resource. An approach to automating this process is proposed, which combines metasearch and information extraction methods based on ontology, thesaurus and pattern technique. In accordance with the approach, specific methods of information extraction adjustable to the knowledge area and types of information resources are developed for every type of entities (ontology class). Each of these methods includes a set of query templates and a set of information extraction patterns. The query templates constructed on the basis of an ontology class description are used to generate queries to search engines in order to collect web documents containing information about the individuals of this class. Web documents gathered using metasearch methods are analyzed by applying the information extraction patterns. For every kind of information to be extracted, these patterns give text markers defining their position in a web document. The patterns are generated on the basis of an ontology taking into consideration the structure of web documents. Several patterns can be combined together to extract information about related entities. To improve the recall of information extraction, the patterns use alternative terms in different languages from the thesaurus (synonyms and hyponyms) to describe the markers. Experiments showed that the proposed approach allows us to achieve an acceptable recall of the extraction from the Internet of information about scientific activity." ; # Text, abstract of the paper
-		schema:author <https://orcid.org/0000-0002-0644-9242> , spe:IrinaAkhmadeeva , spe:YuryZagorulko ; # ORCID of the author(s)
+		schema:author <http://orcid.org/0000-0002-0644-9242> , spe:IrinaAkhmadeeva , spe:YuryZagorulko ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ; # DOI of conference proceedings
 		schema:pageStart "119" ; # Text or Integer first page
 		schema:pageEnd "128" ; # Text or integer last page
@@ -122,7 +122,7 @@
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Accessibility, OpenCourseWare, OCW, Semantic Web, Disabilities, Ontologies, E-learning, Accessibility standards" ; # Text, List of keywords, separated by commas
 		schema:description "Accessibility has become a fundamental requirement for web applications, especially when it comes to e-learning and educational websites for OpenCourseWare. There are various types of disabilities and numerous ways of addressing them. Using semantic technologies to structure and represent the available concepts and taxonomies enables sharing and reusing the knowledge in a variety of systems. This paper provides a literature review of standards and ontologies that were developed to address accessibility requirements. The findings and recommendations reveal missing and future needs for building accessible OpenCourseWare services." ; # Text, abstract of the paper
-		schema:author <https://orcid.org/0000-0002-0698-2864> , spe:MiretteElias ,spe:SteffenLohmann ; # ORCID of the author(s)
+		schema:author <http://orcid.org/0000-0002-0698-2864> , spe:MiretteElias ,spe:SteffenLohmann ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ; # DOI of conference proceedings
 		schema:pageStart "241" ; # Text or Integer first page
 		schema:pageEnd "256" ; # Text or integer last page
@@ -173,7 +173,7 @@
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "Semantic web, Ontology, OWL-DL, Open Science, Reasoning, Human cognitive space, Information space, Information retrieval, Collaborative knowledge construction" ; # Text, List of keywords, separated by commas
 		schema:description "This paper is devoted to a problem of creating a domain information space for information retrieval and reuse in various subject domains. We proposed an ontology-based approach to the collaborative development of the domain information space using personal human cognitive spaces. In framework of the proposed approach an information space ontology was created, an algorithm for generation of the domain information space was developed on the basis of the personal cognitive spaces using the rule-based reasoning over ontology. We considered three scenarios of the information space construction: an individual and collaborative creation of the information space, as well as creation of the new information space on the basis of the existing spaces. Also we presented a software architecture for the construction of domain information space which includes two software applications: web-application for individual and collaborative creation of the domain information space and builder of personal electronic learning collections. The implementation of the developed approach was illustrated by the example of information space construction for the programming languages domain. The proposed approach is consistent with the concept of Open Science and allows describing the domain structure, combining the distributed open scientific information resources into thematic collections and creating the domain information spaces using these resources. The ontology-based approach and software tools can be used in the scientific research and learning process for the open educational resources retrieval and reuse, as well as for extending the personal cognitive spaces of learners, teachers and researchers." ; # Text, abstract of the paper
-		schema:author <https://orcid.org/0000-0003-0661-4284> , spe:ElenaSarkisova , spe:DmitryLitovkin , spe:MarinaKultsova ; # ORCID of the author(s)
+		schema:author <http://orcid.org/0000-0003-0661-4284> , spe:ElenaSarkisova , spe:DmitryLitovkin , spe:MarinaKultsova ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ; # DOI of conference proceedings
 		schema:pageStart "301" ; # Text or Integer first page
 		schema:pageEnd "315" ; # Text or integer last page
@@ -229,7 +229,7 @@
 		schema:inLanguage "" ; # Language identifyer
 		schema:keywords "" ; # Text, List of keywords, separated by commas
 		schema:description "" ; # Text, abstract of the paper
-		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:author <http://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/DOIofConfProceedings> ; # DOI of conference proceedings
 		schema:pageStart "" ; # Text or Integer first page
 		schema:pageEnd "" ; # Text or integer last page

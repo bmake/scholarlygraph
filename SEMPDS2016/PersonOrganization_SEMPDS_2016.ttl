@@ -315,7 +315,7 @@ spe:RifcaPeters a schema:Person ; # ORCID of the person, alternatively a cpe ID
 	
 	
 ### Person Template
-<https://orcid.org/OrcidOfThePerson> a schema:Person ; # ORCID of the person, alternatively a cpe ID
+<http://orcid.org/OrcidOfThePerson> a schema:Person ; # ORCID of the person, alternatively a cpe ID
 		schema:familyName "" ; # Text
 		schema:givenName "" ; # Text
 		schema:affiliation wd:Organization ; # Wikidata Entity

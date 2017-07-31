@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="https://schema.org/">
+
+  <owl:Class rdf:about="https://schema.org/CreativeWork">
+    <rdfs:label>Creative Work</rdfs:label>
+    <rdfs:comment>Here used primarily for scientific papers, conference proceeding and related creative work.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/ScholarlyArticle">
+    <rdfs:label>Scholarly Article</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:comment>The class of scientific papers.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/CreativeWorkSeries">
+    <rdfs:label>Creative Work Series</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:comment>The class of Conference proceedings - independent of the publication format.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Event">
+    <rdfs:label>Event</rdfs:label>
+    <rdfs:comment>Here used primarily for scientific conferences.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/PublicationEvent">
+    <rdfs:label>Publication Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Event"/>
+    <rdfs:comment>The class of scientific conferences.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Organization">
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:comment>Here used for two objectives: (i) to denote the affiliations of authors and other Person and (ii) for indicate publishers and conference organizers.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Place">
+    <rdfs:label>Place</rdfs:label>
+    <rdfs:comment>Here used for specifying the locations of conferences and organizations.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:comment>Mainly used for identifying authors, editors, attendees, contributers, organizers and other human agents.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Intangible">
+    <rdfs:label>Inangible</rdfs:label>
+    <rdfs:comment>A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc. (taken from schema.org).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Enumeration">
+    <rdfs:label>Enumeration</rdfs:label>
+    <rdfs:comment>Lists or enumerations of aspects specifying a scientific paper, like research methods, research artifacts and research action types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/StructuredValue">
+    <rdfs:label>Structured Value</rdfs:label>
+    <rdfs:comment>Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing. Here used for specifying research objectives characterized by research actions applied to research artifacts.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/ItemList">
+    <rdfs:label>Item List</rdfs:label>
+    <rdfs:comment>Lists of enumerations of aspects specifying a scientific paper, like research methods, research findings, research objectives, and future work.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://bmake.th-brandenburg.de/spv#ResearchMethod">
+    <rdfs:label>Research Method</rdfs:label>
+    <rdfs:comment>List of all relevant research methods used in Information Systems.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://bmake.th-brandenburg.de/spv#ResearchArtifact">
+    <rdfs:label>Research Artifact</rdfs:label>
+    <rdfs:comment>Classification of all types of research &amp; development artifacts characteristic for Information Systems.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://bmake.th-brandenburg.de/spv#ResearchActionType">
+    <rdfs:label>Research Action Type</rdfs:label>
+    <rdfs:comment>Classification of all types of research &amp; development actions applied in Information Systems.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://schema.org/Language">
+    <rdfs:label>Language</rdfs:label>
+    <rdfs:comment>Natural languages such as Spanish, Tamil, Hindi, English, etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </owl:Class>
+
+  <rdfs:Class rdf:about="https://schema.org/DataType">
+    <rdfs:label>Data Type</rdfs:label>
+    <rdfs:comment>Encompasses basic data types for typing literals. </rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://schema.org/Text">
+    <rdfs:label>Data Type</rdfs:label>
+    <rdfs:comment>General class for all literals being of any textual Datatype.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://schema.org/URL">
+    <rdfs:label>URL</rdfs:label>
+    <rdfs:comment>General class for all literals being an URL.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Text"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://schema.org/DateTime">
+    <rdfs:label>Date and Time</rdfs:label>
+    <rdfs:comment>General class for all literals indicating a data and a time.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://schema.org/Date">
+    <rdfs:label>Date</rdfs:label>
+    <rdfs:comment>General class for all literals indicating a data.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+  </rdfs:Class>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/about">
+    <rdfs:label>about</rdfs:label>
+    <rdfs:comment>Is used to relate to subject matters of a creative work, mainly a scientific paper. Here mainly used to relate to blank nodes of type schema:ItemList for specifying characteristics of a scientific paper, like research findings, research methods and research objectives.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/citation">
+    <rdfs:label>citation</rdfs:label>
+    <rdfs:comment>Is used to create references of a scientific paper to other items of creative work (particularly other papers).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/isPartOf">
+    <rdfs:label>is part of</rdfs:label>
+    <rdfs:comment>Is used to indicate the proceedings where a scientific paper is published.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/CreativeWorkSeries"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/author">
+    <rdfs:label>author</rdfs:label>
+    <rdfs:comment>Is used to indicate a author of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/affiliation">
+    <rdfs:label>affiliation</rdfs:label>
+    <rdfs:comment>Is used to indicate the affiliation of a person to an organization.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Organization"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/editor">
+    <rdfs:label>editor</rdfs:label>
+    <rdfs:comment>Is used to indicate an editor of a scientific paper or conference proceedings.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/publisher">
+    <rdfs:label>publisher</rdfs:label>
+    <rdfs:comment>Is used to indicate a publishing organization of a scientific paper or conference proceedings.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Organization"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/attendee">
+    <rdfs:label>attendee</rdfs:label>
+    <rdfs:comment>Is used to indicate a person attending a conference.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/contributor">
+    <rdfs:label>contributor</rdfs:label>
+    <rdfs:comment>Is used to indicate a person contributing to a conference.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/organizer">
+    <rdfs:label>organizer</rdfs:label>
+    <rdfs:comment>Is used to indicate a person or an organization organizing a conference.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Person"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/Organization"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:range>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/recordedIn">
+    <rdfs:label>recorded in</rdfs:label>
+    <rdfs:comment>Is used to relate a conference to the corresponding proceedings.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range rdf:resource="https://schema.org/CreativeWorkSeries"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/location">
+    <rdfs:label>location</rdfs:label>
+    <rdfs:comment>Is used for different purposes to referring to a geographical place, e. g. for event locations (termporal) or for organization locations (permanent).</rdfs:comment>
+    <rdfs:domain>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Organization"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/Event"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <rdf:Property rdf:about="https://schema.org/itemListElement">
+    <rdfs:label>item list element</rdfs:label>
+    <rdfs:comment>For itemListElement values simple strings or existing entities can be used.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ItemList"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:range>
+
+  </rdf:Property>
+
+  <owl:ObjectProperty rdf:about="https://bmake.th-brandenburg.de/spv#researchArtifact">
+    <rdfs:label>research artifact</rdfs:label>
+    <rdfs:comment>Is used in combination with research action type to indicate a research objective of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/StructuredValue"/>
+    <rdfs:range rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://bmake.th-brandenburg.de/spv#researchActionType">
+    <rdfs:label>research action type</rdfs:label>
+    <rdfs:comment>Is used in combination with research action type to indicate a research objective of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/StructuredValue"/>
+    <rdfs:range rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://bmake.th-brandenburg.de/spv#researchMethod">
+    <rdfs:label>research method</rdfs:label>
+    <rdfs:comment>Is used to indicate a research method described in a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/StructuredValue"/>
+    <rdfs:range rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/description">
+    <rdfs:label>description</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for description of all resources.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/image">
+    <rdfs:label>image</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for relating an image of a resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/sameAs">
+    <rdfs:label>same as</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for relating one resource to a URL representing the same resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/name">
+    <rdfs:label>name</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for specifying the name of a resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/alternateName">
+    <rdfs:label>alternative name</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for specifying alternative names of a resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/url">
+    <rdfs:label>url</rdfs:label>
+    <rdfs:comment>General datatype property, potentially usable for specifying the URL of a resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/endTime">
+    <rdfs:label>end time</rdfs:label>
+    <rdfs:comment>The end time of some event.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Event"/>
+    <rdfs:range rdf:resource="https://schema.org/DateTime"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/startTime">
+    <rdfs:label>start time</rdfs:label>
+    <rdfs:comment>The start time of some event.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Event"/>
+    <rdfs:range rdf:resource="https://schema.org/DateTime"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/headline">
+    <rdfs:label>headline</rdfs:label>
+    <rdfs:comment>Headline of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/alternativeHeadline">
+    <rdfs:label>alternative headline</rdfs:label>
+    <rdfs:comment>A secondary title of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/inLanguage">
+    <rdfs:label>in language</rdfs:label>
+    <rdfs:comment>The language of the content or performance or used in an event.</rdfs:comment>
+    <rdfs:domain>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Event"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/CreativeWork"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://schema.org/Language"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/dateCreated">
+    <rdfs:label>date created</rdfs:label>
+    <rdfs:comment>The date on which the CreativeWork was created or the item was added to a DataFeed.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Date"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/dateModified">
+    <rdfs:label>date modified</rdfs:label>
+    <rdfs:comment>The date on which the CreativeWork was modified or the item's entry was modified within a DataFeed.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Date"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/pageEnd">
+    <rdfs:label>end page</rdfs:label>
+    <rdfs:comment>The page on which the scientific paper ends.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/pageStart">
+    <rdfs:label>start page</rdfs:label>
+    <rdfs:comment>The page on which the scientific paper starts.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/keywords">
+    <rdfs:label>keywords</rdfs:label>
+    <rdfs:comment>Keywords or tags used to describe the content of a creative work. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/text">
+    <rdfs:label>text</rdfs:label>
+    <rdfs:comment>The textual content of this creative work.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/award">
+    <rdfs:label>award</rdfs:label>
+    <rdfs:comment>An award won by or for this scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/familyName">
+    <rdfs:label>family name</rdfs:label>
+    <rdfs:comment>The last name of a Person.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/givenName">
+    <rdfs:label>given name</rdfs:label>
+    <rdfs:comment>The first name of a Person.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/additionalName">
+    <rdfs:label>additional name</rdfs:label>
+    <rdfs:comment>The additional name for Person, can be used for a middle name.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/honoricPrefix">
+    <rdfs:label>honoric prefix</rdfs:label>
+    <rdfs:comment>An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/honoricSuffix">
+    <rdfs:label>honoric suffix</rdfs:label>
+    <rdfs:comment>An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/jobTitle">
+    <rdfs:label>job title</rdfs:label>
+    <rdfs:comment>The job title of the person (for example, Knowledge Engineer).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/email">
+    <rdfs:label>email</rdfs:label>
+    <rdfs:comment>Email address of a person or an organization.</rdfs:comment>
+    <rdfs:domain>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Person"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/Organization"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/telephone">
+    <rdfs:label>telephone</rdfs:label>
+    <rdfs:comment>Telephone number of a person or an organization.</rdfs:comment>
+    <rdfs:domain>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Person"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/Organization"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/faxNumber">
+    <rdfs:label>fax number</rdfs:label>
+    <rdfs:comment>Fax number of a person or an organization.</rdfs:comment>
+    <rdfs:domain>
+      <rdf:Description>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://schema.org/Person"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://schema.org/Organization"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </rdf:Description>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/legalName">
+    <rdfs:label>legal name</rdfs:label>
+    <rdfs:comment>The legal name of an Organization.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Organization"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://schema.org/logo">
+    <rdfs:label>logo</rdfs:label>
+    <rdfs:comment>An associated logo of an Organization.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Organization"/>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+  </owl:DatatypeProperty>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethDesignScience">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Design Science (Hevner)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/978-1-4419-5653-8_2"/>
+    <rdfs:comment>Description</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethFormalDedAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Formal Deductive Analysis (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Formal-deduktive Analyse (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Logisch-deduktives Schließen im Rahmen mathematisch-formaler Modelle</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethConceptualDedAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Conceptual Deductive Analysis (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Konzeptionell-deduktive Analyse (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Logisch-deduktives Schließen im Rahmen semiformaler Modelle (z. B. BPMN).</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethArgumentDedAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Argumentative Deductive Analysis (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Argumentativ-deduktive Analyse (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Rein sprachliches logisch-deduktives Schließen (wie z. B. in der Philosophie)</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethSimulation">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Simulation (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Simulation (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Die Simulation bildet das Verhalten des zu untersuchenden Systems formal in einem Modell ab und stellt Umweltzustände durch bestimmte Belegungen der Modellparameter nach. Sowohl durch die Modellkonstruktion als auch durch die Beobachtung der endogenen Modellgrößen lassen sich Erkenntnisse gewinnen.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethReferenceModeling">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Reference Modeling (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Reference Modeling (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Die Referenzmodellierung erstellt induktiv (ausgehend von Beobachtungen) oder deduktiv (bspw. aus Theorien oder Modellen) meist vereinfachte und optimierte Abbildungen (Idealkonzepte) von Systemen, um so bestehende Erkenntnisse zu vertiefen und daraus Gestaltungsvorlagen zu generieren</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethActionResearch">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Action Research (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Aktionsforschung (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Es wird ein Praxisproblem durch einen gemischten Kreis aus Wissenschaft und Praxis gelöst. Hierbei werden mehrere Zyklen aus Analyse-, Aktions-, und Evaluationsschritten durchlaufen, die jeweils gering strukturierte Instrumente wie Gruppendiskussionen oder Planspiele vorsehen.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethPrototyping">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Prototyping (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Prototyping (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Es wird eine Vorabversion eines Anwendungssystems entwickelt und evaluiert. Beide Schritte können neue Erkenntnisse generieren.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethEthnography">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Ethnography (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Ethnographie (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Die Ethnographie möchte durch partizipierende Beobachtung Erkenntnisse generieren. Der Unterschied zur Fallstudie liegt in dem sehr hohen Umfang, in dem sich der Forscher in das untersuchte soziale Umfeld integriert. Eine objektive Distanz ist kaum vorhanden.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethCaseStudy">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Case Study (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Fallstudie (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Die Fallstudie untersucht in der Regel komplexe, schwer abgrenzbare Pha¨nomene in ihrem natu¨rlichen Kontext. Sie stellt eine spezielle Form der qualitativ-empirischen Methodik dar, die wenige Merkmalsträger intensiv untersucht. Es steht entweder die möglichst objektive Untersuchung von Thesen (verhaltenswissenschaftlicher Zugang) oder die Interpretation von Verhaltensmustern als Phänotypen der von den Probanden konstruierten Realitäten (konstruktionsorientierter Zugang) im Mittelpunkt.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethGroundedTheory">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Grounded Theory (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Grounded Theory (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Die Grounded Theory („gegenstandsverankerte Theoriebildung“) zielt auf die induktive Gewinnung neuer Theorien durch intensive Beobachtung des Untersuchungsgegenstandes im Feld. Die verschiedenen Vorgehensweisen zu Kodierung und Auswertung der vorwiegend qualitativen Daten sind exakt spezifiziert.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethQualitativeResearch">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Qualitative Research (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Qualitative Querschnittsanalyse (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend qualitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethQuantitativeResearch">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Quantitative Research (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Quantitative Querschnittsanalyse (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Diese Methode fasst Erhebungstechniken wie Fragebögen, Interviews, Delphi-Methode, Inhaltsanalysen etc. zu einem Aggregat zusammen. Sie umfasst eine einmalige Erhebung über mehrere Individuen hinweg, die anschließend quantitativ kodiert und ausgewertet wird. Ergebnis ist ein Querschnittsbild über die Stichprobenteilnehmer hinweg, welches üblicherweise Rückschlüsse auf die Grundgesamtheit zulässt.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethLabExperiment">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Laboratory Experiment (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Laborexperiment (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Das Laborexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in künstlicher Umgebung (im „Labor“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethFieldExperiment">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Field Experiment (Wilde/Hess)</ns0:name>
+    <ns0:name xml:lang="de">Feldexperiment (Wilde/Hess)</ns0:name>
+    <ns0:isBasedOn rdf:resource="http://doi.org/10.1007/s11576-007-0064-z"/>
+    <rdfs:comment xml:lang="de">Das Feldrexperiment untersucht Kausalzusammenhänge in kontrollierter Umgebung, indem eine Experimentalvariable auf wiederholbare Weise manipuliert und die Wirkung der Manipulation gemessen wird. Der Untersuchungsgegenstand wird in seiner natürlichen Umgebung (im „Feld“) untersucht, wodurch wesentlich die Möglichkeiten der Umgebungskontrolle beeinflusst werden.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResMethLiteratureAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <ns0:name xml:lang="en">Literature Analysis)</ns0:name>
+    <ns0:name xml:lang="de">Literaturanalyse</ns0:name>
+    <rdfs:comment xml:lang="de"> </rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDevelop">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">develop</ns0:name>
+    <ns0:name xml:lang="de">entwickeln</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeAnalyze">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">analyze</ns0:name>
+    <ns0:name xml:lang="de">analysieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeProve">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">prove</ns0:name>
+    <ns0:name xml:lang="de">prüfen, erproben</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeConceptualize">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">conceptualize</ns0:name>
+    <ns0:name xml:lang="de">konzeptualisieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeConstruct">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">construct</ns0:name>
+    <ns0:name xml:lang="de">konstruieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeEvaluate">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">evaluate</ns0:name>
+    <ns0:name xml:lang="de">evaluieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeElicit">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">elicit</ns0:name>
+    <ns0:name xml:lang="de">erheben</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDesign">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">design</ns0:name>
+    <ns0:name xml:lang="de">entwerfen/konzipieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeStructure">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">structure</ns0:name>
+    <ns0:name xml:lang="de">strukturieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeCollect">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">collect</ns0:name>
+    <ns0:name xml:lang="de">sammeln</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeEnhance">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">enhance</ns0:name>
+    <ns0:name xml:lang="de">verbessern</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeExtract">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">extract</ns0:name>
+    <ns0:name xml:lang="de">extrahieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeProvide">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">provide</ns0:name>
+    <ns0:name xml:lang="de">bereitstellen</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeExtend">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">extend</ns0:name>
+    <ns0:name xml:lang="de">erweitern</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeImplement">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">implement</ns0:name>
+    <ns0:name xml:lang="de">implementieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeIntegrate">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">integrate</ns0:name>
+    <ns0:name xml:lang="de">integrieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDefine">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">define</ns0:name>
+    <ns0:name xml:lang="de">definieren</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactBlueprint">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Blueprint</ns0:name>
+    <ns0:name xml:lang="de">Konzept</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactRequirements">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Requirements</ns0:name>
+    <ns0:name xml:lang="de">Anforderungen</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactApplication">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Application</ns0:name>
+    <ns0:name xml:lang="de">Anwendung</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactSoftware">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Software</ns0:name>
+    <ns0:name xml:lang="de">Software/ Programm</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactHardware">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Hardware</ns0:name>
+    <ns0:name xml:lang="de">Hardware</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactSystem">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">System</ns0:name>
+    <ns0:name xml:lang="de">System</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactITSystem">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">IT System</ns0:name>
+    <ns0:name xml:lang="de">IT-System</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactProcess">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Process</ns0:name>
+    <ns0:name xml:lang="de">Prozess</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactBusinessProcess">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Business Process</ns0:name>
+    <ns0:name xml:lang="de">Geschäftsprozess</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactMethod">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Method</ns0:name>
+    <ns0:name xml:lang="de">Method</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactFramework">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Framework</ns0:name>
+    <ns0:name xml:lang="de">Framework/ Rahmenwerk</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactPolicy">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Policy</ns0:name>
+    <ns0:name xml:lang="de">Leitlinie</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactStandard">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Description</rdfs:comment>
+    <ns0:name xml:lang="en">Standard, Guidline</ns0:name>
+    <ns0:name xml:lang="de">Richtlinie</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactNLPArtifact">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>Element, Baustein der Verarbeitung natürlicher Sprache, z. B. Schlüsselphrasen, Schlüssel- und Stopwortlisten</rdfs:comment>
+    <ns0:name xml:lang="en">NLP Artifact</ns0:name>
+    <ns0:name xml:lang="de">NLP Artefakt</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactOntology">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment>semantische Netze unterschiedlicher Ausbaustufe; bis zu formal spezifizierten Konzeptualisierungen einer Domäne</rdfs:comment>
+    <ns0:name xml:lang="en">Ontology</ns0:name>
+    <ns0:name xml:lang="de">Ontologie</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactLinkedData">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Linked Data</ns0:name>
+    <ns0:name xml:lang="de">Linked Data</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactWorkflow">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Workflow</ns0:name>
+    <ns0:name xml:lang="de">Workflow</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactTermDefinition">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Term Definition</ns0:name>
+    <ns0:name xml:lang="de">Begriffsdefinition</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactModelingLanguage">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Modeling Language</ns0:name>
+    <ns0:name xml:lang="de">Modellierungssprache</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactDevFramework">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Development Framework</ns0:name>
+    <ns0:name xml:lang="de">Entwicklungsumgebung</ns0:name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactDevDocumentation">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment></rdfs:comment>
+    <ns0:name xml:lang="en">Documentation</ns0:name>
+    <ns0:name xml:lang="de">Dokumentation</ns0:name>
+  </owl:NamedIndividual>
+
+</rdf:RDF>

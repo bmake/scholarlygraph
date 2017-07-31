@@ -542,7 +542,7 @@
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "" ; # Text, List of keywords, separated by commas
 		schema:description "" ; # Text, abstract of the paper
-		schema:author spe:GivennameLastname , <https://orcid.org/ORCIDofTheAuthor> ; # ORCID or cpeID of the author(s)
+		schema:author spe:GivennameLastname , <http://orcid.org/ORCIDofTheAuthor> ; # ORCID or cpeID of the author(s)
 		schema:isPartOf <http://ceur-ws.org/Vol-1695/> ; # DOI of conference proceedings
 		#schema:pageStart "" ; # Text or Integer first page
 		#schema:pageEnd "" ; # Text or integer last page

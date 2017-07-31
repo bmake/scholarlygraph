@@ -16,7 +16,7 @@
 		schema:inLanguage "en" ; # Language identifyer
 		schema:keywords "" ; # Text, List of keywords, separated by commas
 		schema:description "The study described in the paper deals with the extraction of relations between organizations from the Russian Wikipedia. We experiment with two data sources for supervised methods – manual annotations made from scratch and relations from infoboxes with subsequent sentence matching, as well as different feature sets and learning methods – SVM, CRF, and UIMA Ruta. Results show that the automatically obtained training data delivers worse results than manually annotated data, but the former approach is promising due to its scalability. Evaluation of relations extracted from a subset of Wikipedia pages that are mapped to the Russian state company registry proves that external sources can enrich and complement official databases." ; # Text, abstract of the paper
-		schema:author <https://orcid.org/0000-0003-0276-0874>, spe:PavelBraslavski , spe:VladimirIvanov ; # ORCID of the author(s)
+		schema:author <http://orcid.org/0000-0003-0276-0874>, spe:PavelBraslavski , spe:VladimirIvanov ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/10.1007/978-3-319-45880-9> ; # DOI of conference proceedings
 		schema:pageStart "" ; # Text or Integer first page
 		schema:pageEnd "" ; # Text or integer last page

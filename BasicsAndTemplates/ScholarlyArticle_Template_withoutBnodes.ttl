@@ -16,7 +16,7 @@
 		schema:inLanguage "" ; # Language identifyer
 		schema:keywords "" ; # Text, List of keywords, separated by commas
 		schema:description "" ; # Text, abstract of the paper
-		schema:author <https://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
+		schema:author <http://orcid.org/OrcidOfThePerson> ; # ORCID of the author(s)
 		schema:isPartOf <https://doi.org/DOIofConfProceedings> ; # DOI of conference proceedings
 		schema:pageStart "" ; # Text or Integer first page
 		schema:pageEnd "" ; # Text or integer last page

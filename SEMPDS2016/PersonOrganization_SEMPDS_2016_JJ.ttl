@@ -61,7 +61,7 @@ spe:RoyMeissner a schema:Person ; # ORCID of the person, alternatively a cpe ID
 		schema:name "Ondřej Zamazal" ; # alternative to givenName and familyName
 		schema:sameAs "http://nb.vse.cz/~svabo/" . # maybe URL / Website
  
-spe:marekdudas a schema:Person ; # ORCID of the person, alternatively a cpe ID
+spe:MarekDudas a schema:Person ; # ORCID of the person, alternatively a cpe ID
 	schema:familyName "Dudáš" ; # Text
 	schema:givenName "Marek" ; # Text
 	schema:affiliation wd:Q1063665 ; # Wikidata Entity

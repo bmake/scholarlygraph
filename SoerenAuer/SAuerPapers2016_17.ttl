@@ -560,15 +560,19 @@ spe:ChristianMader a schema:Person ; # ORCID of the person, alternatively a cpe 
 		# Research Objectives
 		spe:ETFA2017_1_RO a schema:ItemList ;
 			schema:name "Research Objectives" ;
-			schema:itemListElement spe:ETFA2017_1_RO1 , spe:ETFA2017_1_RO2 .
+			schema:itemListElement spe:ETFA2017_1_RO1 , spe:ETFA2017_1_RO2, spe:ETFA2017_1_RO3 .
 		spe:ETFA2017_1_RO1 a schema:StructuredValue ; 
-				schema:description "" ;				
-				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
-				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
+				schema:description "development of the Standards Ontology (STO) to describe characteristics of standards for Smart Factories and their relations" ;				
+				spv:researchActionType spv:ResActTypeDesign ; # NamedEntity Research Activity Type 1
+				spv:researchArtifact spv:ResArtifactOntology . # NamedEntity Research Artifact 1 
 		spe:ETFA2017_1_RO2 a schema:StructuredValue ;
-				schema:description "" ;
-				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
-				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
+				schema:description "description of 60 standards and 20 standard organizations using STO and classification." ;
+				spv:researchActionType spv:ResActTypeProvide ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactDocumentation . # NamedEntity Research Artifact 2 
+		spe:ETFA2017_1_RO3 a schema:StructuredValue ;
+				schema:description "Real-world use case showing the applicability and benfits of the standardization landscape following a semantic-based approach" ;
+				spv:researchActionType spv:ResActTypeDevelop ; # NamedEntity Research Activity Type 2
+				spv:researchArtifact spv:ResArtifactApplication . # NamedEntity Research Artifact 2 				
 		# proceed if necessary
 		
 		# Research Methods
@@ -576,27 +580,30 @@ spe:ChristianMader a schema:Person ; # ORCID of the person, alternatively a cpe 
 			schema:name "Research Methods" ;
 			schema:itemListElement spe:ETFA2017_1_RM1 , spe:ETFA2017_1_RM2 .
 		spe:ETFA2017_1_RM1 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
+				schema:description "Design of the The Standards Ontology" ; 
+				spv:researchMethod spv:ResMethFormalDedAnalysis .	# NamedEntity Research Method 1		
 		spe:ETFA2017_1_RM2 a schema:StructuredValue ;
-				schema:description "" ; 
-				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
+				schema:description "Applying the ontology on a use case" ; 
+				spv:researchMethod spv:ResMethPrototyping .	# NamedEntity Research Method 2	
+		spe:ETFA2017_1_RM2 a schema:StructuredValue ;
+				schema:description "Overview over I4.0 standards and other work that attempted to provide a landscape for I4.0 standards" ; 
+				spv:researchMethod spv:ResMethLiteratureAnalysis .	# NamedEntity Research Method 2					
 		# proceed if necessary
 			
 		# Research Findings
 		spe:ETFA2017_1_RF a schema:ItemList ;
 			schema:name "Research Findings" ;
-			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
+			schema:itemListElement "The Standards Ontology (STO) to provide a landscape of I4.0 related standards" , "Benefit of semantic-based approach with a provided use case" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
 		spe:ETFA2017_1_FW a schema:ItemList ;
 			schema:name "Future Work" ;
-			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
+			schema:itemListElement "Define algorithms to discover patterns and associations between the concepts of the I4.0 standards" , "Extension of the dataset of I4.0 standards", "Classification of other reference architectures"  . # Text Future Work 1 and 2 etc.
 
 		# Critique
 		spe:ETFA2017_1_Cr a schema:ItemList ;
 			schema:name "Critique" ;
-			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
+			schema:itemListElement "Context of the project could be provided better". # Text Critique 1 and 2 etc.
 
 
 spe:SEM_2016_proceedings  a schema:CreativeWorkSeries ; # URN of the conference proceedings 
@@ -715,9 +722,6 @@ spe:GLU_2017 a schema:PublicationEvent ; # proprietory ID (if no Wikidata entry 
 		schema:endDate "2017-08-25" ; # Date
 		schema:location wd:Q1754 ; # Wikidata entity
 		schema:recordedIn spe:GLU_2017_proceedings . # Reference to conference proceedings	
-
-
-.
 
 
 spe:AshwiniJayaKumar a schema:Person ; # ORCID of the person, alternatively a cpe ID

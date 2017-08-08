@@ -26,7 +26,7 @@ spe:ConferenceAbbr a schema:PublicationEvent ; # propriatory ID (if no Wikidata 
 		schema:name "" ; # Text, short name
 		schema:alternateName "" ; # Text, long name
 		schema:description "" ; # Text, short description 
-		schema:url <http://confWebseite.org> ; # official conference website
+		schema:url "http://confWebseite.org" ; # official conference website
 		schema:startDate "" ; # Date
 		schema:endDate "" ; # Date
 		schema:location wd:PLACE ; # Wikidata entity
@@ -68,43 +68,43 @@ wd:Place a schema:Place .
 		schema:about spe:ConfAbbrYear_ArtNo_RO , spe:ConfAbbrYear_ArtNo_RM , spe:ConfAbbrYear_ArtNo_RF , spe:ConfAbbrYear_ArtNo_FW , spe:ConfAbbrYear_ArtNo_Cr .
 		
 		# Research Objectives
-		spe:ConfAbbrYear_ArtNo_RO a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RO a spv:ResearchObjectives ;
 			schema:name "Research Objectives" ;
 			schema:itemListElement spe:ConfAbbrYear_ArtNo_RO1 , spe:ConfAbbrYear_ArtNo_RO2 .
-		spe:ConfAbbrYear_ArtNo_RO1 a schema:StructuredValue ; 
+		spe:ConfAbbrYear_ArtNo_RO1 a spv:ResearchObjective ; 
 				schema:description "" ;				
 				spv:researchActionType spv:ResActType1 ; # NamedEntity Research Activity Type 1
 				spv:researchArtifact spv:ResArtifact1 . # NamedEntity Research Artifact 1 
-		spe:ConfAbbrYear_ArtNo_RO2 a schema:StructuredValue ;
+		spe:ConfAbbrYear_ArtNo_RO2 a spv:ResearchObjective ;
 				schema:description "" ;
 				spv:researchActionType spv:ResActType2 ; # NamedEntity Research Activity Type 2
 				spv:researchArtifact spv:ResArtifact2 . # NamedEntity Research Artifact 2 
 		# proceed if necessary
 		
 		# Research Methods
-		spe:ConfAbbrYear_ArtNo_RM a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RM a spv:researchMethods ;
 			schema:name "Research Methods" ;
 			schema:itemListElement spe:ConfAbbrYear_ArtNo_RM1 , spe:ConfAbbrYear_ArtNo_RM2 .
-		spe:ConfAbbrYear_ArtNo_RM1 a schema:StructuredValue ;
+		spe:ConfAbbrYear_ArtNo_RM1 a spv:ResearchMethod ;
 				schema:description "" ; 
 				spv:researchMethod spv:ResMeth1 .	# NamedEntity Research Method 1		
-		spe:ConfAbbrYear_ArtNo_RM2 a schema:StructuredValue ;
+		spe:ConfAbbrYear_ArtNo_RM2 a spv:ResearchMethod ;
 				schema:description "" ; 
 				spv:researchMethod spv:ResMeth2 .	# NamedEntity Research Method 2	
 		# proceed if necessary
 			
 		# Research Findings
-		spe:ConfAbbrYear_ArtNo_RF a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_RF a spv:ResearchFindings ;
 			schema:name "Research Findings" ;
 			schema:itemListElement "" , "" . # Text Research Findings 1 and 2 etc.
 			
 		# Future Work
-		spe:ConfAbbrYear_ArtNo_FW a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_FW a spv:FutureWork ;
 			schema:name "Future Work" ;
 			schema:itemListElement "" , ""  . # Text Future Work 1 and 2 etc.
 
 		# Critique
-		spe:ConfAbbrYear_ArtNo_Cr a schema:ItemList ;
+		spe:ConfAbbrYear_ArtNo_Cr a spv:Critique ;
 			schema:name "Critique" ;
 			schema:itemListElement "" , "" . # Text Critique 1 and 2 etc.
 			

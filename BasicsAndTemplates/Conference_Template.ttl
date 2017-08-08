@@ -25,7 +25,7 @@ spe:ConferenceAbbr a schema:PublicationEvent ; # propriatory ID (if no Wikidata 
 		schema:name "" ; # Text, short name
 		schema:alternateName "" ; # Text, long name
 		schema:description "" ; # Text, short description 
-		schema:url <http://confWebseite.org> ; # official conference website
+		schema:url "http://confWebseite.org" ; # official conference website
 		schema:startDate "" ; # Date
 		schema:endDate "" ; # Date
 		schema:location wd:PLACE ; # Wikidata entity

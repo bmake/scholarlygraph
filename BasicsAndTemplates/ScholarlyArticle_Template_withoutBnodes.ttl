@@ -38,7 +38,7 @@
 		# proceed if necessary
 		
 		# Research Methods
-		spe:ConfAbbrYear_ArtNo_RM a spv:researchMethods ;
+		spe:ConfAbbrYear_ArtNo_RM a spv:ResearchMethods ;
 			schema:name "Research Methods" ;
 			schema:itemListElement spe:ConfAbbrYear_ArtNo_RM1 , spe:ConfAbbrYear_ArtNo_RM2 .
 		spe:ConfAbbrYear_ArtNo_RM1 a spv:ResearchMethod ;

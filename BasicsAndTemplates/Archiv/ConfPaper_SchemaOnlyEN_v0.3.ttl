@@ -32,11 +32,17 @@
 	skos:prefLabel "spv ontology"@en . 
 	
 wd:Q1391182 a schema:Organization ;
-	rdfs:label "THB - Technische Hochschule Brandenburg"@de , "BUAS - Brandenburg University of Applied Sciences"@en ;
+	rdfs:legalName "THB - Technische Hochschule Brandenburg"@de , "BUAS - Brandenburg University of Applied Sciences"@en ;
+	schema:location wd:Q3931 ;
 	schema:url "http://th-brandenburg.de" .	
 	
 spe:VeraMeister a schema:Person ;
+	owl:sameAs <http://orcid.org/0000-0002-2780-0222> ;
 	schema:name "Vera G. Meister" ;
+	schema:givenName "Vera G." ;
+	schema:familyName "Meister" ;
+	schema:email "vera.meister@th-brandenburg.de" ;
+	schema:affiliation wd:Q1391182 ;
 	schema:url "https://www.th-brandenburg.de/mitarbeiterseiten/fbw/vera-meister/" .
 	
 ### Definition of Re-Used Classes ### 
@@ -623,7 +629,7 @@ spv:ResMethFieldExperiment a owl:NamedIndividual , spv:ResearchMethod ;
 			vs:term_status "stable" .	
 			
 spv:ResMethLiteratureAnalysis a owl:NamedIndividual , spv:ResearchMethod ;
-			rdfs:label "Literature Analysis (Machi/McEvoy)"@en ;
+			rdfs:label "Literature Review (Machi/McEvoy)"@en ;
 			schema:url "https://lccn.loc.gov/2015048510" ;
 			rdfs:comment "A literature review is a written document that presents a logically argued case founded on a comprehensive understanding of the current state of knowledge about a topic of study. This case establishes a convincing thesis to answer the study’s question."@en ;
 			rdfs:isDefinedBy <https://bmake.th-brandenburg.de/spv#> ;
@@ -752,7 +758,7 @@ spv:ResArtifactApplication a owl:NamedIndividual , spv:ResearchArtifact ;
 			vs:term_status "testing" .
 			
 spv:ResArtifactSystem a owl:NamedIndividual , spv:ResearchArtifact ;
-			rdfs:comment "complex object whose parts interact and form a desing-related and functional whole"@en ;
+			rdfs:comment "complex object whose parts interact and form a design-related and functional whole"@en ;
 			rdfs:label "System"@en ;
 			rdfs:isDefinedBy <https://bmake.th-brandenburg.de/spv#> ;
 			vs:term_status "testing" .

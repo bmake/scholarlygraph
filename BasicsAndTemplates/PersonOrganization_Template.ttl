@@ -15,7 +15,7 @@
 		schema:affiliation wd:Organization ; # Wikidata Entity
 		schema:email "" ; # mailto:emailAddress
 		schema:name "" ; # alternative to givenName and familyName
-		schema:sameAs "" . # maybe URL / wWebsite
+		schema:sameAs "" . # maybe URL / Website
 		
 ### Organization Template
 

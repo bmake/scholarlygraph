@@ -14,7 +14,7 @@
 		schema:name "" ; # Text
 		schema:publisher wd:PUBLISHER ; # Wikidata entity
 		schema:dateCreated "" ; # Date
-		schema:description "" . # Text
+		schema:description "This is a test" . # Text
 		
 wd:PUBLISHER a schema:Organization .
 		
